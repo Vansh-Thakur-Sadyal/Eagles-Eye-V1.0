@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Runtime state and local secrets
+**/.env
+!**/.env.example
+backend/.env*
+!backend/.env.example
+**/.secrets.env
+**/.secrets.*
+**/*.pem
+**/*.key
+**/*.crt
+**/*.p12
+**/*.sqlite
+**/*.db
+**/*.db-shm
+**/*.db-wal
+**/FIRST_RUN_CREDENTIALS.txt
+**/notify_key.txt
+**/token.txt
+storage/
+config/policy.json
+
+# Large model files and release blockers
+*.pt
+*.pth
+*.onnx
+*.engine
+*.weights
+*.ckpt
+*.safetensors
+*.bin
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Dataset protection for public release
+# Keep only metadata and tiny reference examples in Git.
+datasets/raw/
+datasets/**/images/
+datasets/**/video/
+datasets/**/tracking/
+datasets/**/frames/
+datasets/**/clips/
+datasets/**/archives/
+datasets/occlusion/
+datasets/appearance/
+datasets/**/downloaded/
+!datasets/README.md
+!datasets/manifest.json
+!datasets/metadata/
+!datasets/incidents/
+!datasets/detection/data.yaml
+!datasets/**/annotations/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local deployment extras
+deploy/**/.local.env
+deploy/**/.secrets.env

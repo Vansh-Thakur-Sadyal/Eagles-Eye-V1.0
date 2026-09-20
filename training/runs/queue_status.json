@@ -1,0 +1,93 @@
+{
+  "reid": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 55.7,
+    "finished": "2026-09-19T22:26:43.585787",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\reid.log"
+  },
+  "features_ucf_crime": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 5.5,
+    "finished": "2026-09-19T22:32:15.528400",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\features_ucf_crime.log"
+  },
+  "anomaly_head": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 6.1,
+    "finished": "2026-09-19T22:38:19.620565",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\anomaly_head.log"
+  },
+  "crowd_prepare": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 1.2,
+    "finished": "2026-09-19T22:39:31.562691",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\crowd_prepare.log"
+  },
+  "crowd_train": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 46.3,
+    "finished": "2026-09-19T23:25:49.346181",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\crowd_train.log"
+  },
+  "features_shanghaitech_test": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 2.3,
+    "finished": "2026-09-19T23:28:05.537283",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\features_shanghaitech_test.log"
+  },
+  "anomaly_head_with_crossdataset": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 1.8,
+    "finished": "2026-09-19T23:29:55.929798",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\anomaly_head_with_crossdataset.log"
+  },
+  "mot17_eval_stock": {
+    "state": "failed",
+    "exit_code": 1,
+    "minutes": 0.3,
+    "finished": "2026-09-19T23:30:16.341565",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\mot17_eval_stock.log"
+  },
+  "mot20_eval_stock": {
+    "state": "failed",
+    "exit_code": 1,
+    "minutes": 0.2,
+    "finished": "2026-09-19T23:30:30.263604",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\mot20_eval_stock.log"
+  },
+  "detector_finetune": {
+    "state": "failed",
+    "exit_code": 1,
+    "minutes": 34.2,
+    "finished": "2026-09-20T00:04:43.960251",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\detector_finetune.log"
+  },
+  "detector_compare": {
+    "state": "failed",
+    "exit_code": 1,
+    "minutes": 0.1,
+    "finished": "2026-09-20T00:04:49.784755",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\detector_compare.log"
+  },
+  "features_xd_violence": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 16.1,
+    "finished": "2026-09-20T00:20:58.121174",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\features_xd_violence.log"
+  },
+  "violence_head": {
+    "state": "done",
+    "exit_code": 0,
+    "minutes": 3.3,
+    "finished": "2026-09-20T00:24:18.368377",
+    "log": "D:\\Eagle_Eye_V1.0\\training\\logs\\violence_head.log"
+  }
+}

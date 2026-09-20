@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reset your password — Eagles Eye</title>
+<link rel="icon" type="image/png" href="/portal/assets/favicon.png">
+<link rel="stylesheet" href="/portal/assets/portal.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/portal/" aria-label="Eagles Eye - home"><img src="/portal/assets/eagles-eye-emblem.png" alt="Eagles Eye"></a>
+  <div class="actions" style="margin-left:auto"><a class="btn ghost" href="/portal/sign-in.html">Sign in</a></div>
+</header>
+
+<div class="auth-wrap">
+  <div class="card">
+
+    <section id="step-ask" class="step active">
+      <h1>Reset your password</h1>
+      <p class="sub">We will send a code to your registered e-mail and phone.</p>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@gmail.com">
+      <div class="captcha" style="margin-top:14px">
+        <div>
+          <label for="captcha_answer">Anti-robot check</label>
+          <p class="q" id="captcha_q" style="margin:0 0 6px">Loading…</p>
+          <input id="captcha_answer" inputmode="numeric" placeholder="Your answer">
+          <input id="captcha_token" type="hidden">
+        </div>
+        <button class="btn ghost" id="captcha_new" type="button">New question</button>
+      </div>
+      <button class="btn big" id="send" style="width:100%;margin-top:16px">Send reset code</button>
+      <div class="msg" id="msg"></div>
+      <p class="foot"><a href="/portal/sign-in.html">Back to sign in</a></p>
+    </section>
+
+    <section id="step-set" class="step">
+      <h1>Choose a new password</h1>
+      <p class="sub">Enter the code we sent, then your new password.</p>
+      <label for="code">Reset code</label>
+      <input id="code" class="otp-input" inputmode="numeric" maxlength="6" placeholder="······">
+      <label for="password">New password</label>
+      <input id="password" type="password" autocomplete="new-password" placeholder="At least 8 characters">
+      <button class="btn big" id="save" style="width:100%;margin-top:14px">Change password</button>
+      <div class="msg" id="msg2"></div>
+    </section>
+
+    <section id="step-done" class="step">
+      <h1>Password changed</h1>
+      <p class="sub">You can sign in with your new password now.</p>
+      <a class="btn big" href="/portal/sign-in.html" style="width:100%">Go to sign in</a>
+    </section>
+
+  </div>
+</div>
+
+<script src="/portal/assets/portal.js"></script>
+<script>
+const msg = document.getElementById('msg');
+const msg2 = document.getElementById('msg2');
+const qEl = document.getElementById('captcha_q');
+const tokenEl = document.getElementById('captcha_token');
+const ansEl = document.getElementById('captcha_answer');
+loadCaptcha(qEl, tokenEl, ansEl);
+document.getElementById('captcha_new').onclick = () => loadCaptcha(qEl, tokenEl, ansEl);
+
+document.getElementById('send').onclick = async (e) => {
+  clearMsg(msg);
+  const btn = e.currentTarget;
+  busy(btn, true, 'Sending…');
+  try {
+    const out = await api('/forgot', {
+      email: document.getElementById('email').value.trim(),
+      captcha_token: tokenEl.value, captcha_answer: ansEl.value,
+    });
+    show(msg, out.message, 'ok');
+    stepTo('step-set');
+  } catch (err) {
+    show(msg, err.message);
+    loadCaptcha(qEl, tokenEl, ansEl);
+  } finally { busy(btn, false); }
+};
+
+document.getElementById('save').onclick = async (e) => {
+  clearMsg(msg2);
+  const btn = e.currentTarget;
+  busy(btn, true, 'Saving…');
+  try {
+    await api('/reset', {
+      email: document.getElementById('email').value.trim(),
+      code: document.getElementById('code').value.trim(),
+      password: document.getElementById('password').value,
+    });
+    stepTo('step-done');
+  } catch (err) { show(msg2, err.message); } finally { busy(btn, false); }
+};
+</script>
+</body>
+</html>

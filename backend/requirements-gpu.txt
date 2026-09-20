@@ -1,0 +1,68 @@
+# GPU / model stack for Sentinel AI.
+#
+# INSTALL ORDER MATTERS. Read this before running anything.
+#
+#   pip install -r requirements.txt          # core, CPU-only, always safe
+#   pip install -r requirements-gpu.txt      # this file
+#
+# Why the order matters
+# ---------------------
+# `ultralytics` depends on `torch` without pinning an index. If pip resolves it
+# from plain PyPI it installs the CPU-only wheel and SILENTLY REPLACES a working
+# CUDA build - torch.cuda.is_available() flips to False and inference quietly
+# drops to CPU. That is why torch is pinned here with an explicit index URL and
+# listed BEFORE ultralytics.
+#
+# If it happens anyway, repair with:
+#   pip install --force-reinstall torch==2.11.0 torchvision \
+#       --index-url https://download.pytorch.org/whl/cu128
+#
+# Check afterwards, every time:
+#   python tools/verify_stack.py
+#
+# RTX 50-series (Blackwell, SM 12.0) REQUIRES the cu128 build. The default PyPI
+# wheel installs fine and then fails at the first kernel launch with
+# "no kernel image is available for execution on the device".
+
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+torch==2.11.0
+torchvision
+
+# Detection. Install AFTER torch above.
+ultralytics>=8.3.0
+
+# Behaviour classifier training
+scikit-learn>=1.5.0
+
+# ---------------------------------------------------------------------------
+# Optional extras - uncomment what you need.
+# ---------------------------------------------------------------------------
+
+# Open-vocabulary grounding (nvidia/LocateAnything-3B). ~7 GB VRAM in fp16.
+# transformers>=4.48.0
+# accelerate>=1.2.0
+
+# Person re-identification. Falls back to a handcrafted descriptor without it.
+# torchreid>=1.4.0
+
+# Face matching.
+#
+# TRAP: insightface depends on plain `onnxruntime`, and when both that and
+# `onnxruntime-gpu` are installed the CPU build shadows the GPU one - the CUDA
+# execution provider silently disappears and face matching runs on CPU. Install
+# insightface FIRST, then remove the CPU build:
+#
+#   pip install insightface
+#   pip uninstall -y onnxruntime
+#   pip install --force-reinstall --no-deps onnxruntime-gpu
+#
+# Confirm with:  python -c "import torch, onnxruntime; print(onnxruntime.get_available_providers())"
+# CUDAExecutionProvider must appear. Importing torch first matters: onnxruntime
+# reuses the CUDA/cuDNN DLLs torch already loaded.
+# insightface>=2.0
+# onnxruntime-gpu>=1.20.0
+
+# Semantic vector search. Falls back to a built-in TF-IDF index without it.
+# chromadb>=0.5.23
+# sentence-transformers>=3.3.0

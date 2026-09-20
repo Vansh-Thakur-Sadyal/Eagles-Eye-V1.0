@@ -1,0 +1,95 @@
+{
+  "generated": {
+    "structure": {
+      "at": "2026-09-19T00:08:56.098246+00:00",
+      "provenance": null,
+      "result": {
+        "root": "D:\\Eagle_Eye_V1.0\\datasets",
+        "folders_created": 11,
+        "detection_classes": [
+          "person",
+          "backpack",
+          "handbag",
+          "suitcase",
+          "bicycle",
+          "motorcycle",
+          "car",
+          "bus",
+          "truck",
+          "bottle",
+          "laptop"
+        ],
+        "metadata": {
+          "source": "database",
+          "cameras": 1,
+          "zones": 2,
+          "sites": 1
+        }
+      }
+    },
+    "behaviour": {
+      "at": "2026-09-19T08:02:34.984351+00:00",
+      "provenance": {
+        "kind": "simulated",
+        "suitable_for": [
+          "training and evaluating the behaviour, relationship and object agents on trajectory features (the representation they use in production)",
+          "threshold tuning",
+          "end-to-end pipeline testing"
+        ],
+        "not_suitable_for": [
+          "training a detector - a model trained on these renders will not generalise to real CCTV; use Open Images / MOT17 / UCF-Crime for that"
+        ]
+      },
+      "result": {
+        "categories": {
+          "abandoned_object": {
+            "scenes": 24,
+            "positive": 12,
+            "negative": 12,
+            "path": "behavior/abandoned_object"
+          }
+        },
+        "seed": 20260919,
+        "fps": 12,
+        "resolution": [
+          960,
+          540
+        ]
+      }
+    },
+    "reasoning": {
+      "at": "2026-09-19T00:08:57.453996+00:00",
+      "provenance": {
+        "kind": "derived from incidents this deployment actually recorded",
+        "suitable_for": [
+          "fine-tuning incident narration and the conversational assistant",
+          "regression-testing the guardrails"
+        ],
+        "not_suitable_for": [
+          "anything, until you have collected a few hundred real incidents"
+        ]
+      },
+      "result": {
+        "incidents": 1,
+        "qa_pairs": 6,
+        "qa_by_kind": {
+          "summary": 1,
+          "risk_explanation": 1,
+          "factor_breakdown": 1,
+          "recommendation": 1,
+          "timeline": 1,
+          "guardrail_identity": 1
+        },
+        "files": [
+          "events.json",
+          "trajectories.json",
+          "reports.json",
+          "qa.jsonl"
+        ],
+        "note": "Derived from incidents this deployment actually recorded. Run the pipeline for longer, or against recorded footage, to grow the set. Guardrail pairs (contents and identity) are included so a fine-tuned model inherits the platform's limits rather than learning to overstep them.",
+        "warning": "Only 1 incident(s) available. This is far too few to fine-tune on; treat it as a format check and collect more first."
+      }
+    }
+  },
+  "read_this_first": "Simulated trajectory data, augmented imagery and real footage have different standing. Check `provenance` for each section before training on it."
+}

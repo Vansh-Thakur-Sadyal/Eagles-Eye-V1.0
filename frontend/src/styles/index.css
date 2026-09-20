@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { margin: 0; padding: 0; height: 100%; }
+  body {
+    background: theme('colors.background');
+    color: theme('colors.on-surface');
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 13px;
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Slim scrollbars: the Stitch export hides them entirely, which loses the
+     affordance on long telemetry tables. This keeps them unobtrusive. */
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #c4c5d7; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #a3a5bb; }
+}
+
+@layer components {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+  }
+
+  .card {
+    @apply bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-sm;
+  }
+  .card-header {
+    @apply flex items-center justify-between h-9 px-space-md bg-surface
+           border-b border-outline-variant/40 rounded-t-xl;
+  }
+  .card-title {
+    @apply font-headline-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold;
+  }
+  .mono { @apply font-data-mono-sm text-data-mono-sm; }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 h-8 px-3 rounded-lg
+           font-headline-sm text-headline-sm transition-colors disabled:opacity-50
+           disabled:cursor-not-allowed whitespace-nowrap;
+  }
+  .btn-primary { @apply btn bg-primary-container text-on-primary hover:bg-primary; }
+  .btn-secondary {
+    @apply btn bg-surface-container-lowest border border-outline-variant text-on-surface
+           hover:bg-surface hover:border-outline;
+  }
+  .btn-danger { @apply btn bg-error text-on-error hover:brightness-110; }
+  .btn-ghost { @apply btn text-on-surface-variant hover:bg-surface-container hover:text-on-surface; }
+  .btn-xs { @apply h-6 px-2 text-label-sm font-label-sm; }
+
+  .input {
+    @apply w-full h-8 px-2.5 bg-surface-container-lowest border border-outline-variant
+           rounded-lg font-body-sm text-body-sm text-on-surface
+           placeholder:text-outline focus:outline-none focus:border-primary-container
+           focus:ring-1 focus:ring-primary-container transition-colors;
+  }
+  .label { @apply block font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant mb-1; }
+
+  .pill {
+    @apply inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full border
+           font-data-mono-sm text-data-mono-sm font-semibold uppercase tracking-wider whitespace-nowrap;
+  }
+  .pip { @apply w-1.5 h-1.5 rounded-full shrink-0; }
+
+  .table-wrap { @apply w-full overflow-x-auto; }
+  .tbl { @apply w-full text-left border-collapse; }
+  .tbl thead th {
+    @apply h-8 px-space-md bg-surface font-label-sm text-label-sm uppercase tracking-wider
+           text-on-surface-variant font-semibold border-b border-outline-variant/40 whitespace-nowrap;
+  }
+  .tbl tbody td {
+    @apply h-9 px-space-md border-b border-outline-variant/25 font-body-sm text-body-sm align-middle;
+  }
+  .tbl tbody tr:hover { @apply bg-surface; }
+}

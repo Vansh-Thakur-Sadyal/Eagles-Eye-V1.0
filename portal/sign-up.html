@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create an account — Eagles Eye</title>
+<link rel="icon" type="image/png" href="/portal/assets/favicon.png">
+<link rel="stylesheet" href="/portal/assets/portal.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/portal/" aria-label="Eagles Eye - home"><img src="/portal/assets/eagles-eye-emblem.png" alt="Eagles Eye"></a>
+  <div class="actions" style="margin-left:auto"><a class="btn ghost" href="/portal/sign-in.html">Sign in</a></div>
+</header>
+
+<div class="auth-wrap">
+  <div class="card wide">
+
+    <!-- step 1: details ------------------------------------------------ -->
+    <section id="step-details" class="step active">
+      <h1>Register your site</h1>
+      <p class="sub">An account belongs to one organisation. You will only ever
+         see that organisation's cameras and incidents.</p>
+
+      <div class="row">
+        <div><label for="name">Your name</label><input id="name" autocomplete="name" placeholder="Vansh Thakur"></div>
+        <div><label for="phone">Mobile number</label><input id="phone" inputmode="numeric" autocomplete="tel" placeholder="10-digit Indian mobile"></div>
+      </div>
+      <label for="email">Gmail address</label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@gmail.com">
+      <p class="note" style="margin:6px 0 0">Only Gmail addresses are accepted, so throwaway inboxes cannot register.</p>
+
+      <div class="row">
+        <div>
+          <label for="account_type">Kind of site</label>
+          <select id="account_type"><option value="">Choose…</option></select>
+        </div>
+        <div><label for="organisation">Organisation</label><input id="organisation" placeholder="e.g. Chandigarh International Airport"></div>
+      </div>
+      <label for="site_label">Site / terminal (optional)</label>
+      <input id="site_label" placeholder="e.g. Terminal 2, Gate area">
+
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="new-password" placeholder="At least 8 characters">
+
+      <div class="captcha" style="margin-top:14px">
+        <div>
+          <label for="captcha_answer">Anti-robot check</label>
+          <p class="q" id="captcha_q" style="margin:0 0 6px">Loading…</p>
+          <input id="captcha_answer" inputmode="numeric" placeholder="Your answer">
+          <input id="captcha_token" type="hidden">
+        </div>
+        <button class="btn ghost" id="captcha_new" type="button">New question</button>
+      </div>
+
+      <div class="check">
+        <input type="checkbox" id="terms">
+        <label for="terms" style="margin:0">
+          I have read and accept the <a href="/portal/terms.html" target="_blank" rel="noopener">Terms and Conditions</a>,
+          including that this is an <strong>educational research platform</strong>, that I will not
+          use it to profile, target or harass anyone, and that VisionCoders is not responsible
+          for how I use it.
+        </label>
+      </div>
+
+      <button class="btn big" id="submit" style="width:100%">Create account</button>
+      <div class="msg" id="msg"></div>
+      <p class="foot">Already registered? <a href="/portal/sign-in.html">Sign in</a></p>
+    </section>
+
+    <!-- step 2: the code ----------------------------------------------- -->
+    <section id="step-code" class="step">
+      <h1>Check your inbox</h1>
+      <p class="sub">We sent a six-digit code to <strong id="sent_to"></strong> and to your phone.
+         It is valid for 10 minutes.</p>
+      <label for="code">Verification code</label>
+      <input id="code" class="otp-input" inputmode="numeric" maxlength="6" placeholder="······">
+      <button class="btn big" id="verify" style="width:100%;margin-top:14px">Verify and finish</button>
+      <div class="msg" id="msg2"></div>
+      <p class="foot"><a href="#" id="resend">Send the code again</a></p>
+    </section>
+
+    <!-- step 3: done ---------------------------------------------------- -->
+    <section id="step-done" class="step">
+      <h1>You're verified</h1>
+      <p class="sub">Your account is active. Sign in to reach the dashboard.</p>
+      <a class="btn big" href="/portal/sign-in.html" style="width:100%">Go to sign in</a>
+    </section>
+
+  </div>
+</div>
+
+<script src="/portal/assets/portal.js"></script>
+<script>
+const msg = document.getElementById('msg');
+const msg2 = document.getElementById('msg2');
+const qEl = document.getElementById('captcha_q');
+const tokenEl = document.getElementById('captcha_token');
+const ansEl = document.getElementById('captcha_answer');
+
+// The site types come from the API so the form can never drift from the server.
+fetch('/api/portal/config').then((r) => r.json()).then((cfg) => {
+  const sel = document.getElementById('account_type');
+  (cfg.account_types || []).forEach((t) => {
+    const o = document.createElement('option');
+    o.value = t.value; o.textContent = t.label; sel.appendChild(o);
+  });
+});
+loadCaptcha(qEl, tokenEl, ansEl);
+document.getElementById('captcha_new').onclick = () => loadCaptcha(qEl, tokenEl, ansEl);
+
+document.getElementById('submit').onclick = async (e) => {
+  clearMsg(msg);
+  const btn = e.currentTarget;
+  const body = {
+    name: document.getElementById('name').value.trim(),
+    email: document.getElementById('email').value.trim(),
+    phone: document.getElementById('phone').value.trim(),
+    password: document.getElementById('password').value,
+    account_type: document.getElementById('account_type').value,
+    organisation: document.getElementById('organisation').value.trim(),
+    site_label: document.getElementById('site_label').value.trim(),
+    terms_accepted: document.getElementById('terms').checked,
+    captcha_token: tokenEl.value,
+    captcha_answer: ansEl.value,
+  };
+  if (!body.terms_accepted) { show(msg, 'You must accept the Terms and Conditions to register.'); return; }
+  busy(btn, true, 'Creating…');
+  try {
+    const out = await api('/signup', body);
+    document.getElementById('sent_to').textContent = out.email;
+    stepTo('step-code');
+  } catch (err) {
+    show(msg, err.message);
+    loadCaptcha(qEl, tokenEl, ansEl);       // one challenge, one attempt
+  } finally { busy(btn, false); }
+};
+
+document.getElementById('verify').onclick = async (e) => {
+  clearMsg(msg2);
+  const btn = e.currentTarget;
+  busy(btn, true, 'Verifying…');
+  try {
+    await api('/verify', {
+      email: document.getElementById('email').value.trim(),
+      code: document.getElementById('code').value.trim(),
+    });
+    stepTo('step-done');
+  } catch (err) { show(msg2, err.message); } finally { busy(btn, false); }
+};
+
+document.getElementById('resend').onclick = async (ev) => {
+  ev.preventDefault();
+  clearMsg(msg2);
+  try {
+    await loadCaptcha(qEl, tokenEl, ansEl);
+    const out = await api('/resend', {
+      email: document.getElementById('email').value.trim(),
+      captcha_token: tokenEl.value, captcha_answer: ansEl.value,
+    });
+    show(msg2, out.message || 'A new code is on its way.', 'ok');
+  } catch (err) { show(msg2, err.message); }
+};
+</script>
+</body>
+</html>

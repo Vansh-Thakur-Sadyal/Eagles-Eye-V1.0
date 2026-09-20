@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-container":"#1d4ed8","surface":"#f8f9ff","surface-container":"#e5eeff","surface-container-high":"#dce9ff","on-background":"#0b1c30","tertiary":"#5700c0","secondary-fixed":"#dae2fd","surface-bright":"#f8f9ff","on-primary-fixed":"#001551","outline":"#747686","tertiary-fixed-dim":"#d2bbff","on-error-container":"#93000a","surface-tint":"#2151da","on-primary-fixed-variant":"#0039b5","secondary-fixed-dim":"#bec6e0","primary-fixed-dim":"#b7c4ff","on-tertiary-container":"#dfccff","inverse-primary":"#b7c4ff","on-secondary-container":"#5c647a","on-primary":"#ffffff","surface-dim":"#cbdbf5","on-secondary":"#ffffff","tertiary-fixed":"#eaddff","on-secondary-fixed-variant":"#3f465c","surface-container-highest":"#d3e4fe","error-container":"#ffdad6","outline-variant":"#c4c5d7","secondary":"#565e74","inverse-on-surface":"#eaf1ff","primary":"#0037b0","background":"#f8f9ff","surface-container-lowest":"#ffffff","on-error":"#ffffff","surface-container-low":"#eff4ff","on-tertiary-fixed-variant":"#5a00c6","on-primary-container":"#cad3ff","error":"#ba1a1a","on-surface":"#0b1c30","on-tertiary-fixed":"#25005a","on-surface-variant":"#434655","on-tertiary":"#ffffff","surface-variant":"#d3e4fe","tertiary-container":"#712ae2","secondary-container":"#dae2fd","primary-fixed":"#dce1ff","inverse-surface":"#213145","on-secondary-fixed":"#131b2e"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"1.5rem","margin-lg":"1.5rem","gutter-lg":"1rem","space-lg":"1rem","space-md":"0.75rem","space-xs":"0.25rem","gutter":"0.75rem","margin":"1rem","space-sm":"0.5rem"},fontFamily:{"data-mono-sm":["JetBrains Mono"],"data-mono-md":["JetBrains Mono"],"display-lg":["Geist"],"display-lg-mobile":["Geist"],"body-lg":["Inter"],"label-sm":["Inter"],"headline-sm":["Geist"],"body-md":["Inter"],"headline-md":["Geist"],"label-md":["Inter"],"body-sm":["Inter"],"headline-lg":["Geist"]},fontSize:{"data-mono-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"data-mono-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"headline-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}],"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin-lg flex items-center justify-between gap-space-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><div class="flex items-center gap-space-md shrink-0"><img alt="Sentinel AI Shield Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYjFCfs11R9L3rAsRHU1e4Ub09nU0qqiEhGJMZurJ4beCz38LZ3wJNsLe2JMKrfgy2JItEE1KA42UENCy-7urXk9nbVAqo_eJQCWU53JIGK5jNr7K2OvJOXhxlZ-LFwgHgnS9bIUgOcZ_x0tVTHxPRuA4LUhROATuww6JjWfSfh5uf1h_PGRW8AMSvI1m55eiY68xQ2Se8LHa5Of9B25GnUr1ji4m-YZdOL94GvhtTxkO-cj1iGNL4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-wider">SENTINEL AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">PUBLIC SAFETY INTELLIGENCE PLATFORM</span></div><div class="h-6 w-px bg-outline-variant/50 ml-space-xs"></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-data-mono-sm text-data-mono-sm font-semibold uppercase tracking-wider">SYSTEM OPERATIONAL</span></div></div><div class="flex-1 max-w-2xl px-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">smart_toy</span><input class="w-full h-9 pl-9 pr-24 bg-surface-container-low border border-outline-variant/50 rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-all" placeholder='Ask Sentinel or jump to route... (e.g., "Track Re-ID 882", "Terminal 2 Crowd")' type="text"/><div class="absolute right-2.5 flex items-center gap-1.5"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant/50 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Ctrl+K</kbd><span class="material-symbols-outlined text-primary text-[18px] cursor-pointer hover:text-primary-container transition-colors">mic</span></div></div></div><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-2.5"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-300"><span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span><span class="font-data-mono-sm text-data-mono-sm font-bold">7 ACTIVE</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface"><span class="material-symbols-outlined text-[14px] text-primary">videocam</span><span>248/252 CAMS ONLINE</span></div><div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">schedule</span><span>18:44:12 UTC</span></div></div><div class="h-6 w-px bg-outline-variant/50"></div><div class="relative"><button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-data-mono-sm text-data-mono-sm flex items-center justify-center font-bold">3</span></div><div class="flex items-center gap-2.5 pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Cmdr. R. Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant">Watch Commander - SOC Alpha</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><nav class="flex flex-col gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">OPERATIONS</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="command-center" href="#"><span>Command Center</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="live-surveillance" href="#"><span>Live Surveillance</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="active-incidents" href="#"><span>Active Incidents</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="alerts" href="#"><span>Alerts</span></a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INTELLIGENCE</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="people-tracks" href="#"><span>People &amp; Tracks</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="behavior-intelligence" href="#"><span>Behavior Intelligence</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="crowd-intelligence" href="#"><span>Crowd Intelligence</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="object-intelligence" href="#"><span>Object Intelligence</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="relationship-intelligence" href="#"><span>Relationship Intelligence</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="re-id-intelligence" href="#"><span>Re-ID Intelligence</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="threat-assessment" href="#"><span>Threat Assessment</span></a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INVESTIGATION</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="forensic-search" href="#"><span>Forensic Search</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="evidence-center" href="#"><span>Evidence Center</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="incident-timeline" href="#"><span>Incident Timeline</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="ai-investigation" href="#"><span>AI Investigation</span></a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">SPATIAL &amp; AR</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="digital-twin-3d" href="#"><span>Digital Twin 3D</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="3d-incident-replay" href="#"><span>3D Incident Replay</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="ar-field-vision" href="#"><span>AR Field Vision</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="vr-command-center" href="#"><span>VR Command Center</span></a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">AUTOMATION</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="agent-orchestrator" href="#"><span>Agent Orchestrator</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="workflow-automation" href="#"><span>Workflow Automation</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="reports" href="#"><span>Reports</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="notifications" href="#"><span>Notifications</span></a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">GOVERNANCE &amp; SYSTEM</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="system-health" href="#"><span>System Health</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="data-pipeline" href="#"><span>Data Pipeline</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="ai-model-monitoring" href="#"><span>AI Model Monitoring</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="camera-management" href="#"><span>Camera Management</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="users-roles" href="#"><span>Users &amp; Roles</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="privacy-audit" href="#"><span>Privacy &amp; Audit</span></a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="settings" href="#"><span>Settings</span></a></div></nav></div><div class="p-space-md border-t border-outline-variant/40 bg-surface-container-low"><div class="flex flex-col gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg border border-outline-variant/60"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between"><span class="font-headline-sm text-headline-sm font-semibold truncate text-on-surface">Cmdr. R. Chen</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">#SOC-04</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Terminal A - Sector 1</span></div></div><div class="flex items-center justify-between pt-1.5 border-t border-outline-variant/30"><div class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-data-mono-sm text-data-mono-sm text-emerald-800 font-medium">Online &amp; Authorized</span></div><div class="flex items-center gap-1"><button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" title="Lock Station"><span class="material-symbols-outlined text-[16px]">lock</span></button><button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Operator Logout"><span class="material-symbols-outlined text-[16px]">logout</span></button></div></div></div></div></aside><div class="pl-72"><main class="relative pt-16 min-h-screen bg-background w-full px-gutter-lg py-margin"><div class="flex flex-col w-full">
+<!-- Script to ensure the global App Shell has Camera Management active -->
+<script>
+    (function() {
+      const links = document.querySelectorAll('aside nav a[data-path]');
+      links.forEach(el => {
+        if (el.getAttribute('data-path') === 'camera-management') {
+          el.className = 'flex items-center justify-between px-3 py-1.5 rounded-lg bg-primary-container text-on-primary font-semibold shadow-sm font-headline-sm text-headline-sm';
+        } else {
+          el.className = 'flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm';
+        }
+      });
+    })();
+  </script>
+<!-- Screen Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-2">
+<span class="font-data-mono-sm text-data-mono-sm uppercase tracking-widest text-primary font-bold">SYSTEM GOVERNANCE // SENSOR MESH</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">NODE CLUSTER 10.24.0.0/16</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Camera Fleet Management &amp; Spatial Coverage Engine</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">RTSP ingestion streams, edge TensorRT hardware allocation, optical FOV cones, and blind spot diagnostics across 252 node endpoints.</p>
+</div>
+<div class="flex items-center gap-2.5 shrink-0">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">sync</span>
+<span>Sync Homography</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span>Export Topology</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors shadow-sm font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Provision Node</span>
+</button>
+</div>
+</div>
+<!-- KPI Metrics Deck (4 Cards) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter mb-space-lg">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Monitored Cameras</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">248<span class="text-on-surface-variant font-headline-lg text-headline-lg font-normal"> / 252</span></span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>98.4%
+            </span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">videocam</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-data-mono-sm text-data-mono-sm text-error font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>4 NODES OFFLINE
+        </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Heartbeat interval: 1.0s</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Spatial FOV Coverage</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">94.2%</span>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant">Facility Mesh</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-data-mono-sm text-data-mono-sm text-amber-800 font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>3.8% BLIND-SPOT INDEX
+        </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Concourse Alpha focus</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Aggregate Edge Throughput</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">4.8</span>
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold">Gbps</span>
+<span class="font-data-mono-sm text-data-mono-sm text-emerald-800 font-semibold ml-1">0% drops</span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-primary">bolt</span>18.2ms AVG EDGE LATENCY
+        </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">NVENC H.265 Main</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Calibration &amp; Drift Status</span>
+<div class="flex items-baseline gap-2 mt-1">
+<span class="font-display-lg text-display-lg text-on-surface font-bold">99.1%</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed font-data-mono-sm text-data-mono-sm font-semibold">
+              Homography Lock
+            </span>
+</div>
+</div>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">architecture</span>
+</div>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 bg-surface-container-low px-2 py-1.5 rounded-lg">
+<span class="font-data-mono-sm text-data-mono-sm text-amber-800 font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>2 NODES DRIFT ALERT
+        </span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Re-projection error &lt; 1.2px</span>
+</div>
+</div>
+</div>
+<!-- Main Split Layout (60% Left, 40% Right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: Spatial Coverage & Inventory (7 Cols on desktop) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- Spatial Camera Coverage & Overlap Grid Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Module Header -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-wide">Terminal 2 &amp; Concourse Alpha // Spatial Overlap Matrix</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<span>GRID: LEVEL 02 DEPARTURES</span>
+</div>
+</div>
+<!-- Filter Chips Row -->
+<div class="p-space-sm bg-surface-container-lowest flex items-center justify-between flex-wrap gap-1.5 shadow-sm">
+<div class="flex items-center gap-1.5 flex-wrap">
+<button class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-colors">
+              All 252 Cams
+            </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+              Overlapping Corridors
+            </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+              Turnstile Chokepoints
+            </button>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-medium transition-colors">
+              Restricted Gates
+            </button>
+<button class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 hover:bg-amber-100 font-label-sm text-label-sm font-semibold transition-colors flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span>Blind Spot Heatmap
+            </button>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Recenter Orthomap">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+</button>
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface-variant" title="Layer Projection">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</button>
+</div>
+</div>
+<!-- Interactive SVG Facility Map with FOV Cones -->
+<div class="relative w-full h-[400px] bg-surface-container-low overflow-hidden select-none">
+<!-- Ambient Blueprint Grid -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="gridPattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(116, 118, 134, 0.12)" stroke-width="1"></path>
+</pattern>
+<!-- Gradient Optical Cones -->
+<!-- Normal Blue FOV -->
+<radialgradient cx="0%" cy="0%" id="fovBlue" r="100%">
+<stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.38"></stop>
+<stop offset="70%" stop-color="#2151da" stop-opacity="0.16"></stop>
+<stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.0"></stop>
+</radialgradient>
+<!-- Green High Overlap FOV -->
+<radialgradient cx="0%" cy="0%" id="fovGreen" r="100%">
+<stop offset="0%" stop-color="#059669" stop-opacity="0.45"></stop>
+<stop offset="70%" stop-color="#10b981" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#059669" stop-opacity="0.0"></stop>
+</radialgradient>
+<!-- Amber Degraded / Drift FOV -->
+<radialgradient cx="0%" cy="0%" id="fovAmber" r="100%">
+<stop offset="0%" stop-color="#d97706" stop-opacity="0.45"></stop>
+<stop offset="70%" stop-color="#f59e0b" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#d97706" stop-opacity="0.0"></stop>
+</radialgradient>
+<!-- Purple Thermal FOV -->
+<radialgradient cx="0%" cy="0%" id="fovThermal" r="100%">
+<stop offset="0%" stop-color="#712ae2" stop-opacity="0.4"></stop>
+<stop offset="70%" stop-color="#5700c0" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#712ae2" stop-opacity="0.0"></stop>
+</radialgradient>
+</defs>
+<!-- Background Grid Fill -->
+<rect fill="url(#gridPattern)" height="100%" width="100%"></rect>
+<!-- Architectural Geometry / Walls / Walkways -->
+<g fill="none" stroke="#747686" stroke-opacity="0.3" stroke-width="1.5">
+<!-- Terminal Outer Perimeter -->
+<path d="M 40 40 L 760 40 L 760 360 L 40 360 Z" stroke-opacity="0.45" stroke-width="2"></path>
+<!-- Security Chokepoint Buffer -->
+<rect fill="rgba(218, 226, 253, 0.25)" height="250" stroke-dasharray="4 4" width="130" x="180" y="70"></rect>
+<!-- Concourse Main Central Artery -->
+<rect fill="rgba(248, 249, 255, 0.7)" height="150" width="370" x="360" y="120"></rect>
+<!-- Gate 4 Waiting Lounge -->
+<rect fill="rgba(229, 238, 255, 0.4)" height="60" width="160" x="420" y="50"></rect>
+<!-- Gate 5 Waiting Lounge -->
+<rect fill="rgba(229, 238, 255, 0.4)" height="60" width="140" x="600" y="50"></rect>
+<!-- Sector 4 Baggage Claim Corridor -->
+<rect fill="rgba(255, 218, 214, 0.2)" height="70" stroke="#ba1a1a" stroke-dasharray="3 3" stroke-opacity="0.4" width="320" x="420" y="280"></rect>
+</g>
+<!-- Labels for Zones inside SVG -->
+<text fill="#434655" font-family="Geist" font-size="11" font-weight="700" letter-spacing="1" x="50" y="65">ZONE A: INGRESS TURNSTILES</text>
+<text fill="#565e74" font-family="Geist" font-size="10" font-weight="600" x="195" y="90">SECURITY SCREENING 01</text>
+<text fill="#0037b0" font-family="Geist" font-size="10" font-weight="700" x="440" y="75">GATE 04 - CONCOURSE ALPHA</text>
+<text fill="#565e74" font-family="Geist" font-size="10" font-weight="600" x="615" y="75">GATE 05 BOARDING</text>
+<text fill="#ba1a1a" font-family="Geist" font-size="10" font-weight="700" x="440" y="320">SECTOR 04 - BAGGAGE CAROUSEL [FAILOVER RISK]</text>
+<!-- FOV CONES -->
+<!-- CAM-009 (Ingress West Fixed - Blue Normal) -->
+<g transform="translate(60, 190) rotate(15)">
+<path d="M 0 0 L 140 -60 A 160 160 0 0 1 140 60 Z" fill="url(#fovBlue)" stroke="#1d4ed8" stroke-opacity="0.6" stroke-width="0.75"></path>
+<line stroke="#1d4ed8" stroke-dasharray="2 2" stroke-opacity="0.6" stroke-width="0.5" x1="0" x2="160" y1="0" y2="0"></line>
+</g>
+<!-- CAM-101 (Security Turnstile - Green High Overlap) -->
+<g transform="translate(190, 80) rotate(70)">
+<path d="M 0 0 L 170 -65 A 190 190 0 0 1 170 65 Z" fill="url(#fovGreen)" stroke="#059669" stroke-opacity="0.7" stroke-width="0.75"></path>
+</g>
+<!-- CAM-204 (Screening Exit - Green High Overlap Corroboration) -->
+<g transform="translate(300, 290) rotate(-65)">
+<path d="M 0 0 L 180 -70 A 200 200 0 0 1 180 70 Z" fill="url(#fovGreen)" stroke="#059669" stroke-opacity="0.7" stroke-width="0.75"></path>
+</g>
+<!-- CAM-042 (Gate 4 PTZ - Blue Active Selected Inspector Focus) -->
+<g transform="translate(430, 70) rotate(80)">
+<path d="M 0 0 L 220 -85 A 240 240 0 0 1 220 85 Z" fill="url(#fovBlue)" stroke="#1d4ed8" stroke-opacity="0.9" stroke-width="1.5"></path>
+<!-- Active Reticle Arc -->
+<path d="M 70 -27 A 80 80 0 0 1 70 27" fill="none" stroke="#1d4ed8" stroke-dasharray="3 2" stroke-width="1.5"></path>
+<line stroke="#1d4ed8" stroke-width="1" x1="0" x2="230" y1="0" y2="0"></line>
+</g>
+<!-- CAM-311 (Thermal Concourse Center - Purple Thermal IR) -->
+<g transform="translate(540, 250) rotate(-110)">
+<path d="M 0 0 L 160 -55 A 175 175 0 0 1 160 55 Z" fill="url(#fovThermal)" stroke="#712ae2" stroke-opacity="0.7" stroke-width="0.75"></path>
+</g>
+<!-- CAM-117 (Sector 4 Baggage Claim - Amber/Red Degraded Heartbeat) -->
+<g transform="translate(680, 310) rotate(-160)">
+<path d="M 0 0 L 140 -50 A 150 150 0 0 1 140 50 Z" fill="url(#fovAmber)" stroke="#ba1a1a" stroke-dasharray="4 2" stroke-opacity="0.8" stroke-width="1"></path>
+<circle cx="90" cy="0" fill="rgba(186, 26, 26, 0.15)" r="18" stroke="#ba1a1a" stroke-dasharray="2 2" stroke-width="0.75"></circle>
+</g>
+<!-- Blind Spot Indicator Zone Marker -->
+<g transform="translate(670, 180)">
+<circle cx="0" cy="0" fill="rgba(217, 119, 6, 0.1)" r="28" stroke="#d97706" stroke-dasharray="3 3" stroke-width="1"></circle>
+<text fill="#92400e" font-family="JetBrains Mono" font-size="8" font-weight="700" text-anchor="middle" x="0" y="3">BLIND SPOT 3.8%</text>
+</g>
+<!-- CAMERA NODES (Anchors) -->
+<!-- CAM-009 -->
+<circle cx="60" cy="190" fill="#1d4ed8" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="60" y="178">CAM-009</text>
+<!-- CAM-101 -->
+<circle cx="190" cy="80" fill="#059669" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="190" y="68">CAM-101</text>
+<!-- CAM-204 -->
+<circle cx="300" cy="290" fill="#059669" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#0b1c30" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="300" y="310">CAM-204</text>
+<!-- CAM-042 (TARGET / SELECTED INSPECTOR) -->
+<circle class="animate-pulse" cx="430" cy="70" fill="#1d4ed8" r="8" stroke="#ffffff" stroke-width="2.5"></circle>
+<circle cx="430" cy="70" fill="none" r="14" stroke="#1d4ed8" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<text fill="#0037b0" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" x="430" y="52">★ CAM-042 [ACTIVE]</text>
+<!-- CAM-311 -->
+<circle cx="540" cy="250" fill="#712ae2" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#5700c0" font-family="JetBrains Mono" font-size="9" font-weight="600" text-anchor="middle" x="540" y="272">CAM-311 [FLIR]</text>
+<!-- CAM-117 -->
+<circle cx="680" cy="310" fill="#ba1a1a" r="7" stroke="#ffffff" stroke-width="2"></circle>
+<text fill="#ba1a1a" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" x="680" y="332">CAM-117 [FAIL]</text>
+</svg>
+<!-- Top-Right Legend Box -->
+<div class="absolute top-3 right-3 p-space-sm bg-surface-container-lowest/90 backdrop-blur rounded-lg shadow-sm flex flex-col gap-1.5 z-10 text-[11px]">
+<span class="font-label-sm text-label-sm uppercase font-bold text-on-surface-variant mb-0.5">FOV Optical Legend</span>
+<div class="flex items-center gap-2 font-data-mono-sm text-data-mono-sm text-on-surface">
+<span class="w-3 h-3 rounded-full bg-primary/40 border border-primary"></span>
+<span>Sony 4K PTZ (Active Slew)</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono-sm text-data-mono-sm text-on-surface">
+<span class="w-3 h-3 rounded-full bg-emerald-500/40 border border-emerald-600"></span>
+<span>15m Overlap Corroboration</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono-sm text-data-mono-sm text-on-surface">
+<span class="w-3 h-3 rounded-full bg-purple-600/40 border border-purple-700"></span>
+<span>FLIR Thermal IR Radiometric</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono-sm text-data-mono-sm text-error font-semibold">
+<span class="w-3 h-3 rounded-full bg-error/40 border border-error"></span>
+<span>Degraded Signal / Blind Spot</span>
+</div>
+</div>
+<!-- Bottom Coordinates readout -->
+<div class="absolute bottom-2 left-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded">
+<span>ORTHO-COORD: 37°37'08.2"N 122°22'29.6"W // ELEVATION +14.2M</span>
+</div>
+</div>
+</div>
+<!-- Production Camera Fleet Inventory Table Module -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Search, Filtering, Batch Actions Bar -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 flex-1 max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full h-8 pl-8 pr-3 bg-surface-container-lowest rounded font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary shadow-sm" placeholder="Filter by Camera ID, Zone, Sensor, or IP..." type="text" value=""/>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px] text-primary">network_ping</span>
+<span>Ping Heartbeat</span>
+</button>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px] text-primary">straighten</span>
+<span>Recalibrate Homography</span>
+</button>
+<button class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors shadow-sm font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[15px] text-secondary">system_update</span>
+<span>Firmware Update</span>
+</button>
+</div>
+</div>
+<!-- Dense Data Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-data-mono-sm text-data-mono-sm uppercase tracking-wider">
+<th class="py-2.5 px-3">Node ID</th>
+<th class="py-2.5 px-3">Physical Location / Zone</th>
+<th class="py-2.5 px-3">Sensor Hardware</th>
+<th class="py-2.5 px-3">Health Status</th>
+<th class="py-2.5 px-3">Resolution &amp; FPS</th>
+<th class="py-2.5 px-3">Edge Latency</th>
+<th class="py-2.5 px-3">AI Pipeline Models</th>
+<th class="py-2.5 px-3 text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Row 1: CAM-042 (Selected) -->
+<tr class="bg-secondary-container/40 hover:bg-secondary-container transition-colors font-medium">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-primary">CAM-042</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-headline-sm text-headline-sm">Gate 4 Concourse Alpha</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Sony 4K IMX-485 IR PTZ</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>ONLINE
+                  </span>
+</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm">3840x2160 @ 60fps</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm text-emerald-800 font-bold">14.2 ms</td>
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-primary">YOLOv10</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-secondary">ByteTrack</span>
+<span class="px-1.5 py-0.5 rounded bg-purple-100 font-data-mono-sm text-[10px] text-purple-900">OSNet</span>
+</div>
+</td>
+<td class="py-2.5 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded bg-primary text-on-primary hover:bg-primary-container" title="Inspect Node In Right Panel">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+</button>
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant" title="PTZ Slew Controls">
+<span class="material-symbols-outlined text-[15px]">pan_tool</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: CAM-101 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-semibold">CAM-101</span>
+</div>
+</td>
+<td class="py-2 px-3">Security Turnstiles Ingress</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Axis Q1656 4MP Fixed</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>ONLINE
+                  </span>
+</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">2560x1440 @ 30fps</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">16.8 ms</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-primary">YOLOv10</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-secondary">ByteTrack</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: CAM-204 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-semibold">CAM-204</span>
+</div>
+</td>
+<td class="py-2 px-3">Terminal 2 Screened Exit</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Sony 4K IMX-485 IR Dome</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>ONLINE
+                  </span>
+</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">3840x2160 @ 30fps</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">19.0 ms</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-primary">YOLOv10</span>
+<span class="px-1.5 py-0.5 rounded bg-amber-100 font-data-mono-sm text-[10px] text-amber-900">Anomaly-V2</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: CAM-311 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-semibold text-purple-900">CAM-311</span>
+</div>
+</td>
+<td class="py-2 px-3">Concourse Central Junction</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">FLIR Quasar 4K IR Radiometric</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-purple-50 text-purple-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-purple-600"></span>THERMAL OK
+                  </span>
+</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">3840x2160 @ 30fps</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">22.4 ms</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-purple-100 font-data-mono-sm text-[10px] text-purple-900">ThermalDetect</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-primary">OSNet</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: CAM-117 (CRITICAL / OFFLINE ALERT) -->
+<tr class="bg-error-container/30 hover:bg-error-container/50 transition-colors">
+<td class="py-2.5 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-error">CAM-117</span>
+</div>
+</td>
+<td class="py-2.5 px-3 font-semibold text-error">Sector 4 Baggage Claim</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Axis Q1656 4MP PTZ</td>
+<td class="py-2.5 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error text-on-error font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>OFFLINE / FAILOVER
+                  </span>
+</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm text-error font-semibold">0 fps (Signal Loss)</td>
+<td class="py-2.5 px-3 font-data-mono-sm text-data-mono-sm text-error font-bold">TIMEOUT (&gt;4000ms)</td>
+<td class="py-2.5 px-3">
+<span class="px-1.5 py-0.5 rounded bg-error-container text-error font-data-mono-sm text-[10px] font-bold">PIPELINE SUSPENDED</span>
+</td>
+<td class="py-2.5 px-3 text-right">
+<button class="px-2 py-1 rounded bg-error text-on-error font-data-mono-sm text-data-mono-sm font-bold hover:bg-opacity-90" title="Force Recovery">
+                    RECOVER
+                  </button>
+</td>
+</tr>
+<!-- Row 6: CAM-009 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-2 px-3">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+<span class="font-data-mono-sm text-data-mono-sm font-semibold">CAM-009</span>
+</div>
+</td>
+<td class="py-2 px-3">West Ingress Turnstiles</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm text-on-surface-variant">Sony 4K IMX-485 IR Fixed</td>
+<td class="py-2 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>ONLINE
+                  </span>
+</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">3840x2160 @ 30fps</td>
+<td class="py-2 px-3 font-data-mono-sm text-data-mono-sm">17.1 ms</td>
+<td class="py-2 px-3">
+<div class="flex items-center gap-1">
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-primary">YOLOv10</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-data-mono-sm text-[10px] text-secondary">ByteTrack</span>
+</div>
+</td>
+<td class="py-2 px-3 text-right">
+<button class="p-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination / Status -->
+<div class="p-space-sm bg-surface-container-low flex items-center justify-between text-on-surface-variant font-data-mono-sm text-data-mono-sm">
+<span>Showing 6 of 252 provisioned endpoints</span>
+<div class="flex items-center gap-2">
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container disabled:opacity-50">Prev</button>
+<span class="font-bold text-on-surface">Page 1 / 42</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Dedicated Camera Inspector & Fleet Diagnostics (5 Cols on desktop) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- Module 1: Dedicated Camera Inspector (CAM-042 Focus) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Inspector Title Bar -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">videocam</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-wide">NODE INSPECTOR: CAM-042</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-data-mono-sm text-data-mono-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>SYNCED TO CONSOLE
+          </span>
+</div>
+<!-- Camera Viewport Frame with Telemetry Simulation Overlay -->
+<div class="relative w-full h-64 bg-inverse-surface overflow-hidden group">
+<!-- Synthetic Camera Feed Image -->
+<img class="w-full h-full object-cover opacity-85" data-alt="Security surveillance perspective showing an airport concourse terminal hall with passengers walking and carrying roller bags under bright modern ceiling fixtures with sharp geometric perspectives" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQjNH_3HmL8-JegjvTaBfjo1PHe5diOauS4jETli-lzDZnurt8PoDXF-YNfVFnMqdjfde0HL198IsE4AE3OU65jognHv6fQ-X_xJ5MhO_l10636foQzxXGk2ii-dZRV69tXeA58JP1jonDfD7gTK_pddjCNNOyzh3znwdEou3WjuV1CCIXKCa5DR8xO80zQKH8e1j-a2nu7Rueqiar0Ie-pu8NN9hI3Af1O1SvMPmjT9brSOZziaNB"/>
+<!-- Simulated Optical HUD Brackets (Corner markers) -->
+<div class="absolute top-2 left-2 w-4 h-4 border-t-2 border-l-2 border-primary-fixed pointer-events-none"></div>
+<div class="absolute top-2 right-2 w-4 h-4 border-t-2 border-r-2 border-primary-fixed pointer-events-none"></div>
+<div class="absolute bottom-2 left-2 w-4 h-4 border-b-2 border-l-2 border-primary-fixed pointer-events-none"></div>
+<div class="absolute bottom-2 right-2 w-4 h-4 border-b-2 border-r-2 border-primary-fixed pointer-events-none"></div>
+<!-- Top Overlay: Timecode & Node Status -->
+<div class="absolute top-2.5 left-3 right-3 flex items-center justify-between text-on-primary font-data-mono-sm text-data-mono-sm drop-shadow-md">
+<div class="flex items-center gap-2 bg-on-background/70 backdrop-blur px-2 py-0.5 rounded">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-bold">LIVE RTSP MAIN</span>
+<span>18:44:12.894 UTC</span>
+</div>
+<div class="bg-on-background/70 backdrop-blur px-2 py-0.5 rounded text-primary-fixed font-bold">
+              3840x2160 @ 59.94 FPS // 8.4 Mbps
+            </div>
+</div>
+<!-- Simulated AI Bounding Boxes & Vectors -->
+<!-- Luggage Track OBJ-00017 -->
+<div class="absolute top-[48%] left-[58%] w-16 h-20 border border-amber-400 bg-amber-400/10 pointer-events-none">
+<div class="absolute -top-4 left-0 bg-amber-500 text-on-surface font-data-mono-sm text-[9px] px-1 font-bold whitespace-nowrap">
+              OBJ-00017: LUGGAGE [CONF: 97%]
+            </div>
+<span class="absolute bottom-1 right-1 font-data-mono-sm text-[8px] text-amber-300 font-bold">STATIC: 42s</span>
+</div>
+<!-- Pedestrian Track P-882 -->
+<div class="absolute top-[28%] left-[28%] w-20 h-40 border border-primary-fixed-dim bg-primary-container/10 pointer-events-none">
+<div class="absolute -top-4 left-0 bg-primary-container text-on-primary font-data-mono-sm text-[9px] px-1 font-semibold whitespace-nowrap">
+              TRACK: P-882 [FLOW: +1.2m/s]
+            </div>
+</div>
+<!-- Flow Directional Vector Arrow (SVG Overlay) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none">
+<line stroke="#0037b0" stroke-dasharray="3 3" stroke-width="2" x1="180" x2="260" y1="210" y2="210"></line>
+<polygon fill="#0037b0" points="260,206 268,210 260,214"></polygon>
+</svg>
+<!-- Bottom Overlay: Target Reticle Coordinates -->
+<div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between text-on-primary font-data-mono-sm text-data-mono-sm drop-shadow-md">
+<span class="bg-on-background/70 backdrop-blur px-2 py-0.5 rounded">AZIMUTH: 135.4° | TILT: -24.8° | ZOOM: 2.3x</span>
+<span class="bg-on-background/70 backdrop-blur px-2 py-0.5 rounded text-emerald-400">TENSORRT: OK</span>
+</div>
+</div>
+<!-- Node Telemetry & Hardware Metadata Strip -->
+<div class="p-space-md flex flex-col gap-space-sm bg-surface-container-lowest">
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Subnet Ingestion IP</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface mt-0.5">10.24.18.42</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Sensor Hardware</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface mt-0.5">Sony IMX-485 IR</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Optical FOV Angle</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface mt-0.5">82.4° (Horizontal)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Homography Matrix</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-emerald-800 mt-0.5 flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>LOCKED (99.8%)
+              </span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Thermal Core Temp</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface mt-0.5">44.2°C (Optimal)</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">GPU Worker Node</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-primary mt-0.5">Edge-Node-03</span>
+</div>
+</div>
+<!-- Active Sensor Detections Counter Banner -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">fitbit_hourly_activity</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Active Sensor Detections:</span>
+</div>
+<div class="flex items-center gap-2 font-data-mono-sm text-data-mono-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">19 Persons</span>
+<span class="px-2 py-0.5 rounded bg-surface-container font-semibold">4 Bags</span>
+<span class="px-2 py-0.5 rounded bg-amber-100 text-amber-900 font-bold">1 Alert (INC-0017)</span>
+</div>
+</div>
+<!-- Quick Hardware Action Controls -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[18px]">lock_reset</span>
+<span>Trigger PTZ Interlock</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[18px]">grid_on</span>
+<span>Calibrate Intrinsic Matrix</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-secondary text-[18px]">filter_center_focus</span>
+<span>Isolate RTSP Stream</span>
+</button>
+<button class="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-colors font-headline-sm text-headline-sm font-semibold shadow-sm">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+<span>Open in 3D Digital Twin</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Module 2: Fleet Health Diagnostics & Error State Panel -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="px-space-md py-space-sm bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[20px]">warning</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface uppercase tracking-wide">Fleet Fault Diagnostics &amp; Failover</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-error font-bold">1 CRITICAL INTERRUPT</span>
+</div>
+<div class="p-space-md flex flex-col gap-space-md">
+<!-- Critical Error Callout Box -->
+<div class="p-space-md rounded-lg bg-error-container/40 flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-error-container">CAM-117: RTSP Heartbeat Lost</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-error font-bold">FAULT #9024-ERR</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+              Sector 4 Baggage Claim node dropped connection at 18:41:03 UTC. 3 automatic socket retries initiated without ACK response. Automatic spatial failover to auxiliary sensor <strong>CAM-118 (Sector 4 West Ingress)</strong> is currently active to maintain 78% partial corridor corroboration.
+            </p>
+<div class="flex items-center justify-between mt-1 pt-2 bg-surface-container-lowest/60 px-2 py-1 rounded font-data-mono-sm text-data-mono-sm">
+<span class="text-on-surface-variant">Switchport: SW-04-P18 (VLAN 140)</span>
+<span class="text-error font-semibold">PoE Load: 0.0W [INACTIVE]</span>
+</div>
+</div>
+<!-- Action Buttons for Fault Resolution -->
+<div class="flex flex-col sm:flex-row items-center gap-2">
+<button class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-error text-on-error font-headline-sm text-headline-sm font-semibold hover:bg-opacity-90 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">replay</span>
+<span>Force RTSP Re-Demux</span>
+</button>
+<button class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-primary text-[18px]">lens_blur</span>
+<span>Run Optical Clean</span>
+</button>
+<button class="w-full sm:w-auto flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-headline-sm font-semibold transition-colors">
+<span class="material-symbols-outlined text-secondary text-[18px]">picture_as_pdf</span>
+<span>Export Audit PDF</span>
+</button>
+</div>
+<!-- Secondary Advisory Banner -->
+<div class="p-2.5 rounded-lg bg-surface-container flex items-center justify-between text-on-surface font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">published_with_changes</span>
+<span>Edge TensorRT runtime v8.6.1 synchronized across 32 Jetson AGX units.</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-emerald-800">ALL GREEN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

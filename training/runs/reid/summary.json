@@ -1,0 +1,11 @@
+{
+  "model": "osnet_x1_0",
+  "dataset": "market1501",
+  "epochs": 80,
+  "rank1": 0.9284,
+  "baseline_rank1_imagenet": 0.147,
+  "train_minutes": 50.1,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "promoted": true,
+  "checkpoint": "D:\\Eagle_Eye_V1.0\\storage\\models\\reid\\osnet_x1_0_market1501.pth.tar"
+}

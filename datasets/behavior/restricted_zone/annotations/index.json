@@ -1,0 +1,1088 @@
+[
+  {
+    "scene_id": "RSTR_0000",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 284,
+    "fps": 12,
+    "subjects": [
+      "T_S000",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0000.csv",
+    "subject_id": "T_S000",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0001",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 278,
+    "fps": 12,
+    "subjects": [
+      "T_S001",
+      "T_T001",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0001.csv",
+    "subject_id": "T_S001",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0002",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 292,
+    "fps": 12,
+    "subjects": [
+      "T_S002",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0002.csv",
+    "subject_id": "T_S002",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0003",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 272,
+    "fps": 12,
+    "subjects": [
+      "T_S003",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0003.csv",
+    "subject_id": "T_S003",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  },
+  {
+    "scene_id": "RSTR_0004",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 260,
+    "fps": 12,
+    "subjects": [
+      "T_S004",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0004.csv",
+    "subject_id": "T_S004",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0005",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 358,
+    "fps": 12,
+    "subjects": [
+      "T_S005",
+      "T_T005",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0005.csv",
+    "subject_id": "T_S005",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0006",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 368,
+    "fps": 12,
+    "subjects": [
+      "T_S006",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0006.csv",
+    "subject_id": "T_S006",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0007",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 320,
+    "fps": 12,
+    "subjects": [
+      "T_S007",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0007.csv",
+    "subject_id": "T_S007",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  },
+  {
+    "scene_id": "RSTR_0008",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 302,
+    "fps": 12,
+    "subjects": [
+      "T_S008",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0008.csv",
+    "subject_id": "T_S008",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0009",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 266,
+    "fps": 12,
+    "subjects": [
+      "T_S009",
+      "T_T009",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0009.csv",
+    "subject_id": "T_S009",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0010",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 324,
+    "fps": 12,
+    "subjects": [
+      "T_S010",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0010.csv",
+    "subject_id": "T_S010",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0011",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 316,
+    "fps": 12,
+    "subjects": [
+      "T_S011",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0011.csv",
+    "subject_id": "T_S011",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  },
+  {
+    "scene_id": "RSTR_0012",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 286,
+    "fps": 12,
+    "subjects": [
+      "T_S012",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0012.csv",
+    "subject_id": "T_S012",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0013",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 312,
+    "fps": 12,
+    "subjects": [
+      "T_S013",
+      "T_T013",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0013.csv",
+    "subject_id": "T_S013",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0014",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 378,
+    "fps": 12,
+    "subjects": [
+      "T_S014",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0014.csv",
+    "subject_id": "T_S014",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0015",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 344,
+    "fps": 12,
+    "subjects": [
+      "T_S015",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0015.csv",
+    "subject_id": "T_S015",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  },
+  {
+    "scene_id": "RSTR_0016",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 358,
+    "fps": 12,
+    "subjects": [
+      "T_S016",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0016.csv",
+    "subject_id": "T_S016",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0017",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 360,
+    "fps": 12,
+    "subjects": [
+      "T_S017",
+      "T_T017",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0017.csv",
+    "subject_id": "T_S017",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0018",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 380,
+    "fps": 12,
+    "subjects": [
+      "T_S018",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0018.csv",
+    "subject_id": "T_S018",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0019",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 370,
+    "fps": 12,
+    "subjects": [
+      "T_S019",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0019.csv",
+    "subject_id": "T_S019",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  },
+  {
+    "scene_id": "RSTR_0020",
+    "category": "restricted_zone",
+    "label": "entry",
+    "positive": true,
+    "frames": 296,
+    "fps": 12,
+    "subjects": [
+      "T_S020",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0020.csv",
+    "subject_id": "T_S020",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "entry"
+  },
+  {
+    "scene_id": "RSTR_0021",
+    "category": "restricted_zone",
+    "label": "tailgating",
+    "positive": true,
+    "frames": 288,
+    "fps": 12,
+    "subjects": [
+      "T_S021",
+      "T_T021",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0021.csv",
+    "subject_id": "T_S021",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "tailgating"
+  },
+  {
+    "scene_id": "RSTR_0022",
+    "category": "restricted_zone",
+    "label": "boundary_pass",
+    "positive": false,
+    "frames": 370,
+    "fps": 12,
+    "subjects": [
+      "T_S022",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0022.csv",
+    "subject_id": "T_S022",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "unverified",
+    "event_type": "boundary_pass"
+  },
+  {
+    "scene_id": "RSTR_0023",
+    "category": "restricted_zone",
+    "label": "authorised_entry",
+    "positive": true,
+    "frames": 348,
+    "fps": 12,
+    "subjects": [
+      "T_S023",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02"
+    ],
+    "zones": [
+      {
+        "id": "ZONE_RESTRICTED",
+        "name": "Restricted Apron",
+        "zone_type": "restricted",
+        "polygon": [
+          [
+            0.7,
+            0.52
+          ],
+          [
+            0.97,
+            0.52
+          ],
+          [
+            0.97,
+            0.94
+          ],
+          [
+            0.7,
+            0.94
+          ]
+        ]
+      }
+    ],
+    "objects": [],
+    "tracking_csv": "behavior/restricted_zone/tracking/RSTR_0023.csv",
+    "subject_id": "T_S023",
+    "zone_id": "ZONE_RESTRICTED",
+    "authorization_status": "authorised",
+    "event_type": "authorised_entry"
+  }
+]

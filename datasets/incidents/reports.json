@@ -1,0 +1,10 @@
+[
+  {
+    "incident_id": "INC_F12FFA6DD453",
+    "title": "Rapid occupancy increase",
+    "summary": "Occupancy rose 122% over 30s at Demo Camera (synthetic) (now 5 subjects, density band LOW), observed at Restricted Area (Primary Site - Concourse). Concurrent observations: running (confidence 0.95); running (confidence 0.95). Crowd density in view is LOW with 4 subjects tracked. Assessed risk 11% (LOW). Recommendations require operator approval.",
+    "explanation": "Risk assessed at 11% (LOW) because of movement against the prevailing flow and movement that is not goal-directed. The dominant contributor is 'counter_flow' (weight 8 x confidence 0.86 x recency 0.43 = 3.0). Location: Restricted Area.",
+    "severity": "low",
+    "risk_score": 10.9
+  }
+]

@@ -1,0 +1,43 @@
+WARNING NMS time limit 2.050s exceeded
+  MOT20-01: 429 frames at 2.7 fps
+  MOT20-02: 2782 frames at 13.1 fps
+  MOT20-03: 2405 frames at 20.2 fps
+  MOT20-05: 3315 frames at 13.1 fps
+  MOT20-01: 429 frames at 15707.8 fps
+  MOT20-02: 2782 frames at 20496.4 fps
+  MOT20-03: 2405 frames at 21290.3 fps
+  MOT20-05: 3315 frames at 19957.6 fps
+              MOTA      IDF1  IDs      Prcn      Rcll   MT    ML  num_frames
+MOT20-01  0.407801  0.492116   89  0.873996  0.481731   18    27         429
+MOT20-02  0.383645  0.464072  372  0.889315  0.440927   52    58        2782
+MOT20-03  0.292599  0.457196   74  0.889096  0.334568   37   382        2405
+MOT20-05  0.117100  0.192416  188  0.866330  0.138808    9   931        3315
+MOT20-01       NaN       NaN    0       NaN       NaN    0     0           0
+MOT20-02       NaN       NaN    0       NaN       NaN    0     0           0
+MOT20-03       NaN       NaN    0       NaN       NaN    0     0           0
+MOT20-05       NaN       NaN    0       NaN       NaN    0     0           0
+OVERALL   0.207059  0.321526  723  0.880992  0.240135  116  1398        8931
+{
+  "dataset": "mot20",
+  "detector": "yolo11m.pt",
+  "tracker": "Sentinel ByteTracker (backend/app/vision/tracker.py)",
+  "sequences": [
+    "MOT20-01",
+    "MOT20-02",
+    "MOT20-03",
+    "MOT20-05",
+    "MOT20-01",
+    "MOT20-02",
+    "MOT20-03",
+    "MOT20-05"
+  ],
+  "MOTA": 0.2071,
+  "IDF1": 0.3215,
+  "id_switches": 723,
+  "precision": 0.881,
+  "recall": 0.2401,
+  "mostly_tracked": 116,
+  "mostly_lost": 1398,
+  "mean_fps": 9687.7,
+  "note": "MOTChallenge train sequences (the only ones with public ground truth); no training was done on them."
+}

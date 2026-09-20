@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#dae2fd","surface":"#f8f9ff","on-tertiary-container":"#dfccff","on-primary-container":"#cad3ff","on-tertiary-fixed":"#25005a","error-container":"#ffdad6","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#5a00c6","on-background":"#0b1c30","on-primary":"#ffffff","on-tertiary":"#ffffff","on-error-container":"#93000a","secondary-fixed":"#dae2fd","primary":"#0037b0","surface-container-highest":"#d3e4fe","on-primary-fixed":"#001551","surface-container-high":"#dce9ff","background":"#f8f9ff","primary-fixed-dim":"#b7c4ff","tertiary-container":"#712ae2","inverse-on-surface":"#eaf1ff","inverse-surface":"#213145","tertiary-fixed-dim":"#d2bbff","on-surface-variant":"#434655","tertiary":"#5700c0","surface-variant":"#d3e4fe","inverse-primary":"#b7c4ff","surface-bright":"#f8f9ff","surface-container":"#e5eeff","primary-container":"#1d4ed8","on-secondary-fixed":"#131b2e","outline-variant":"#c4c5d7","secondary":"#565e74","on-secondary-fixed-variant":"#3f465c","surface-dim":"#cbdbf5","primary-fixed":"#dce1ff","on-secondary":"#ffffff","secondary-fixed-dim":"#bec6e0","error":"#ba1a1a","on-error":"#ffffff","on-surface":"#0b1c30","tertiary-fixed":"#eaddff","surface-container-low":"#eff4ff","outline":"#747686","on-secondary-container":"#5c647a","surface-tint":"#2151da","on-primary-fixed-variant":"#0039b5"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"1.5rem","space-sm":"0.5rem","space-lg":"1rem","space-xs":"0.25rem","gutter-lg":"1rem","space-md":"0.75rem","gutter":"0.75rem","margin":"1rem","margin-lg":"1.5rem"},fontFamily:{"headline-md":["Geist"],"headline-lg":["Geist"],"data-mono-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"label-sm":["Inter"],"data-mono-sm":["JetBrains Mono"],"body-lg":["Inter"],"label-md":["Inter"],"display-lg":["Geist"],"headline-sm":["Geist"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"data-mono-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"data-mono-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin-lg flex items-center justify-between gap-space-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><div class="flex items-center gap-space-md shrink-0"><img alt="Sentinel AI Shield Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYjFCfs11R9L3rAsRHU1e4Ub09nU0qqiEhGJMZurJ4beCz38LZ3wJNsLe2JMKrfgy2JItEE1KA42UENCy-7urXk9nbVAqo_eJQCWU53JIGK5jNr7K2OvJOXhxlZ-LFwgHgnS9bIUgOcZ_x0tVTHxPRuA4LUhROATuww6JjWfSfh5uf1h_PGRW8AMSvI1m55eiY68xQ2Se8LHa5Of9B25GnUr1ji4m-YZdOL94GvhtTxkO-cj1iGNL4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-wider">SENTINEL AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">PUBLIC SAFETY INTELLIGENCE PLATFORM</span></div><div class="h-6 w-px bg-outline-variant/50 ml-space-xs"></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-data-mono-sm text-data-mono-sm font-semibold uppercase tracking-wider">SYSTEM OPERATIONAL</span></div></div><div class="flex-1 max-w-2xl px-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">smart_toy</span><input class="w-full h-9 pl-9 pr-20 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-all" placeholder='Ask Sentinel anything... (e.g., "Find unusual activity near Platform 3", "Where is Track A17?")' type="text"/><div class="absolute right-2.5 flex items-center gap-1.5"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant font-data-mono-sm text-data-mono-sm text-on-surface-variant">Ctrl+K</kbd><span class="material-symbols-outlined text-primary text-[18px] cursor-pointer hover:text-primary-container transition-colors">mic</span></div></div></div><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-2.5"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-300"><span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span><span class="font-data-mono-sm text-data-mono-sm font-bold">7 ACTIVE</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface"><span class="material-symbols-outlined text-[14px] text-primary">videocam</span><span>248/252 CAMS ONLINE</span></div><div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">schedule</span><span>18:44:12 UTC</span></div></div><div class="h-6 w-px bg-outline-variant/50"></div><div class="relative"><button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-data-mono-sm text-data-mono-sm flex items-center justify-center font-bold">3</span></div><div class="flex items-center gap-2.5 pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Cmdr. R. Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant">Watch Commander - SOC Alpha</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><nav class="flex flex-col gap-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">OPERATIONS</div><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="command-center" href="#">Command Center</a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="live-surveillance" href="#">Live Surveillance</a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="active-incidents" href="#">Active Incidents</a><a class="flex items-center justify-between px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="incident-workspace" href="#">Incident Workspace</a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INTELLIGENCE</div><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="people-tracks" href="#">People &amp; Tracks</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="person-intelligence" href="#">Person Intelligence</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="behavior-intelligence" href="#">Behavior Intelligence</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="crowd-intelligence" href="#">Crowd Intelligence</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="object-intelligence" href="#">Object Intelligence</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="relationship-intelligence" href="#">Relationship Intelligence</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="threat-assessment" href="#">Threat Assessment</a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INVESTIGATION</div><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="forensic-search" href="#">Forensic Search</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="evidence-center" href="#">Evidence Center</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="incident-timeline" href="#">Incident Timeline</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="ai-investigation" href="#">AI Investigation</a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">SPATIAL &amp; AR</div><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="digital-twin-3d" href="#">Digital Twin 3D</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="3d-incident-replay" href="#">3D Incident Replay</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="ar-field-vision" href="#">AR Field Vision</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="vr-command-center" href="#">VR Command Center</a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">AUTOMATION</div><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="agent-orchestrator" href="#">Agent Orchestrator</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="automation-center-builder" href="#">Automation Center &amp; Builder</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="reports-briefings" href="#">Reports &amp; Briefings</a></div><div class="flex flex-col gap-0.5"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">SYSTEM &amp; GOVERNANCE</div><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="camera-fleet-management" href="#">Camera Fleet Management</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="system-health-pipelines" href="#">System Health &amp; Pipelines</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="privacy-audit-rbac" href="#">Privacy, Audit &amp; RBAC</a><a class="flex items-center px-3 py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-body-md text-body-md" data-path="settings-threat-config" href="#">Settings &amp; Threat Config</a></div></nav></div><div class="p-space-md border-t border-outline-variant/40 bg-surface-container-low"><div class="flex flex-col gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg border border-outline-variant/60"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between"><span class="font-headline-sm text-headline-sm font-semibold truncate text-on-surface">Cmdr. R. Chen</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">#SOC-04</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Watch Commander - SOC Alpha</span></div></div><div class="flex items-center justify-between pt-1.5 border-t border-outline-variant/30"><div class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-data-mono-sm text-data-mono-sm text-emerald-800 font-medium">Online &amp; Authorized</span></div><div class="flex items-center gap-1"><button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" title="Lock Station"><span class="material-symbols-outlined text-[16px]">lock</span></button><button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Operator Logout"><span class="material-symbols-outlined text-[16px]">logout</span></button></div></div></div></div></aside><div class="pl-72"><main class="relative pt-16 min-h-screen bg-background w-full px-gutter-lg py-margin"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Cryptographic Ledger Alert -->
+<div class="mb-space-lg bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-on-primary text-[22px]">admin_panel_settings</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">System Configuration, Threat Thresholds &amp; Ecosystem Integrations</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-data-mono-sm text-data-mono-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+              NODE CLUSTER #SC-09B
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">
+            Operational parameter tuning, Bayesian risk weights, data retention governance, and secure API webhooks across dispatch networks.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0 bg-surface-container-lowest p-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-primary text-[18px]">verified_user</span>
+<div class="flex flex-col pr-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface font-semibold">Ledger Enforced</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">SHA-256 Sig · Level 4 Required</span>
+</div>
+<button class="h-8 px-3 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">fingerprint</span>
+<span>Auth Re-Check</span>
+</button>
+</div>
+</div>
+<!-- Security Micro-Stripe -->
+<div class="mt-space-md pt-space-xs flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px] text-tertiary">lock_clock</span>
+<span class="font-label-sm text-label-sm tracking-wide">
+        SECURITY PROTOCOL: Configuration modifications require Level 4 Command Credentials and are permanently recorded in the immutable cryptographic audit ledger (CJIS Pub. 5.4.1 compliance).
+      </span>
+</div>
+</div>
+<!-- KPI Deck (4 High-Acuity Metrics Cards) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter-lg mb-space-xl">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Connected Integrations</span>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          100% HEALTHY
+        </div>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">12</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">/ 12 Active</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">hub</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>n8n · CAD 911 · Milvus · AR Mesh</span>
+<span class="text-primary font-bold">0 Drop</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Threat Sensitivity</span>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          ZONE A ACTIVATED
+        </div>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">Peak Concourse</span>
+</div>
+<span class="material-symbols-outlined text-tertiary text-[28px]">speed</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>High Vigilance Auto-Prioritize</span>
+<span class="font-bold text-on-surface">HITL: 80%</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Retention &amp; Zero-PII</span>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          AUDITED
+        </div>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">30d</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Raw / 365d Evidence</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">lock_reset</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>Daily Auto-Purge: 02:00 UTC</span>
+<span class="text-primary font-bold">100% Policy</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Active RBAC Profiles</span>
+<div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          ENCRYPTED
+        </div>
+</div>
+<div class="mt-3 flex items-baseline justify-between">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-display-lg font-bold text-on-surface">7 Tiers</span>
+<span class="font-body-md text-body-md text-on-surface-variant ml-1">/ 48 Active</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[28px]">badge</span>
+</div>
+<div class="mt-2 pt-2 bg-surface-container-low rounded-lg p-2 flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>Operators + Field Patrol Units</span>
+<span class="font-bold text-primary">Zero Breach</span>
+</div>
+</div>
+</div>
+<!-- Navigation Workspace Tabs Bar -->
+<div class="flex items-center justify-between bg-surface-container-lowest rounded-xl p-1.5 mb-space-lg shadow-sm overflow-x-auto">
+<div class="flex items-center gap-1 shrink-0" id="admin-tabs">
+<button class="h-9 px-4 rounded-lg bg-primary-container text-on-primary font-headline-sm text-headline-sm font-semibold flex items-center gap-2 shadow-sm transition-all" id="tab-btn-weights" onclick="switchTab('weights')">
+<span class="material-symbols-outlined text-[18px]">model_training</span>
+<span>Threat &amp; Scoring Weights</span>
+<span class="ml-1 px-1.5 py-0.2 rounded bg-on-primary/20 text-on-primary font-data-mono-sm text-data-mono-sm">ACTIVE</span>
+</button>
+<button class="h-9 px-4 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-headline-sm text-headline-sm transition-all flex items-center gap-2" id="tab-btn-integrations" onclick="switchTab('integrations')">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span>Integrations &amp; Webhooks</span>
+<span class="ml-1 px-1.5 py-0.2 rounded bg-surface-container-highest font-data-mono-sm text-data-mono-sm text-primary">12</span>
+</button>
+<button class="h-9 px-4 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-headline-sm text-headline-sm transition-all flex items-center gap-2" id="tab-btn-retention" onclick="switchTab('retention')">
+<span class="material-symbols-outlined text-[18px]">policy</span>
+<span>Data Retention &amp; Privacy</span>
+</button>
+<button class="h-9 px-4 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-headline-sm text-headline-sm transition-all flex items-center gap-2" id="tab-btn-rbac" onclick="switchTab('rbac')">
+<span class="material-symbols-outlined text-[18px]">manage_accounts</span>
+<span>Roles &amp; RBAC Matrix</span>
+</button>
+<button class="h-9 px-4 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface font-headline-sm text-headline-sm transition-all flex items-center gap-2" id="tab-btn-fleet" onclick="switchTab('fleet')">
+<span class="material-symbols-outlined text-[18px]">memory</span>
+<span>General &amp; Edge Fleet</span>
+</button>
+</div>
+<div class="flex items-center gap-2 pr-2 shrink-0">
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-headline-sm text-headline-sm flex items-center gap-1.5" title="Export Configuration YAML">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Config</span>
+</button>
+<button class="h-8 px-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-headline-sm text-headline-sm flex items-center gap-1.5" title="History Revisions">
+<span class="material-symbols-outlined text-[16px]">history</span>
+<span>Revisions (v3.18)</span>
+</button>
+</div>
+</div>
+<!-- Tab Contents Area -->
+<div class="flex flex-col gap-space-xl">
+<!-- SECTION 1: Configurable Bayesian Threat Scoring Matrix (Tab: weights) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-weights">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">tune</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Bayesian Threat Probability Calculation Engine</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Live adjustments directly recompile local inference tensor pipelines on 248 Edge TensorRT nodes. Risk formula: <code class="font-data-mono-sm text-data-mono-sm text-primary">P(Threat | E) = α · ∏ P(e_i | Threat) · P(Threat)</code>
+</p>
+</div>
+<div class="flex items-center gap-space-sm mt-3 md:mt-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Profile Preset:</span>
+<select class="h-8 px-3 bg-surface-container-lowest text-on-surface rounded-lg font-headline-sm text-headline-sm focus:outline-none focus:bg-surface-container-high">
+<option selected="">Peak Transit Concourse (High Vigilance)</option>
+<option>Night Low-Traffic Perimeter</option>
+<option>Escorted VIP Diplomatic Corridor</option>
+<option>Emergency Evacuation Surge</option>
+</select>
+</div>
+</div>
+<!-- Matrix Layout: 2 Columns (Sliders & Visual Curve) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- Left: Precision Tuners (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<!-- Parameter 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">luggage</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Unattended Luggage Stationary Benchmark</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block">Spatial centroid drift tolerance &lt; 0.35m</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold" id="val-luggage">60s</span>
+<span class="inline-block ml-1.5 px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-primary font-bold">+35 Pts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">30s</span>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="range-luggage" max="180" min="30" oninput="document.getElementById('val-luggage').innerText = this.value + 's'" type="range" value="60"/>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">180s</span>
+</div>
+</div>
+<!-- Parameter 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">social_distance</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Owner Separation Spatial Envelope</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block">Euclidean distance between trajectory anchor &amp; baggage</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold" id="val-envelope">15.0m</span>
+<span class="inline-block ml-1.5 px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-primary font-bold">+20 Pts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">5m</span>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="range-envelope" max="50" min="5" oninput="document.getElementById('val-envelope').innerText = parseFloat(this.value).toFixed(1) + 'm'" step="0.5" type="range" value="15.0"/>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">50m</span>
+</div>
+</div>
+<!-- Parameter 3 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">escalator_warning</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Escalator Counter-Flow Velocity Trigger</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block">Reverse directional vector against transit drive train</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold" id="val-escalator">-1.5 m/s</span>
+<span class="inline-block ml-1.5 px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-primary font-bold">+12 Pts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">-0.5m/s</span>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="range-escalator" max="3.0" min="0.5" oninput="document.getElementById('val-escalator').innerText = '-' + parseFloat(this.value).toFixed(1) + ' m/s'" step="0.1" type="range" value="1.5"/>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">-3.0m/s</span>
+</div>
+</div>
+<!-- Parameter 4 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">groups</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Concourse Localized Crowd Compression</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block">Micro-choke hazard warning density estimation</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold" id="val-crowd">2.0 p/m²</span>
+<span class="inline-block ml-1.5 px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-primary font-bold">+10 Pts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">0.8</span>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="range-crowd" max="4.5" min="0.8" oninput="document.getElementById('val-crowd').innerText = parseFloat(this.value).toFixed(1) + ' p/m²'" step="0.1" type="range" value="2.0"/>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">4.5 p/m²</span>
+</div>
+</div>
+<!-- Parameter 5 -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[18px]">timeline</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Persistent Trajectory Following Co-occurrence</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant block">Dual-subject spatial tracking alignment &gt; 90 seconds</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md text-on-surface font-bold" id="val-traj">75%</span>
+<span class="inline-block ml-1.5 px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-primary font-bold">+8 Pts</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">40%</span>
+<input class="w-full accent-primary h-2 bg-surface-container-high rounded-lg cursor-pointer" id="range-traj" max="95" min="40" oninput="document.getElementById('val-traj').innerText = this.value + '%'" type="range" value="75"/>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">95%</span>
+</div>
+</div>
+</div>
+<!-- Right: Visual Posterior Distribution & HITL Interlock (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Real-time Bayesian Confidence Distribution Simulation -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold block">Simulated Threat Posterior</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Gaussian risk density across 10,000 synthetic encounters</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container text-on-primary font-data-mono-sm text-data-mono-sm font-semibold">P(θ)=0.84</span>
+</div>
+<!-- Inline SVG Posterior Curve -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm shadow-sm relative">
+<svg class="w-full h-36" preserveaspectratio="none" viewbox="0 0 360 140">
+<defs>
+<lineargradient id="curveFill" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#1d4ed8" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#1d4ed8" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid lines -->
+<line stroke="#e5eeff" stroke-width="1" x1="0" x2="360" y1="35" y2="35"></line>
+<line stroke="#e5eeff" stroke-width="1" x1="0" x2="360" y1="70" y2="70"></line>
+<line stroke="#e5eeff" stroke-width="1" x1="0" x2="360" y1="105" y2="105"></line>
+<!-- Escalation Threshold Line (80% = x:288) -->
+<line stroke="#ba1a1a" stroke-dasharray="4 3" stroke-width="2" x1="288" x2="288" y1="10" y2="130"></line>
+<text class="font-data-mono-sm text-data-mono-sm font-bold" fill="#ba1a1a" text-anchor="end" x="284" y="24">HITL INTERLOCK 80%</text>
+<!-- Simulated Area Curve -->
+<path d="M 10 130 Q 80 128 140 95 T 240 40 T 310 75 T 350 130 Z" fill="url(#curveFill)"></path>
+<path d="M 10 130 Q 80 128 140 95 T 240 40 T 310 75 T 350 130" fill="none" stroke="#0037b0" stroke-width="2.5"></path>
+<!-- Marker Points -->
+<circle cx="240" cy="40" fill="#1d4ed8" r="4"></circle>
+<circle cx="288" cy="62" fill="#ba1a1a" r="5"></circle>
+</svg>
+<div class="flex items-center justify-between font-data-mono-sm text-data-mono-sm text-on-surface-variant pt-1">
+<span>0.0 (Baseline Noise)</span>
+<span>0.50 (Advisory)</span>
+<span class="text-error font-bold">0.80 (Dispatch Lock)</span>
+<span>1.0 (Critical)</span>
+</div>
+</div>
+<!-- Human-in-the-Loop Interlock Threshold Slider -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-error text-[18px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">HITL Dispatch Auto-Trigger</span>
+</div>
+<span class="font-data-mono-md text-data-mono-md text-error font-bold" id="hitl-val">80% Posterior</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">
+                  Incidents breaching this posterior probability immediately dispatch to Watch Commander workstation with automated pan-tilt-zoom visual confirmation lock.
+                </p>
+<input class="w-full accent-error h-2 bg-surface-container-high rounded-lg cursor-pointer" max="95" min="50" oninput="document.getElementById('hitl-val').innerText = this.value + '% Posterior'" type="range" value="80"/>
+</div>
+<!-- Live Weight Impact Metrics -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-md">
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">False Pos. Mitigation</span>
+<span class="font-headline-md text-headline-md font-bold text-primary block mt-0.5">99.4%</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Validated against baseline</span>
+</div>
+<div class="bg-surface-container-lowest p-2.5 rounded-lg shadow-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mean Incident Lead Time</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface block mt-0.5">4.2s</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">From first frame anomaly</span>
+</div>
+</div>
+</div>
+<!-- Operations Control Buttons -->
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-center justify-between gap-space-md">
+<button class="h-9 px-4 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-headline-sm text-headline-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">draft</span>
+<span>Save Draft Weights</span>
+</button>
+<button class="h-9 px-4 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-headline-sm text-headline-sm transition-all flex items-center gap-2 shadow-sm" id="deploy-btn" onclick="simulateDeploy()">
+<span class="material-symbols-outlined text-[18px]">rocket_launch</span>
+<span>Deploy to Live Edge Fleet</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Connected Enterprise Integrations (Tab: integrations) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-integrations">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">cable</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Enterprise API Integrations &amp; Webhook Pipelines</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              TLS 1.3 mTLS encrypted bidirectional dispatch pipes, vector indices, and field telepresence websockets.
+            </p>
+</div>
+<button class="h-8 px-3 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm mt-2 md:mt-0">
+<span class="material-symbols-outlined text-[16px]">add_link</span>
+<span>Register Integration</span>
+</button>
+</div>
+<!-- 4 Integration Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Card A: n8n Workflow Engine -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">account_tree</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">n8n Automation Engine</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">v1.42.0</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Multi-DAG Event Dispatcher &amp; Incident Router</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-data-mono-sm text-data-mono-sm font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  CONNECTED
+                </div>
+</div>
+<!-- Integration Metadata -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-lg space-y-2 shadow-sm font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Webhook Endpoint:</span>
+<span class="text-primary truncate max-w-[220px]">https://n8n.sentinel.internal/webhook/incidents</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Active Workflows:</span>
+<span class="text-on-surface font-semibold">14 Running DAGs</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Heartbeat Sync:</span>
+<span class="text-on-surface">1s ago (0 dropped payloads)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Avg Latency: <b class="font-data-mono-sm text-data-mono-sm text-on-surface">18ms</b></span>
+<div class="flex items-center gap-2">
+<button class="h-7 px-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-data-mono-sm text-data-mono-sm transition-colors">Test Event</button>
+<button class="h-7 px-2.5 rounded bg-primary text-on-primary hover:bg-primary-container font-data-mono-sm text-data-mono-sm transition-colors">Configure DAGs</button>
+</div>
+</div>
+</div>
+<!-- Card B: CAD 911 / APCO P25 -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">local_police</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">CAD 911 / APCO P25 Bridge</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">NENA i3</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Transit Police Sector Alpha Gateway</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-data-mono-sm text-data-mono-sm font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  OPERATIONAL
+                </div>
+</div>
+<!-- Integration Metadata -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-lg space-y-2 shadow-sm font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Dispatch Pipe:</span>
+<span class="text-primary truncate max-w-[220px]">apco25.soc-alpha.transit.internal:8443</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Auto-CAD Broadcast:</span>
+<span class="text-on-surface font-semibold">Threshold &gt;= 85% Posterior</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Direct Channels:</span>
+<span class="text-on-surface">P25 Talkgroups 104, 107, 202</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Pipe RTT: <b class="font-data-mono-sm text-data-mono-sm text-on-surface">42ms</b></span>
+<div class="flex items-center gap-2">
+<button class="h-7 px-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-data-mono-sm text-data-mono-sm transition-colors">Test Ping</button>
+<button class="h-7 px-2.5 rounded bg-primary text-on-primary hover:bg-primary-container font-data-mono-sm text-data-mono-sm transition-colors">Map Channels</button>
+</div>
+</div>
+</div>
+<!-- Card C: Milvus Vector Database -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">database</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Milvus Vector DB Cluster</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">HNSW Index</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fast Re-ID &amp; Forensic Embedding Retrieval</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-data-mono-sm text-data-mono-sm font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                  SYNCHRONIZED
+                </div>
+</div>
+<!-- Integration Metadata -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-lg space-y-2 shadow-sm font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Live Vectors Indexed:</span>
+<span class="text-primary font-bold">14.8M embeddings (512-dim)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Cluster Allocation:</span>
+<span class="text-on-surface font-semibold">84.2 GB / 256 GB (Port: 19530)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">KNN Top-10 Latency:</span>
+<span class="text-on-surface">3.8ms average search</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Purge Cron: <b class="font-data-mono-sm text-data-mono-sm text-on-surface">Every 24h</b></span>
+<div class="flex items-center gap-2">
+<button class="h-7 px-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-data-mono-sm text-data-mono-sm transition-colors">Flush Cache</button>
+<button class="h-7 px-2.5 rounded bg-primary text-on-primary hover:bg-primary-container font-data-mono-sm text-data-mono-sm transition-colors">Inspect Collections</button>
+</div>
+</div>
+</div>
+<!-- Card D: AR Smart Glass WebRTC Mesh -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-md">
+<div class="w-11 h-11 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">smart_screen</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">AR Smart Glass WebRTC Mesh</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">Ultra-Low Latency</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Patrol Visor Spatial Telemetry Overlay</span>
+</div>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-data-mono-sm text-data-mono-sm font-bold shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                  3 ACTIVE VISORS
+                </div>
+</div>
+<!-- Integration Metadata -->
+<div class="mt-space-md bg-surface-container-lowest p-space-md rounded-lg space-y-2 shadow-sm font-data-mono-sm text-data-mono-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Active Units:</span>
+<span class="text-primary font-bold">Patrol-04, Officer Perez, Lead-01</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Video Transport:</span>
+<span class="text-on-surface font-semibold">H.265 / 1080p60 WebRTC Mesh</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Spatial Anchor Drift:</span>
+<span class="text-on-surface">&lt; 0.04m accuracy (VIO synced)</span>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mesh Latency: <b class="font-data-mono-sm text-data-mono-sm text-on-surface">26ms</b></span>
+<div class="flex items-center gap-2">
+<button class="h-7 px-2.5 rounded bg-surface-container text-on-surface hover:bg-surface-container-high font-data-mono-sm text-data-mono-sm transition-colors">Broadcast HUD</button>
+<button class="h-7 px-2.5 rounded bg-primary text-on-primary hover:bg-primary-container font-data-mono-sm text-data-mono-sm transition-colors">Manage Glasses</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Data Retention & Zero-PII Policy Matrix (Tab: retention) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-retention">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">privacy_tip</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Data Retention, Zero-PII Sanitization &amp; Evidence Governance</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Automated cryptographic wiping schedules compliant with CJIS Tier-4, GDPR Section 9, and Municipal Surveillance Ordinances.
+            </p>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>AUDIT COMPLIANT (Q3 VERIFIED)</span>
+</div>
+</div>
+<!-- Policy Matrix Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">
+<th class="p-space-sm rounded-l-lg">Data Artifact Class</th>
+<th class="p-space-sm">Retention Period</th>
+<th class="p-space-sm">Sanitization Standard</th>
+<th class="p-space-sm">Purge Trigger &amp; Schedule</th>
+<th class="p-space-sm">Cryptographic Guarantee</th>
+<th class="p-space-sm rounded-r-lg text-right">Policy Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40 font-body-sm text-body-sm">
+<!-- Row 1: Raw Video -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-space-sm font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">videocam</span>
+<span>Rolling Raw Video Streams</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface font-bold">30 Days</td>
+<td class="p-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-on-surface">NIST SP 800-88 Rev 1</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant">Automated daily cron @ 02:00 UTC</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-primary">Zero-fill block overwrite + Block ID wipe</td>
+<td class="p-space-sm text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">ENFORCED</span>
+</td>
+</tr>
+<!-- Row 2: Admissible Evidence Dossiers -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-space-sm font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">folder_special</span>
+<span>Admissible Evidence Dossiers</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface font-bold">365 Days (1 Year)</td>
+<td class="p-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-on-surface">CJIS Tier-4 Immutable</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant">Court Order / Case Disposition Check</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-primary">WORM Storage + Cmdr Dual-Key Sign</td>
+<td class="p-space-sm text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">SEALED</span>
+</td>
+</tr>
+<!-- Row 3: Anonymous Trajectories -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-space-sm font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">route</span>
+<span>Anonymous Trajectory Vectors</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface font-bold">0 Days (Transient)</td>
+<td class="p-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-on-surface">Zero-PII Spatial Obfuscation</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant">Purged immediately on track termination</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-primary">RAM-only scratchpad buffer (Non-disk)</td>
+<td class="p-space-sm text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">EPHEMERAL</span>
+</td>
+</tr>
+<!-- Row 4: Facial Biometric Encodings -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="p-space-sm font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">face</span>
+<span>Facial &amp; Gait Mathematical Embeddings</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface font-bold">24 Hours</td>
+<td class="p-space-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container font-data-mono-sm text-data-mono-sm text-on-surface">Municipal Zero-Match Drop</span>
+</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-on-surface-variant">Automatic purge unless tagged in active BOLO</td>
+<td class="p-space-sm font-data-mono-sm text-data-mono-sm text-primary">Milvus Index Pruning + Key Revocation</td>
+<td class="p-space-sm text-right">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">COMPLIANT</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Zero-PII Policy Switches -->
+<div class="mt-space-lg grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Auto Dynamic Face Blur</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Redacts civilian bystanders in public feeds before display</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Cryptographic Audit Hashing</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Signs every stream segment with HSM hardware timestamp</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex items-start justify-between">
+<div class="flex flex-col pr-2">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">FOIA Auto-Redaction Pipe</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Strips audio tracks and private signage for open records</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-9 h-5 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface-container-lowest after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Roles & RBAC Matrix (Tab: rbac) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-rbac">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">badge</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Hierarchical RBAC Permission Matrix</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Granular access control governing real-time PTZ control, biometric verification, evidence sealing, and external dispatch authorization.
+            </p>
+</div>
+<div class="flex items-center gap-2 mt-2 md:mt-0">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">48 Active Identifiers</span>
+<button class="h-8 px-3 rounded-lg bg-primary text-on-primary font-headline-sm text-headline-sm hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+<span>Grant Operator</span>
+</button>
+</div>
+</div>
+<!-- RBAC 4-Tier Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Tier 1: Watch Commander -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-primary text-on-primary flex items-center justify-center font-bold text-[14px]">L4</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Watch Commander</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">3 ASSIGNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Full administrative authority, weight deployment, emergency CAD dispatch.</p>
+<ul class="space-y-1.5 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Live Weight Override</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>APCO P25 Broadcast</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Audit Ledger Clear</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Evidence Cryptographic Seal</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-semibold">Dual-Factor Biometric Enforced</span>
+</div>
+</div>
+<!-- Tier 2: SOC Supervisor -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-[14px]">L3</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SOC Supervisor</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">8 ASSIGNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Incident triage, BOLO activation, field officer HUD tasking.</p>
+<ul class="space-y-1.5 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Triage &amp; Dismiss False Flags</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Dispatch AR Field Directives</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Initiate CAD Auto-Sync</span></li>
+<li class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">block</span> <span>Weight Tuning (Locked)</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">FIDO2 Hardware Key Enforced</span>
+</div>
+</div>
+<!-- Tier 3: Console Operator -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[14px]">L2</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Console Operator</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">24 ASSIGNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Continuous monitoring, manual PTZ steer, live track pinning.</p>
+<ul class="space-y-1.5 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Live Surveillance Feeds</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>PTZ Priority Steer</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Annotate Incident Notes</span></li>
+<li class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">block</span> <span>External CAD Triggers</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">SOC Station Proximity Lock</span>
+</div>
+</div>
+<!-- Tier 4: Forensics Investigator -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-high text-on-surface flex items-center justify-center font-bold text-[14px]">L2F</div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Forensics Investigator</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-data-mono-sm text-data-mono-sm font-bold">13 ASSIGNED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Historical archive replay, Milvus vector queries, chain of custody.</p>
+<ul class="space-y-1.5 text-on-surface font-body-sm text-body-sm">
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Query 365d Vault</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Export Evidence Packages</span></li>
+<li class="flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[16px]">check_circle</span> <span>Vector Similarity Search</span></li>
+<li class="flex items-center gap-1.5 text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">block</span> <span>Live Camera Controls</span></li>
+</ul>
+</div>
+<div class="mt-space-md pt-space-xs">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Audit-Logged Vector Replays</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 5: General & Edge Fleet (Tab: fleet) -->
+<div class="flex flex-col gap-space-lg" id="tab-content-fleet">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between pb-space-md mb-space-md bg-surface-container-low p-space-md rounded-lg">
+<div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">router</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Edge Fleet Compute &amp; Hardware Acceleration</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              248 on-premise Jetson AGX Orin &amp; TensorRT edge accelerators performing real-time video inference at the glass.
+            </p>
+</div>
+<div class="inline-flex items-center gap-2">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface font-bold">Fleet Telemetry: 99.8% Online</span>
+<button class="h-8 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-headline-sm text-headline-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Scan Nodes</span>
+</button>
+</div>
+</div>
+<!-- Edge Nodes Diagnostic Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Total Model Inference Load</span>
+<span class="material-symbols-outlined text-primary text-[18px]">memory</span>
+</div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface block mt-1">11.4 ms</span>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42%;"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant mt-1.5 block">42% GPU Tensor Core Allocation</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Thermal Performance</span>
+<span class="material-symbols-outlined text-primary text-[18px]">thermostat</span>
+</div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface block mt-1">54.2 °C</span>
+<div class="w-full bg-surface-container-high h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 58%;"></div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant mt-1.5 block">Optimal across all 248 nodes</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Edge Model Checkpoint</span>
+<span class="material-symbols-outlined text-primary text-[18px]">neurology</span>
+</div>
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface block mt-1">YOLO-World + ByteTrack</span>
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold mt-1 block">Tuned: FP16 TensorRT Engine</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant mt-1 block">Checksum: a94f81...0b2e</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Simple Script for Tab Switching & Deploy Simulation -->
+<script>
+  function switchTab(tabKey) {
+    const tabKeys = ['weights', 'integrations', 'retention', 'rbac', 'fleet'];
+    
+    // Hide all tab contents
+    tabKeys.forEach(k => {
+      const el = document.getElementById('tab-content-' + k);
+      const btn = document.getElementById('tab-btn-' + k);
+      if (el) el.classList.add('hidden');
+      if (btn) {
+        btn.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        btn.classList.add('text-on-surface-variant', 'hover:bg-surface-container', 'hover:text-on-surface');
+      }
+    });
+
+    // Show selected
+    const activeEl = document.getElementById('tab-content-' + tabKey);
+    const activeBtn = document.getElementById('tab-btn-' + tabKey);
+    if (activeEl) activeEl.classList.remove('hidden');
+    if (activeBtn) {
+      activeBtn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+      activeBtn.classList.remove('text-on-surface-variant', 'hover:bg-surface-container', 'hover:text-on-surface');
+    }
+  }
+
+  function simulateDeploy() {
+    const btn = document.getElementById('deploy-btn');
+    const origHtml = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">sync</span><span>Syncing 248 Nodes...</span>';
+    btn.classList.add('opacity-80');
+    
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">task_alt</span><span>Fleet Updated!</span>';
+      setTimeout(() => {
+        btn.innerHTML = origHtml;
+        btn.classList.remove('opacity-80');
+      }, 2500);
+    }, 1800);
+  }
+
+  // Initialize with weights visible, others hidden
+  document.addEventListener('DOMContentLoaded', () => {
+    switchTab('weights');
+  });
+</script></main></div></body></html>

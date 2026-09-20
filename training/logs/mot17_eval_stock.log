@@ -1,0 +1,60 @@
+  MOT17-02-FRCNN: 600 frames at 28.3 fps
+  MOT17-04-FRCNN: 1050 frames at 31.9 fps
+  MOT17-05-FRCNN: 837 frames at 37.8 fps
+  MOT17-09-FRCNN: 525 frames at 33.0 fps
+  MOT17-10-FRCNN: 654 frames at 35.2 fps
+  MOT17-11-FRCNN: 900 frames at 34.8 fps
+  MOT17-13-FRCNN: 750 frames at 34.7 fps
+  MOT17-02-FRCNN: 600 frames at 25665.4 fps
+  MOT17-04-FRCNN: 1050 frames at 27834.8 fps
+  MOT17-05-FRCNN: 837 frames at 27267.8 fps
+  MOT17-09-FRCNN: 525 frames at 25592.9 fps
+  MOT17-10-FRCNN: 654 frames at 24472.6 fps
+  MOT17-11-FRCNN: 900 frames at 26434.0 fps
+  MOT17-13-FRCNN: 750 frames at 27022.1 fps
+                    MOTA      IDF1  IDs      Prcn      Rcll   MT   ML  num_frames
+MOT17-02-FRCNN  0.306657  0.417768   96  0.786832  0.427695    8   25         600
+MOT17-04-FRCNN  0.445402  0.614583   30  0.824998  0.566121   23   26        1050
+MOT17-05-FRCNN  0.247795  0.497612  163  0.644763  0.604308   30   23         837
+MOT17-09-FRCNN  0.428357  0.494232   38  0.707165  0.743286   13    1         525
+MOT17-10-FRCNN  0.463354  0.465278  204  0.801588  0.636888   18    7         654
+MOT17-11-FRCNN  0.415112  0.555562   24  0.727988  0.666808   26   29         900
+MOT17-13-FRCNN  0.442793  0.541581  104  0.908879  0.502062   26   39         750
+MOT17-02-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-04-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-05-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-09-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-10-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-11-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+MOT17-13-FRCNN       NaN       NaN    0       NaN       NaN    0    0           0
+OVERALL         0.408702  0.539977  659  0.790645  0.563880  144  150        5316
+{
+  "dataset": "mot17",
+  "detector": "yolo11m.pt",
+  "tracker": "Sentinel ByteTracker (backend/app/vision/tracker.py)",
+  "sequences": [
+    "MOT17-02-FRCNN",
+    "MOT17-04-FRCNN",
+    "MOT17-05-FRCNN",
+    "MOT17-09-FRCNN",
+    "MOT17-10-FRCNN",
+    "MOT17-11-FRCNN",
+    "MOT17-13-FRCNN",
+    "MOT17-02-FRCNN",
+    "MOT17-04-FRCNN",
+    "MOT17-05-FRCNN",
+    "MOT17-09-FRCNN",
+    "MOT17-10-FRCNN",
+    "MOT17-11-FRCNN",
+    "MOT17-13-FRCNN"
+  ],
+  "MOTA": 0.4087,
+  "IDF1": 0.54,
+  "id_switches": 659,
+  "precision": 0.7906,
+  "recall": 0.5639,
+  "mostly_tracked": 144,
+  "mostly_lost": 150,
+  "mean_fps": 13180.4,
+  "note": "MOTChallenge train sequences (the only ones with public ground truth); no training was done on them."
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Eagles Eye</title>
+<link rel="icon" type="image/png" href="/portal/assets/favicon.png">
+<link rel="stylesheet" href="/portal/assets/portal.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="/portal/" aria-label="Eagles Eye - home"><img src="/portal/assets/eagles-eye-emblem.png" alt="Eagles Eye"></a>
+  <div class="actions" style="margin-left:auto"><a class="btn ghost" href="/portal/sign-up.html">Create account</a></div>
+</header>
+
+<div class="auth-wrap">
+  <div class="card">
+
+    <!-- step 1: password ------------------------------------------------ -->
+    <section id="step-pass" class="step active">
+      <h1>Sign in</h1>
+      <p class="sub">Your e-mail and password, then a one-time code — so a stolen
+         password alone is not enough.</p>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@gmail.com">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" placeholder="Your password">
+
+      <div class="captcha" style="margin-top:14px">
+        <div>
+          <label for="captcha_answer">Anti-robot check</label>
+          <p class="q" id="captcha_q" style="margin:0 0 6px">Loading…</p>
+          <input id="captcha_answer" inputmode="numeric" placeholder="Your answer">
+          <input id="captcha_token" type="hidden">
+        </div>
+        <button class="btn ghost" id="captcha_new" type="button">New question</button>
+      </div>
+
+      <button class="btn big" id="submit" style="width:100%;margin-top:16px">Continue</button>
+      <div class="msg" id="msg"></div>
+      <p class="foot">
+        <a href="/portal/reset.html">Forgot password?</a> ·
+        <a href="/portal/sign-up.html">Create an account</a>
+      </p>
+    </section>
+
+    <!-- step 2: one-time code -------------------------------------------- -->
+    <section id="step-code" class="step">
+      <h1>Enter your code</h1>
+      <p class="sub">We sent a six-digit code to <strong id="sent_to"></strong> and your phone.</p>
+      <label for="code">Sign-in code</label>
+      <input id="code" class="otp-input" inputmode="numeric" maxlength="6" placeholder="······">
+      <button class="btn big" id="verify" style="width:100%;margin-top:14px">Sign in</button>
+      <div class="msg" id="msg2"></div>
+      <p class="foot"><a href="#" id="back">Use a different account</a></p>
+    </section>
+
+  </div>
+</div>
+
+<script src="/portal/assets/portal.js"></script>
+<script>
+const msg = document.getElementById('msg');
+const msg2 = document.getElementById('msg2');
+const qEl = document.getElementById('captcha_q');
+const tokenEl = document.getElementById('captcha_token');
+const ansEl = document.getElementById('captcha_answer');
+loadCaptcha(qEl, tokenEl, ansEl);
+document.getElementById('captcha_new').onclick = () => loadCaptcha(qEl, tokenEl, ansEl);
+
+document.getElementById('submit').onclick = async (e) => {
+  clearMsg(msg);
+  const btn = e.currentTarget;
+  busy(btn, true, 'Checking…');
+  try {
+    const out = await api('/login', {
+      email: document.getElementById('email').value.trim(),
+      password: document.getElementById('password').value,
+      captcha_token: tokenEl.value, captcha_answer: ansEl.value,
+    });
+    document.getElementById('sent_to').textContent = out.email;
+    stepTo('step-code');
+  } catch (err) {
+    show(msg, err.message);
+    loadCaptcha(qEl, tokenEl, ansEl);
+  } finally { busy(btn, false); }
+};
+
+document.getElementById('verify').onclick = async (e) => {
+  clearMsg(msg2);
+  const btn = e.currentTarget;
+  busy(btn, true, 'Signing in…');
+  try {
+    const session = await api('/otp-login', {
+      email: document.getElementById('email').value.trim(),
+      code: document.getElementById('code').value.trim(),
+    });
+    enterDashboard(session);
+  } catch (err) { show(msg2, err.message); } finally { busy(btn, false); }
+};
+
+document.getElementById('back').onclick = (ev) => { ev.preventDefault(); stepTo('step-pass'); };
+</script>
+</body>
+</html>

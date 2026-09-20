@@ -1,0 +1,29 @@
+{
+  "baseline": {
+    "open_images_val": {
+      "mAP50": 0.6026,
+      "mAP50_95": 0.4243
+    },
+    "mot17_person": {
+      "mAP50": 0.8179,
+      "mAP50_95": 0.5272
+    }
+  },
+  "candidate": {
+    "open_images_val": {
+      "mAP50": 0.6869,
+      "mAP50_95": 0.4864
+    },
+    "mot17_person": {
+      "mAP50": 0.8043,
+      "mAP50_95": 0.4984
+    }
+  },
+  "delta_mAP50_95": {
+    "open_images_val": 0.0621,
+    "mot17_person": -0.0288
+  },
+  "promoted": false,
+  "rule": "promote only if no set regresses (>0.5 pt) and one improves by >=1 pt",
+  "why_not_promoted": "regressed on mot17_person"
+}

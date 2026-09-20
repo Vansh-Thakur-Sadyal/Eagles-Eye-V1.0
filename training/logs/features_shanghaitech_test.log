@@ -1,0 +1,7 @@
+shanghaitech_test: 107 videos, 107 to extract -> V:\sentinel_cache\features\shanghaitech_test_dense
+  25/107  1.42 vid/s  eta 1 min  failed 0
+  50/107  2.46 vid/s  eta 0 min  failed 0
+  75/107  3.14 vid/s  eta 0 min  failed 0
+  100/107  3.21 vid/s  eta 0 min  failed 0
+  107/107  3.36 vid/s  eta 0 min  failed 0
+finished in 0.5 min, 0 failed

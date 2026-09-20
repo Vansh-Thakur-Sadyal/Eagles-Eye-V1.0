@@ -1,0 +1,37 @@
+# Sentinel AI on a CPU-only VPS: dashboard, API and edge hub.
+#
+# No torch / ultralytics / insightface / chromadb here. Detection, tracking,
+# Re-ID, crowd density and the video models run on operators' GPU machines
+# (tools/gpu_worker.py, docs/EDGE_GPU.md); this box only aggregates results.
+# The app degrades honestly without them - see docs/ARCHITECTURE.md.
+
+# ---- Core API ----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+pydantic-settings==2.7.0
+python-multipart==0.0.20
+websockets==14.1
+httpx==0.28.1
+python-dotenv==1.0.1
+
+# ---- Database ----
+SQLAlchemy==2.0.36
+alembic==1.14.0
+
+# ---- Auth / security ----
+passlib[bcrypt]==1.7.4
+PyJWT==2.10.1
+email-validator==2.2.0        # pydantic EmailStr for the portal forms
+
+# ---- Imaging: needed to decode/annotate the preview frames nodes push up ----
+numpy==1.26.4
+opencv-python-headless==4.10.0.84
+Pillow==11.0.0
+scipy==1.14.1
+
+# ---- Misc ----
+orjson==3.10.12
+psutil==6.1.1
+PyYAML==6.0.2
+# Forensic search falls back to the built-in TF-IDF index without chromadb.

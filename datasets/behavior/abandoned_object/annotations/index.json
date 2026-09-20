@@ -1,0 +1,938 @@
+[
+  {
+    "scene_id": "ABND_0000",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 642,
+    "fps": 12,
+    "subjects": [
+      "T_O000",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_000",
+        "class_name": "suitcase",
+        "position": [
+          419.3,
+          402.5
+        ],
+        "present_from": 169,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0000.csv",
+    "object_id": "O_000",
+    "owner_track_id": "T_O000",
+    "first_seen": 169,
+    "attended_until": 226,
+    "separation_frame": 226,
+    "stationary_duration_frames": 473,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0001",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 577,
+    "fps": 12,
+    "subjects": [
+      "T_O001",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_001",
+        "class_name": "suitcase",
+        "position": [
+          529.9,
+          345.1
+        ],
+        "present_from": 192,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0001.csv",
+    "object_id": "O_001",
+    "owner_track_id": "T_O001",
+    "first_seen": 192,
+    "attended_until": 239,
+    "separation_frame": 239,
+    "stationary_duration_frames": 385,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0002",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 648,
+    "fps": 12,
+    "subjects": [
+      "T_O002",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_002",
+        "class_name": "suitcase",
+        "position": [
+          453.5,
+          328.0
+        ],
+        "present_from": 254,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0002.csv",
+    "object_id": "O_002",
+    "owner_track_id": "T_O002",
+    "first_seen": 254,
+    "attended_until": 326,
+    "separation_frame": 326,
+    "stationary_duration_frames": 394,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0003",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 546,
+    "fps": 12,
+    "subjects": [
+      "T_O003",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_003",
+        "class_name": "suitcase",
+        "position": [
+          624.5,
+          419.9
+        ],
+        "present_from": 147,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0003.csv",
+    "object_id": "O_003",
+    "owner_track_id": "T_O003",
+    "first_seen": 147,
+    "attended_until": 199,
+    "separation_frame": 199,
+    "stationary_duration_frames": 399,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0004",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 536,
+    "fps": 12,
+    "subjects": [
+      "T_O004",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_004",
+        "class_name": "suitcase",
+        "position": [
+          372.6,
+          422.6
+        ],
+        "present_from": 190,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0004.csv",
+    "object_id": "O_004",
+    "owner_track_id": "T_O004",
+    "first_seen": 190,
+    "attended_until": 240,
+    "separation_frame": 240,
+    "stationary_duration_frames": 346,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0005",
+    "category": "abandoned_object",
+    "label": "normal_stays",
+    "positive": false,
+    "frames": 610,
+    "fps": 12,
+    "subjects": [
+      "T_O005",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_005",
+        "class_name": "suitcase",
+        "position": [
+          386.9,
+          347.4
+        ],
+        "present_from": 162,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0005.csv",
+    "object_id": "O_005",
+    "owner_track_id": "T_O005",
+    "first_seen": 162,
+    "attended_until": 226,
+    "separation_frame": null,
+    "stationary_duration_frames": 448,
+    "status": "attended",
+    "note": "owner remains with the bag throughout",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0006",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 700,
+    "fps": 12,
+    "subjects": [
+      "T_O006",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_006",
+        "class_name": "suitcase",
+        "position": [
+          377.0,
+          377.1
+        ],
+        "present_from": 208,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0006.csv",
+    "object_id": "O_006",
+    "owner_track_id": "T_O006",
+    "first_seen": 208,
+    "attended_until": 278,
+    "separation_frame": 278,
+    "stationary_duration_frames": 492,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0007",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 494,
+    "fps": 12,
+    "subjects": [
+      "T_O007",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_007",
+        "class_name": "suitcase",
+        "position": [
+          417.5,
+          339.4
+        ],
+        "present_from": 163,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0007.csv",
+    "object_id": "O_007",
+    "owner_track_id": "T_O007",
+    "first_seen": 163,
+    "attended_until": 235,
+    "separation_frame": 235,
+    "stationary_duration_frames": 331,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0008",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 661,
+    "fps": 12,
+    "subjects": [
+      "T_O008",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_008",
+        "class_name": "suitcase",
+        "position": [
+          584.8,
+          355.9
+        ],
+        "present_from": 219,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0008.csv",
+    "object_id": "O_008",
+    "owner_track_id": "T_O008",
+    "first_seen": 219,
+    "attended_until": 282,
+    "separation_frame": 282,
+    "stationary_duration_frames": 442,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0009",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 505,
+    "fps": 12,
+    "subjects": [
+      "T_O009",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_009",
+        "class_name": "suitcase",
+        "position": [
+          466.4,
+          400.7
+        ],
+        "present_from": 138,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0009.csv",
+    "object_id": "O_009",
+    "owner_track_id": "T_O009",
+    "first_seen": 138,
+    "attended_until": 184,
+    "separation_frame": 184,
+    "stationary_duration_frames": 367,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0010",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 486,
+    "fps": 12,
+    "subjects": [
+      "T_O010",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_010",
+        "class_name": "suitcase",
+        "position": [
+          482.5,
+          404.7
+        ],
+        "present_from": 149,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0010.csv",
+    "object_id": "O_010",
+    "owner_track_id": "T_O010",
+    "first_seen": 149,
+    "attended_until": 218,
+    "separation_frame": 218,
+    "stationary_duration_frames": 337,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0011",
+    "category": "abandoned_object",
+    "label": "normal_stays",
+    "positive": false,
+    "frames": 528,
+    "fps": 12,
+    "subjects": [
+      "T_O011",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_011",
+        "class_name": "suitcase",
+        "position": [
+          611.6,
+          416.2
+        ],
+        "present_from": 206,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0011.csv",
+    "object_id": "O_011",
+    "owner_track_id": "T_O011",
+    "first_seen": 206,
+    "attended_until": 269,
+    "separation_frame": null,
+    "stationary_duration_frames": 322,
+    "status": "attended",
+    "note": "owner remains with the bag throughout",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0012",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 594,
+    "fps": 12,
+    "subjects": [
+      "T_O012",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_012",
+        "class_name": "suitcase",
+        "position": [
+          351.9,
+          380.9
+        ],
+        "present_from": 180,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0012.csv",
+    "object_id": "O_012",
+    "owner_track_id": "T_O012",
+    "first_seen": 180,
+    "attended_until": 251,
+    "separation_frame": 251,
+    "stationary_duration_frames": 414,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0013",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 684,
+    "fps": 12,
+    "subjects": [
+      "T_O013",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_013",
+        "class_name": "suitcase",
+        "position": [
+          599.9,
+          393.4
+        ],
+        "present_from": 188,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0013.csv",
+    "object_id": "O_013",
+    "owner_track_id": "T_O013",
+    "first_seen": 188,
+    "attended_until": 258,
+    "separation_frame": 258,
+    "stationary_duration_frames": 496,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0014",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 611,
+    "fps": 12,
+    "subjects": [
+      "T_O014",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_014",
+        "class_name": "suitcase",
+        "position": [
+          540.2,
+          406.0
+        ],
+        "present_from": 167,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0014.csv",
+    "object_id": "O_014",
+    "owner_track_id": "T_O014",
+    "first_seen": 167,
+    "attended_until": 207,
+    "separation_frame": 207,
+    "stationary_duration_frames": 444,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0015",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 503,
+    "fps": 12,
+    "subjects": [
+      "T_O015",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_015",
+        "class_name": "suitcase",
+        "position": [
+          350.3,
+          418.6
+        ],
+        "present_from": 188,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0015.csv",
+    "object_id": "O_015",
+    "owner_track_id": "T_O015",
+    "first_seen": 188,
+    "attended_until": 249,
+    "separation_frame": 249,
+    "stationary_duration_frames": 315,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0016",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 583,
+    "fps": 12,
+    "subjects": [
+      "T_O016",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_016",
+        "class_name": "suitcase",
+        "position": [
+          443.7,
+          380.8
+        ],
+        "present_from": 194,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0016.csv",
+    "object_id": "O_016",
+    "owner_track_id": "T_O016",
+    "first_seen": 194,
+    "attended_until": 236,
+    "separation_frame": 236,
+    "stationary_duration_frames": 389,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0017",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 619,
+    "fps": 12,
+    "subjects": [
+      "T_O017",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_017",
+        "class_name": "suitcase",
+        "position": [
+          409.3,
+          377.3
+        ],
+        "present_from": 157,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0017.csv",
+    "object_id": "O_017",
+    "owner_track_id": "T_O017",
+    "first_seen": 157,
+    "attended_until": 209,
+    "separation_frame": 209,
+    "stationary_duration_frames": 462,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0018",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 598,
+    "fps": 12,
+    "subjects": [
+      "T_O018",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_018",
+        "class_name": "suitcase",
+        "position": [
+          467.3,
+          410.5
+        ],
+        "present_from": 166,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0018.csv",
+    "object_id": "O_018",
+    "owner_track_id": "T_O018",
+    "first_seen": 166,
+    "attended_until": 222,
+    "separation_frame": 222,
+    "stationary_duration_frames": 432,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0019",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 605,
+    "fps": 12,
+    "subjects": [
+      "T_O019",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_019",
+        "class_name": "suitcase",
+        "position": [
+          570.4,
+          427.2
+        ],
+        "present_from": 225,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0019.csv",
+    "object_id": "O_019",
+    "owner_track_id": "T_O019",
+    "first_seen": 225,
+    "attended_until": 292,
+    "separation_frame": 292,
+    "stationary_duration_frames": 380,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0020",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 548,
+    "fps": 12,
+    "subjects": [
+      "T_O020",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_020",
+        "class_name": "suitcase",
+        "position": [
+          481.9,
+          394.3
+        ],
+        "present_from": 168,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0020.csv",
+    "object_id": "O_020",
+    "owner_track_id": "T_O020",
+    "first_seen": 168,
+    "attended_until": 216,
+    "separation_frame": 216,
+    "stationary_duration_frames": 380,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0021",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 486,
+    "fps": 12,
+    "subjects": [
+      "T_O021",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_021",
+        "class_name": "suitcase",
+        "position": [
+          378.6,
+          369.0
+        ],
+        "present_from": 194,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0021.csv",
+    "object_id": "O_021",
+    "owner_track_id": "T_O021",
+    "first_seen": 194,
+    "attended_until": 263,
+    "separation_frame": 263,
+    "stationary_duration_frames": 292,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0022",
+    "category": "abandoned_object",
+    "label": "unattended",
+    "positive": true,
+    "frames": 536,
+    "fps": 12,
+    "subjects": [
+      "T_O022",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_022",
+        "class_name": "suitcase",
+        "position": [
+          489.0,
+          407.8
+        ],
+        "present_from": 203,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0022.csv",
+    "object_id": "O_022",
+    "owner_track_id": "T_O022",
+    "first_seen": 203,
+    "attended_until": 259,
+    "separation_frame": 259,
+    "stationary_duration_frames": 333,
+    "status": "unattended",
+    "note": "owner settles with the bag, then departs for good",
+    "contents": null
+  },
+  {
+    "scene_id": "ABND_0023",
+    "category": "abandoned_object",
+    "label": "normal_returns",
+    "positive": false,
+    "frames": 604,
+    "fps": 12,
+    "subjects": [
+      "T_O023",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [
+      {
+        "object_id": "O_023",
+        "class_name": "suitcase",
+        "position": [
+          384.8,
+          412.1
+        ],
+        "present_from": 224,
+        "width": 46,
+        "height": 38
+      }
+    ],
+    "tracking_csv": "behavior/abandoned_object/tracking/ABND_0023.csv",
+    "object_id": "O_023",
+    "owner_track_id": "T_O023",
+    "first_seen": 224,
+    "attended_until": 284,
+    "separation_frame": 284,
+    "stationary_duration_frames": 380,
+    "status": "attended",
+    "note": "owner steps away briefly then reclaims the bag",
+    "contents": null
+  }
+]

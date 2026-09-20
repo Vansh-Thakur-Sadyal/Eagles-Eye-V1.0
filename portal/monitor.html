@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eagles Eye — Platform Admin</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/portal/assets/favicon.png">
+<link rel="stylesheet" href="/portal/assets/portal.css">
+<style>
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 24px 20px 64px; }
+  .kpis { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); margin-bottom: 22px; }
+  .kpi { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .kpi b { display: block; font-size: 1.8rem; line-height: 1.1; }
+  .kpi span { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; }
+  table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  th { text-align: left; color: var(--muted); font-weight: 500; padding: 10px 8px; border-bottom: 1px solid var(--line); font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; }
+  td { padding: 10px 8px; border-bottom: 1px solid rgba(43,58,60,.6); vertical-align: top; }
+  .panel { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 4px 16px 12px; margin-bottom: 20px; }
+  .panel h2 { font-size: 1rem; margin: 16px 0 10px; }
+  .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .75rem; border: 1px solid var(--line); }
+  .pill.on { background: rgba(126,226,168,.14); border-color: var(--ok); color: #d7f7e6; }
+  .pill.off { color: var(--muted); }
+  .pill.bad { background: rgba(255,123,107,.14); border-color: var(--danger); color: #ffd9d3; }
+  .mono { font-family: ui-monospace, Consolas, monospace; font-size: .82rem; color: var(--muted); }
+  .bar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-bottom: 16px; }
+  .bar .grow { flex: 1; }
+  button.link { background: none; border: 1px solid var(--line); color: var(--ink); border-radius: 8px; padding: 4px 10px; cursor: pointer; font-size: .8rem; }
+  button.link:hover { border-color: var(--brand); }
+</style>
+</head>
+<body>
+
+<!-- sign in --------------------------------------------------------------- -->
+<div class="auth-wrap" id="gate">
+  <div class="card">
+    <h1>Platform admin</h1>
+    <p class="sub">Administrator account only. Operators cannot sign in here.</p>
+    <label for="u">Username</label>
+    <input id="u" autocomplete="username" placeholder="admin">
+    <label for="p">Password</label>
+    <input id="p" type="password" autocomplete="current-password">
+    <button class="btn big" id="go" style="width:100%;margin-top:16px">Sign in</button>
+    <div class="msg" id="msg"></div>
+  </div>
+</div>
+
+<!-- panel ----------------------------------------------------------------- -->
+<div id="panel" style="display:none">
+  <header class="nav">
+    <a class="brand" href="#" aria-label="Eagles Eye"><img src="/portal/assets/eagles-eye-emblem.png" alt="Eagles Eye"><span class="brand-tag">admin</span></a>
+    <div class="actions" style="margin-left:auto">
+      <span class="mono" id="refreshed"></span>
+      <button class="btn ghost" id="signout">Sign out</button>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="kpis" id="kpis"></div>
+
+    <div class="panel">
+      <h2>Online now <span class="mono" id="online_count"></span></h2>
+      <table><thead><tr><th>Account</th><th>Organisation</th><th>Type</th><th>Last seen</th></tr></thead>
+        <tbody id="online"></tbody></table>
+    </div>
+
+    <div class="panel">
+      <h2>Accounts</h2>
+      <table><thead><tr><th>Account</th><th>Organisation</th><th>Status</th><th>Terms</th><th>Sign-ins</th><th></th></tr></thead>
+        <tbody id="accounts"></tbody></table>
+    </div>
+
+    <div class="panel">
+      <h2>Activity</h2>
+      <div class="bar">
+        <select id="event_filter" style="max-width:240px">
+          <option value="">All events</option>
+          <option value="signup_started">Sign-ups</option>
+          <option value="signup_verified">Verifications</option>
+          <option value="login_ok">Sign-ins</option>
+          <option value="login_failed">Failed sign-ins</option>
+          <option value="otp_sent">Codes sent</option>
+          <option value="password_reset">Password resets</option>
+          <option value="captcha_failed">Captcha failures</option>
+          <option value="rate_limited">Rate-limited</option>
+        </select>
+        <span class="grow"></span>
+      </div>
+      <table><thead><tr><th>When</th><th>Event</th><th>Account</th><th>Outcome</th><th>From</th><th>Detail</th></tr></thead>
+        <tbody id="activity"></tbody></table>
+    </div>
+  </div>
+</div>
+
+<script>
+const KEY = 'sentinel.admin.token';
+let token = null;
+try { token = localStorage.getItem(KEY); } catch (e) {}
+
+async function get(path) {
+  const r = await fetch(path, { headers: { Authorization: 'Bearer ' + token } });
+  if (r.status === 401 || r.status === 404) { signOut(); throw new Error('Session ended'); }
+  return r.json();
+}
+
+function signOut() {
+  token = null;
+  try { localStorage.removeItem(KEY); } catch (e) {}
+  document.getElementById('panel').style.display = 'none';
+  document.getElementById('gate').style.display = 'grid';
+}
+
+document.getElementById('signout').onclick = signOut;
+
+document.getElementById('go').onclick = async (e) => {
+  const msg = document.getElementById('msg');
+  msg.className = 'msg';
+  const btn = e.currentTarget;
+  btn.disabled = true; btn.textContent = 'Signing in…';
+  try {
+    const r = await fetch('/api/auth/login', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username: document.getElementById('u').value.trim(),
+                             password: document.getElementById('p').value }),
+    });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.detail || 'Those details did not match.');
+    token = data.access_token;
+    // Confirm this really is the administrator before showing anything.
+    const probe = await fetch('/api/portal/admin/overview', { headers: { Authorization: 'Bearer ' + token } });
+    if (!probe.ok) throw new Error('This account is not a platform administrator.');
+    try { localStorage.setItem(KEY, token); } catch (err) {}
+    start();
+  } catch (err) {
+    msg.textContent = err.message; msg.className = 'msg err';
+  } finally { btn.disabled = false; btn.textContent = 'Sign in'; }
+};
+
+const fmt = (iso) => iso ? new Date(iso).toLocaleString([], { month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }) : '—';
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+
+async function refresh() {
+  const [ov, acc, act] = await Promise.all([
+    get('/api/portal/admin/overview'),
+    get('/api/portal/admin/accounts'),
+    get('/api/portal/admin/activity?limit=120' +
+        (document.getElementById('event_filter').value ? '&event=' + document.getElementById('event_filter').value : '')),
+  ]);
+
+  document.getElementById('kpis').innerHTML = [
+    ['Accounts', ov.accounts.total], ['Active', ov.accounts.active],
+    ['Pending', ov.accounts.pending], ['Suspended', ov.accounts.suspended],
+    ['Online now', ov.accounts.online_now], ['Organisations', ov.organisations.total],
+    ['Sign-ups 24h', ov.last_24h.signups], ['Sign-ins 24h', ov.last_24h.logins],
+    ['Failed 24h', ov.last_24h.failed_logins], ['Blocked 24h', ov.last_24h.blocked],
+  ].map(([k, v]) => `<div class="kpi"><b>${v}</b><span>${k}</span></div>`).join('');
+
+  document.getElementById('online_count').textContent = `(${ov.online.length})`;
+  document.getElementById('online').innerHTML = ov.online.length ? ov.online.map((a) => `
+    <tr><td>${esc(a.name)}<div class="mono">${esc(a.email)}</div></td>
+        <td>${esc(a.organisation ? a.organisation.name : '—')}</td>
+        <td>${esc(a.organisation ? a.organisation.account_type : '—')}</td>
+        <td class="mono">${fmt(a.last_seen_at)}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="mono">Nobody signed in within the last 15 minutes.</td></tr>';
+
+  document.getElementById('accounts').innerHTML = acc.items.map((a) => `
+    <tr>
+      <td>${esc(a.name)}<div class="mono">${esc(a.email)} · ${esc(a.phone)}</div></td>
+      <td>${esc(a.organisation ? a.organisation.name : '—')}<div class="mono">${esc(a.organisation ? a.organisation.account_type : '')}</div></td>
+      <td><span class="pill ${a.status === 'active' ? 'on' : a.status === 'suspended' ? 'bad' : 'off'}">${esc(a.status)}</span>
+          ${a.online ? '<span class="pill on">online</span>' : ''}</td>
+      <td class="mono">${esc(a.terms.version || '—')}<br>${fmt(a.terms.accepted_at)}<br>${esc(a.terms.ip)}</td>
+      <td class="mono">${a.login_count}<br>${fmt(a.last_login_at)}</td>
+      <td><button class="link" data-id="${a.id}" data-to="${a.status === 'suspended' ? 'active' : 'suspended'}">
+          ${a.status === 'suspended' ? 'Reinstate' : 'Suspend'}</button></td>
+    </tr>`).join('');
+
+  document.querySelectorAll('button.link[data-id]').forEach((b) => {
+    b.onclick = async () => {
+      b.disabled = true;
+      await fetch(`/api/portal/admin/accounts/${b.dataset.id}/status`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+        body: JSON.stringify({ status: b.dataset.to }),
+      });
+      refresh();
+    };
+  });
+
+  document.getElementById('activity').innerHTML = act.items.map((e) => `
+    <tr><td class="mono">${fmt(e.at)}</td>
+        <td>${esc(e.event)}</td>
+        <td class="mono">${esc(e.email || '—')}</td>
+        <td><span class="pill ${e.outcome === 'ok' ? 'on' : e.outcome === 'blocked' || e.outcome === 'failed' ? 'bad' : 'off'}">${esc(e.outcome)}</span></td>
+        <td class="mono">${esc(e.ip)}</td>
+        <td class="mono">${esc(JSON.stringify(e.detail || {}).slice(0, 90))}</td></tr>`).join('');
+
+  document.getElementById('refreshed').textContent = 'updated ' + new Date().toLocaleTimeString();
+}
+
+function start() {
+  document.getElementById('gate').style.display = 'none';
+  document.getElementById('panel').style.display = 'block';
+  refresh().catch(() => {});
+  clearInterval(window.__timer);
+  window.__timer = setInterval(() => refresh().catch(() => {}), 10000);
+}
+
+document.getElementById('event_filter').onchange = () => refresh().catch(() => {});
+if (token) {
+  fetch('/api/portal/admin/overview', { headers: { Authorization: 'Bearer ' + token } })
+    .then((r) => { if (r.ok) start(); else signOut(); }).catch(signOut);
+}
+</script>
+</body>
+</html>

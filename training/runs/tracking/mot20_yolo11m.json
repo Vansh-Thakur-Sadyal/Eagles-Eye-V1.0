@@ -1,0 +1,24 @@
+{
+  "dataset": "mot20",
+  "detector": "yolo11m.pt",
+  "tracker": "Sentinel ByteTracker (backend/app/vision/tracker.py)",
+  "sequences": [
+    "MOT20-01",
+    "MOT20-02",
+    "MOT20-03",
+    "MOT20-05",
+    "MOT20-01",
+    "MOT20-02",
+    "MOT20-03",
+    "MOT20-05"
+  ],
+  "MOTA": 0.2071,
+  "IDF1": 0.3215,
+  "id_switches": 723,
+  "precision": 0.881,
+  "recall": 0.2401,
+  "mostly_tracked": 116,
+  "mostly_lost": 1398,
+  "mean_fps": 9687.7,
+  "note": "MOTChallenge train sequences (the only ones with public ground truth); no training was done on them."
+}

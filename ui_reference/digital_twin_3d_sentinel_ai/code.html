@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#dae2fd","surface":"#f8f9ff","on-tertiary-container":"#dfccff","on-primary-container":"#cad3ff","on-tertiary-fixed":"#25005a","error-container":"#ffdad6","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#5a00c6","on-background":"#0b1c30","on-primary":"#ffffff","on-tertiary":"#ffffff","on-error-container":"#93000a","secondary-fixed":"#dae2fd","primary":"#0037b0","surface-container-highest":"#d3e4fe","on-primary-fixed":"#001551","surface-container-high":"#dce9ff","background":"#f8f9ff","primary-fixed-dim":"#b7c4ff","tertiary-container":"#712ae2","inverse-on-surface":"#eaf1ff","inverse-surface":"#213145","tertiary-fixed-dim":"#d2bbff","on-surface-variant":"#434655","tertiary":"#5700c0","surface-variant":"#d3e4fe","inverse-primary":"#b7c4ff","surface-bright":"#f8f9ff","surface-container":"#e5eeff","primary-container":"#1d4ed8","on-secondary-fixed":"#131b2e","outline-variant":"#c4c5d7","secondary":"#565e74","on-secondary-fixed-variant":"#3f465c","surface-dim":"#cbdbf5","primary-fixed":"#dce1ff","on-secondary":"#ffffff","secondary-fixed-dim":"#bec6e0","error":"#ba1a1a","on-error":"#ffffff","on-surface":"#0b1c30","tertiary-fixed":"#eaddff","surface-container-low":"#eff4ff","outline":"#747686","on-secondary-container":"#5c647a","surface-tint":"#2151da","on-primary-fixed-variant":"#0039b5"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"1.5rem","space-sm":"0.5rem","space-lg":"1rem","space-xs":"0.25rem","gutter-lg":"1rem","space-md":"0.75rem","gutter":"0.75rem","margin":"1rem","margin-lg":"1.5rem"},fontFamily:{"headline-md":["Geist"],"headline-lg":["Geist"],"data-mono-md":["JetBrains Mono"],"display-lg-mobile":["Geist"],"label-sm":["Inter"],"data-mono-sm":["JetBrains Mono"],"body-lg":["Inter"],"label-md":["Inter"],"display-lg":["Geist"],"headline-sm":["Geist"],"body-sm":["Inter"],"body-md":["Inter"]},fontSize:{"headline-md":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["20px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"data-mono-md":["12px",{"lineHeight":"16px","fontWeight":"500"}],"display-lg-mobile":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.02em","fontWeight":"600"}],"data-mono-sm":["11px",{"lineHeight":"14px","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"display-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["14px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"body-md":["13px",{"lineHeight":"18px","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-16 bg-surface-container-lowest border-b border-outline-variant/40 z-50 px-margin-lg flex items-center justify-between gap-space-lg shadow-[0_1px_3px_0_rgba(15,23,42,0.04)]"><div class="flex items-center gap-space-md shrink-0"><img alt="Sentinel AI Shield Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYjFCfs11R9L3rAsRHU1e4Ub09nU0qqiEhGJMZurJ4beCz38LZ3wJNsLe2JMKrfgy2JItEE1KA42UENCy-7urXk9nbVAqo_eJQCWU53JIGK5jNr7K2OvJOXhxlZ-LFwgHgnS9bIUgOcZ_x0tVTHxPRuA4LUhROATuww6JjWfSfh5uf1h_PGRW8AMSvI1m55eiY68xQ2Se8LHa5Of9B25GnUr1ji4m-YZdOL94GvhtTxkO-cj1iGNL4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-on-surface tracking-wider">SENTINEL AI</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">PUBLIC SAFETY INTELLIGENCE PLATFORM</span></div><div class="h-6 w-px bg-outline-variant/50 ml-space-xs"></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span><span class="font-data-mono-sm text-data-mono-sm font-semibold uppercase tracking-wider">SYSTEM OPERATIONAL</span></div></div><div class="flex-1 max-w-2xl px-space-md"><div class="relative flex items-center w-full"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">smart_toy</span><input class="w-full h-9 pl-9 pr-20 bg-surface-container-low border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:bg-surface-container-lowest transition-all" placeholder='Ask Sentinel anything... (e.g., "Find unusual activity near Platform 3", "Where is Track A17?")' type="text"/><div class="absolute right-2.5 flex items-center gap-1.5"><kbd class="px-1.5 py-0.5 rounded bg-surface-container-high border border-outline-variant font-data-mono-sm text-data-mono-sm text-on-surface-variant">⌘K</kbd><span class="material-symbols-outlined text-primary text-[18px] cursor-pointer hover:text-primary-container transition-colors">mic</span></div></div></div><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-2.5"><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-300"><span class="w-1.5 h-1.5 rounded-full bg-amber-600"></span><span class="font-data-mono-sm text-data-mono-sm font-bold">7 ACTIVE</span></div><div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface"><span class="material-symbols-outlined text-[14px] text-primary">videocam</span><span>248/252 CAMS ONLINE</span></div><div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-low border border-outline-variant/60 font-data-mono-sm text-data-mono-sm text-on-surface-variant"><span class="material-symbols-outlined text-[14px]">schedule</span><span>18:44:12 UTC</span></div></div><div class="h-6 w-px bg-outline-variant/50"></div><div class="relative"><button class="w-8 h-8 rounded-lg flex items-center justify-center hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-error text-on-error font-data-mono-sm text-data-mono-sm flex items-center justify-center font-bold">3</span></div><div class="flex items-center gap-2.5 pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-headline-sm font-semibold text-on-surface leading-tight">Cmdr. R. Chen</span><span class="font-label-sm text-label-sm text-on-surface-variant">Watch Commander - SOC Alpha</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-72 bg-surface-container-lowest border-r border-outline-variant/40 z-40 flex flex-col justify-between overflow-y-auto"><div class="p-space-md"><nav class="flex flex-col gap-space-lg" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><div class="flex flex-col gap-1"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">OPERATIONS</div><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="command-center" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">desktop_windows</span><span>Command Center</span></div></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="live-cameras" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">videocam</span><span>Live Cameras</span></div></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="active-incidents" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">warning</span><span>Active Incidents</span></div><span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-data-mono-sm text-data-mono-sm font-bold">7</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="alerts" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">emergency_home</span><span>Alerts</span></div></a></div><div class="flex flex-col gap-1"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INTELLIGENCE</div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="people-tracking" href="#"><span class="material-symbols-outlined text-[20px]">person_search</span><span>People &amp; Tracking</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="behavior-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span>Behavior Intelligence</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="crowd-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">groups</span><span>Crowd Intelligence</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="object-intelligence" href="#"><span class="material-symbols-outlined text-[20px]">category</span><span>Object Intelligence</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="threat-assessment" href="#"><span class="material-symbols-outlined text-[20px]">shield_with_heart</span><span>Threat Assessment</span></a></div><div class="flex flex-col gap-1"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">INVESTIGATION</div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="forensic-search" href="#"><span class="material-symbols-outlined text-[20px]">manage_search</span><span>Forensic Search</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="incident-timeline" href="#"><span class="material-symbols-outlined text-[20px]">timeline</span><span>Incident Timeline</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="evidence-locker" href="#"><span class="material-symbols-outlined text-[20px]">lock_open</span><span>Evidence Locker</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>AI Assistant</span></a></div><div class="flex flex-col gap-1"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">SPATIAL &amp; AR</div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="digital-twin-3d" href="#"><span class="material-symbols-outlined text-[20px]">3d_rotation</span><span>Digital Twin 3D</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="ar-field-vision" href="#"><span class="material-symbols-outlined text-[20px]">view_in_ar</span><span>AR Field Vision</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="vr-command-center" href="#"><span class="material-symbols-outlined text-[20px]">vrpano</span><span>VR Command Center</span></a></div><div class="flex flex-col gap-1"><div class="px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">AUTOMATION &amp; ADMIN</div><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="workflows" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span>Workflows (n8n)</span></a><a class="flex items-center justify-between px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="system-health" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-[20px]">monitor_heart</span><span>System Health</span></div><span class="font-data-mono-sm text-data-mono-sm text-on-surface font-semibold">98.4%</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="privacy-audit" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span>Privacy &amp; Audit</span></a><a class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors font-headline-sm text-headline-sm" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span>Settings</span></a></div></nav></div><div class="p-space-md border-t border-outline-variant/40 bg-surface-container-low"><div class="flex flex-col gap-2.5 p-space-sm bg-surface-container-lowest rounded-lg border border-outline-variant/60"><div class="flex items-center gap-2.5"><div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[16px]">person</span></div><div class="flex flex-col min-w-0 flex-1"><div class="flex items-center justify-between"><span class="font-headline-sm text-headline-sm font-semibold truncate text-on-surface">Cmdr. R. Chen</span><span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">#SOC-04</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Terminal A - Sector 1</span></div></div><div class="flex items-center justify-between pt-1.5 border-t border-outline-variant/30"><div class="inline-flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-500"></span><span class="font-data-mono-sm text-data-mono-sm text-emerald-800 font-medium">Online &amp; Authorized</span></div><div class="flex items-center gap-1"><button class="p-1 text-on-surface-variant hover:text-on-surface transition-colors" title="Lock Station"><span class="material-symbols-outlined text-[16px]">lock</span></button><button class="p-1 text-on-surface-variant hover:text-error transition-colors" title="Operator Logout"><span class="material-symbols-outlined text-[16px]">logout</span></button></div></div></div></div></aside><div class="pl-72"><main class="relative pt-16 min-h-screen bg-background w-full px-gutter-lg py-margin"><div class="flex flex-col w-full gap-space-lg">
+<!-- Top Operational Control Strip -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">3d_rotation</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Digital Twin &amp; 3D Spatial Intelligence</h1>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary/10 text-tertiary font-data-mono-sm text-data-mono-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+              METRO HUB ALPHA
+            </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Railway Intermodal Station • Real-Time Spatial Node Graph v4.8</span>
+</div>
+</div>
+<!-- Floor Level Switcher -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg gap-1">
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all">
+          Level 0 <span class="font-data-mono-sm text-data-mono-sm text-outline">(Ground)</span>
+</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+          Level 1 <span class="font-data-mono-sm text-data-mono-sm font-normal text-on-surface-variant">(Concourse &amp; Mezzanine)</span>
+</button>
+<button class="px-3 py-1.5 rounded font-label-md text-label-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all">
+          Level 2 <span class="font-data-mono-sm text-data-mono-sm text-outline">(Platforms &amp; Tracks)</span>
+</button>
+</div>
+<!-- View Projection Controls -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm bg-primary-container text-on-primary font-semibold flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+          Isometric 3D
+        </button>
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+          Orthographic
+        </button>
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+          FOV Inspector
+        </button>
+<button class="px-3 py-1.5 rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container-lowest transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">vertical_split</span>
+          Twin / Live Split
+        </button>
+</div>
+</div>
+<!-- Spatial Filter Layer Pills -->
+<div class="flex flex-wrap items-center justify-between pt-space-xs border-t-0 gap-2">
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider pr-1">Active Layers:</span>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          Cameras (252)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          People Tracks (3,842)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+          Unattended Objects (3)
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          Heatmap: Medium
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+          FOV Cones
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm hover:bg-surface-container-high transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+          Security Corridors
+        </button>
+<button class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-semibold transition-all">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+          AR Beacons (14)
+        </button>
+</div>
+<div class="flex items-center gap-2">
+<div class="inline-flex items-center gap-1.5 px-2 py-1 bg-surface-container-low rounded font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-tertiary">speed</span>
+          Mesh Engine: 60.1 FPS
+        </div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 bg-surface-container-low rounded font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-primary">sensors</span>
+          Sync: 12ms
+        </div>
+</div>
+</div>
+</div>
+<!-- Central Workspace Grid (Twin Viewport + Telemetry Panel) -->
+<div class="grid grid-cols-12 gap-space-lg">
+<!-- Main 3D Digital Twin Spatial Viewport (8 Cols) -->
+<div class="col-span-12 xl:col-span-8 flex flex-col gap-space-md">
+<!-- 3D Viewport Window -->
+<div class="relative w-full h-[620px] bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col justify-between select-none">
+<!-- Digital Twin Ambient Overlay Grid -->
+<div class="absolute inset-0 bg-[radial-gradient(#dce9ff_1px,transparent_1px)] [background-size:24px_24px] opacity-70 pointer-events-none"></div>
+<!-- Top In-Viewport Overlay Badges -->
+<div class="relative z-20 p-space-md flex items-start justify-between pointer-events-none">
+<div class="flex flex-col gap-1 pointer-events-auto">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-lowest/90 backdrop-blur rounded-full shadow-sm text-on-surface">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm font-bold tracking-wide">CONCOURSE MEZZANINE LEVEL 1</span>
+<span class="font-data-mono-sm text-data-mono-sm text-outline">SEC-04-ELEV</span>
+</div>
+<div class="inline-flex items-center gap-2 px-2.5 py-0.5 bg-surface-container-lowest/80 backdrop-blur rounded font-data-mono-sm text-data-mono-sm text-on-surface-variant">
+<span>BOUNDS: X:142.8 Y:88.4 Z:14.0m</span>
+<span>•</span>
+<span>SENSORS: 48 ONLINE</span>
+</div>
+</div>
+<!-- Viewport Telemetry Tools -->
+<div class="flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur p-1 rounded-lg shadow-sm pointer-events-auto">
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Center View">
+<span class="material-symbols-outlined text-[18px]">center_focus_strong</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Rotate Left">
+<span class="material-symbols-outlined text-[18px]">rotate_left</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Rotate Right">
+<span class="material-symbols-outlined text-[18px]">rotate_right</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Zoom Extents">
+<span class="material-symbols-outlined text-[18px]">zoom_out_map</span>
+</button>
+<button class="w-7 h-7 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-primary transition-colors" title="Layer Density">
+<span class="material-symbols-outlined text-[18px]">layers</span>
+</button>
+</div>
+</div>
+<!-- High-Precision Technical 3D Isometric Station SVG Mesh Model -->
+<div class="absolute inset-0 flex items-center justify-center overflow-hidden">
+<svg class="w-[1100px] h-[780px] -mt-10" fill="none" viewbox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+<!-- Floor Base Projection Grid -->
+<path d="M500 80 L920 320 L500 560 L80 320 Z" fill="#eff4ff" stroke="#c4c5d7" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M500 560 L500 620 L920 380 L920 320 Z" fill="#dce9ff" stroke="#c4c5d7" stroke-width="1.5"></path>
+<path d="M500 560 L500 620 L80 380 L80 320 Z" fill="#cbdbf5" stroke="#c4c5d7" stroke-width="1.5"></path>
+<!-- Track Lines & Platform Subdivisions -->
+<path d="M220 240 L640 480" stroke="#b7c4ff" stroke-dasharray="6 3" stroke-width="2"></path>
+<path d="M250 220 L670 460" stroke="#b7c4ff" stroke-dasharray="6 3" stroke-width="2"></path>
+<path d="M280 200 L700 440" stroke="#b7c4ff" stroke-dasharray="6 3" stroke-width="2"></path>
+<!-- Platform 1 & Platform 2 Raised Structural Slabs -->
+<!-- Platform 2 (North Track) -->
+<path d="M260 170 L520 320 L480 345 L220 195 Z" fill="#ffffff" stroke="#c4c5d7" stroke-width="1.5"></path>
+<path d="M220 195 L480 345 L480 355 L220 205 Z" fill="#e5eeff" stroke="#c4c5d7" stroke-width="1"></path>
+<text fill="#565e74" font-family="Geist" font-size="11" font-weight="600" letter-spacing="1" x="320" y="245">PLATFORM 2 (NORTHBOUND)</text>
+<!-- Platform 1 (South Track) -->
+<path d="M370 415 L640 260 L680 285 L410 440 Z" fill="#ffffff" stroke="#c4c5d7" stroke-width="1.5"></path>
+<text fill="#565e74" font-family="Geist" font-size="11" font-weight="600" letter-spacing="1" x="500" y="360">PLATFORM 1 (SOUTHBOUND)</text>
+<!-- Concourse Central Hall & Turnstiles Hub -->
+<path d="M360 270 L640 110 L840 225 L560 385 Z" fill="#f8f9ff" stroke="#0037b0" stroke-width="1.5"></path>
+<!-- Concourse Structural Columns (Soft Technical Isometric Prisms) -->
+<g opacity="0.85">
+<path d="M500 240 L515 232 L515 190 L500 198 Z" fill="#cbdbf5" stroke="#747686" stroke-width="0.75"></path>
+<path d="M515 232 L530 240 L530 198 L515 190 Z" fill="#dce9ff" stroke="#747686" stroke-width="0.75"></path>
+<path d="M500 198 L515 190 L530 198 L515 206 Z" fill="#ffffff" stroke="#747686" stroke-width="0.75"></path>
+</g>
+<g opacity="0.85">
+<path d="M620 210 L635 202 L635 160 L620 168 Z" fill="#cbdbf5" stroke="#747686" stroke-width="0.75"></path>
+<path d="M635 202 L650 210 L650 168 L635 160 Z" fill="#dce9ff" stroke="#747686" stroke-width="0.75"></path>
+<path d="M620 168 L635 160 L650 168 L635 176 Z" fill="#ffffff" stroke="#747686" stroke-width="0.75"></path>
+</g>
+<g opacity="0.85">
+<path d="M680 270 L695 262 L695 220 L680 228 Z" fill="#cbdbf5" stroke="#747686" stroke-width="0.75"></path>
+<path d="M695 262 L710 270 L710 228 L695 220 Z" fill="#dce9ff" stroke="#747686" stroke-width="0.75"></path>
+<path d="M680 228 L695 220 L710 228 L695 236 Z" fill="#ffffff" stroke="#747686" stroke-width="0.75"></path>
+</g>
+<!-- Turnstiles & Baggage Check Enclosure -->
+<path d="M420 300 L540 230 L560 242 L440 312 Z" fill="#dae2fd" stroke="#0037b0" stroke-width="1"></path>
+<text fill="#0037b0" font-family="Inter" font-size="9" font-weight="600" x="445" y="275">TURNSTILES &amp; RFID GATES</text>
+<!-- Gate 4 Zone Outline (Critical Area) -->
+<path d="M660 190 L780 260 L730 290 L610 220 Z" fill="#ffdad6" fill-opacity="0.25" stroke="#ba1a1a" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<text fill="#ba1a1a" font-family="Geist" font-size="10" font-weight="700" x="670" y="225">ZONE 04: GATE 4 MEZZANINE</text>
+<!-- Camera Field of View Cones (Translucent Volumetric Frustums) -->
+<!-- CAM-042 Frustum over Gate 4 -->
+<g>
+<path d="M720 140 L600 220 L750 300 Z" fill="#712ae2" fill-opacity="0.12" stroke="#712ae2" stroke-dasharray="4 2" stroke-width="1.2"></path>
+<!-- Camera Rig Node Mount -->
+<circle cx="720" cy="140" fill="#712ae2" r="5" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#5700c0" font-family="JetBrains Mono" font-size="10" font-weight="600" x="730" y="142">CAM-042 (82° FOV)</text>
+</g>
+<!-- CAM-001 Frustum -->
+<g>
+<path d="M410 180 L350 280 L520 340 Z" fill="#1d4ed8" fill-opacity="0.08" stroke="#1d4ed8" stroke-dasharray="4 2" stroke-width="1"></path>
+<circle cx="410" cy="180" fill="#0037b0" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#0037b0" font-family="JetBrains Mono" font-size="9" font-weight="500" x="350" y="175">CAM-001</text>
+</g>
+<!-- CAM-009 Frustum (Platform 2 oversight) -->
+<g>
+<path d="M300 130 L210 200 L400 310 Z" fill="#1d4ed8" fill-opacity="0.08" stroke="#1d4ed8" stroke-dasharray="4 2" stroke-width="1"></path>
+<circle cx="300" cy="130" fill="#0037b0" r="4" stroke="#ffffff" stroke-width="1.5"></circle>
+<text fill="#0037b0" font-family="JetBrains Mono" font-size="9" font-weight="500" x="240" y="125">CAM-009</text>
+</g>
+<!-- Dynamic Pedestrian Vectors & Anonymous Dots -->
+<g opacity="0.6">
+<circle cx="460" cy="330" fill="#565e74" r="3"></circle>
+<circle cx="480" cy="320" fill="#565e74" r="3"></circle>
+<circle cx="530" cy="300" fill="#565e74" r="3"></circle>
+<circle cx="550" cy="270" fill="#565e74" r="3"></circle>
+<circle cx="580" cy="250" fill="#565e74" r="3"></circle>
+<circle cx="430" cy="240" fill="#565e74" r="3"></circle>
+<circle cx="390" cy="260" fill="#565e74" r="3"></circle>
+<circle cx="620" cy="320" fill="#565e74" r="3"></circle>
+<circle cx="650" cy="310" fill="#565e74" r="3"></circle>
+<!-- Micro vector lines -->
+<line stroke="#565e74" stroke-width="1" x1="460" x2="475" y1="330" y2="322"></line>
+<line stroke="#565e74" stroke-width="1" x1="530" x2="545" y1="300" y2="292"></line>
+<line stroke="#565e74" stroke-width="1" x1="620" x2="635" y1="320" y2="312"></line>
+</g>
+<!-- TRACK-0021 Historical Movement Trajectory (Gate 4 -> Platform 2) -->
+<g>
+<path d="M685 245 Q 580 260 480 310 T 360 250" fill="none" stroke="#712ae2" stroke-dasharray="5 4" stroke-width="2.5"></path>
+<!-- Trajectory directional chevron arrows -->
+<circle cx="685" cy="245" fill="#712ae2" r="4"></circle>
+<circle cx="580" cy="260" fill="#712ae2" opacity="0.7" r="3"></circle>
+<circle cx="480" cy="310" fill="#712ae2" opacity="0.7" r="3"></circle>
+<!-- Current target point on Platform 2 -->
+<circle cx="360" cy="250" fill="#712ae2" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<circle cx="360" cy="250" fill="#712ae2" fill-opacity="0.2" r="14"></circle>
+<text fill="#5700c0" font-family="JetBrains Mono" font-size="10" font-weight="700" x="310" y="235">TRACK-0021 (POK-34)</text>
+<text fill="#565e74" font-family="Inter" font-size="9" x="310" y="247">V: 1.4 m/s • Azimuth 274°</text>
+</g>
+<!-- INCIDENT 0017 Beacon at Gate 4 (Unattended Object) -->
+<g>
+<!-- Pulsing Incident Concentric Rings -->
+<circle cx="685" cy="245" fill="#ba1a1a" fill-opacity="0.1" r="28"></circle>
+<circle cx="685" cy="245" fill="#ba1a1a" fill-opacity="0.2" r="18"></circle>
+<circle cx="685" cy="245" fill="#ba1a1a" r="8" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Floating Spatial Callout Pin -->
+<path d="M685 245 L685 185" stroke="#ba1a1a" stroke-width="1.5"></path>
+<rect fill="#ffffff" filter="drop-shadow(0px 2px 4px rgba(186,26,26,0.15))" height="40" rx="4" stroke="#ba1a1a" stroke-width="1.5" width="140" x="615" y="145"></rect>
+<text fill="#ba1a1a" font-family="Geist" font-size="10" font-weight="700" x="625" y="161">INC-0017: UNATTENDED BAG</text>
+<text fill="#434655" font-family="JetBrains Mono" font-size="9" x="625" y="176">Stationary: 78s | CAM-042</text>
+</g>
+<!-- Field Officer AR Locations -->
+<!-- Officer Vance (Sector 2) -->
+<g>
+<circle cx="580" cy="340" fill="#0037b0" r="5" stroke="#ffffff" stroke-width="1.5"></circle>
+<path d="M580 340 L595 330" stroke="#0037b0" stroke-width="1.5"></path>
+<rect fill="#eff4ff" height="18" rx="2" stroke="#0037b0" stroke-width="0.75" width="88" x="595" y="320"></rect>
+<text fill="#0037b0" font-family="Inter" font-size="8" font-weight="600" x="600" y="332">AR: OFC VANCE</text>
+</g>
+<!-- Officer Davies (Platform 2 Intercept Vector) -->
+<g>
+<circle cx="280" cy="220" fill="#0037b0" r="5" stroke="#ffffff" stroke-width="1.5"></circle>
+<line stroke="#0037b0" stroke-dasharray="3 2" stroke-width="1.5" x1="280" x2="330" y1="220" y2="240"></line>
+<rect fill="#eff4ff" height="18" rx="2" stroke="#0037b0" stroke-width="0.75" width="90" x="235" y="195"></rect>
+<text fill="#0037b0" font-family="Inter" font-size="8" font-weight="600" x="240" y="207">AR: OFC DAVIES</text>
+</g>
+<!-- Spatial Orientation Compass Indicator (Bottom Left of Canvas) -->
+<g transform="translate(130, 480)">
+<circle cx="25" cy="25" fill="#ffffff" r="22" stroke="#c4c5d7" stroke-width="1"></circle>
+<line stroke="#747686" stroke-width="1" x1="25" x2="25" y1="8" y2="42"></line>
+<line stroke="#747686" stroke-width="1" x1="8" x2="42" y1="25" y2="25"></line>
+<polygon fill="#ba1a1a" points="25,8 21,18 29,18"></polygon>
+<text fill="#ba1a1a" font-family="Geist" font-size="9" font-weight="700" x="22" y="6">N</text>
+<text fill="#565e74" font-family="Geist" font-size="8" x="45" y="28">E</text>
+</g>
+</svg>
+</div>
+<!-- Live Status Overlay HUD within Viewport -->
+<div class="relative z-20 p-space-md flex items-end justify-between pointer-events-none">
+<div class="flex items-center gap-2 bg-surface-container-lowest/95 backdrop-blur p-2 rounded-lg shadow-sm pointer-events-auto">
+<span class="material-symbols-outlined text-[18px] text-tertiary">view_in_ar</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Digital Twin Correlated Space</span>
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">Mesh Resolution: 4.2mm • Point Cloud: 1.8M Verts</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-lowest/95 backdrop-blur px-3 py-1.5 rounded-lg shadow-sm pointer-events-auto">
+<span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-semibold text-emerald-800">ZERO BLIND-SPOT MAPPING ACTIVE</span>
+</div>
+</div>
+</div>
+<!-- Bottom Interactive 3D Replay Scrubber & Time Travel Controller -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-sm">
+<!-- Replay Header / Time readouts -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-primary">history_toggle_off</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Incident Temporal Replay &amp; Forensic Sync</span>
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-data-mono-sm text-data-mono-sm font-semibold">TIME-STEP ENGINE</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-data-mono-md text-data-mono-md font-bold text-on-surface bg-surface-container-low px-2.5 py-1 rounded">
+<span class="text-outline text-[10px]">CURRENT</span>
+<span>18:43:25 UTC</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold flex items-center gap-1 hover:bg-error-container/80 transition-colors">
+<span class="material-symbols-outlined text-[14px]">crisis_alert</span>
+              Jump to Trigger (18:43:15)
+            </button>
+</div>
+</div>
+<!-- Interactive Scrubber Track with Keyframe Markers -->
+<div class="relative w-full pt-4 pb-2 px-1">
+<!-- Timeline Scale Labels -->
+<div class="flex justify-between font-data-mono-sm text-data-mono-sm text-outline mb-1.5">
+<span>18:41:00</span>
+<span>18:41:45</span>
+<span>18:42:30</span>
+<span>18:43:15 [ALARM]</span>
+<span>18:44:00</span>
+<span>18:44:30</span>
+</div>
+<!-- Base Rail -->
+<div class="relative w-full h-2.5 bg-surface-container rounded-full overflow-visible">
+<!-- Cached Buffer Range -->
+<div class="absolute left-0 top-0 bottom-0 w-full bg-surface-variant rounded-full"></div>
+<!-- Progress Fill to 18:43:25 (~72% progress) -->
+<div class="absolute left-0 top-0 bottom-0 w-[72%] bg-primary rounded-full"></div>
+<!-- Keyframe Markers (Absolute along progress bar) -->
+<!-- Marker 1: 18:41:02 (~2%) -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[2%] w-2 h-2 rounded-full bg-surface-container-lowest border-2 border-primary cursor-pointer hover:scale-125 transition-transform" title="18:41:02 - Subject enters CAM-01"></div>
+<!-- Marker 2: 18:41:24 (~12%) -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[12%] w-2 h-2 rounded-full bg-surface-container-lowest border-2 border-primary cursor-pointer hover:scale-125 transition-transform" title="18:41:24 - Object in hand CAM-04"></div>
+<!-- Marker 3: 18:42:10 (~34%) -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[34%] w-2.5 h-2.5 rounded-full bg-amber-500 border-2 border-white cursor-pointer hover:scale-125 transition-transform" title="18:42:10 - Separation detected"></div>
+<!-- Marker 4: 18:43:15 (~66%) Trigger -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[66%] w-3.5 h-3.5 rounded-full bg-error border-2 border-white shadow-sm cursor-pointer hover:scale-125 transition-transform animate-pulse" title="18:43:15 - Stationary threshold reached (INC-0017 generated)"></div>
+<!-- Marker 5: 18:43:25 (~72%) Current Scrubber Position -->
+<div class="absolute top-1/2 -translate-y-1/2 left-[72%] -ml-2.5 w-5 h-5 rounded-full bg-primary-container border-2 border-white shadow-md flex items-center justify-center cursor-grab active:cursor-grabbing">
+<span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+</div>
+</div>
+<!-- Keyframe Event Description Strip Below Timeline -->
+<div class="grid grid-cols-5 gap-1 pt-3">
+<div class="flex flex-col bg-surface-container-low p-1.5 rounded hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-data-mono-sm text-data-mono-sm text-outline">18:41:02</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Subject enters CAM-01</span>
+</div>
+<div class="flex flex-col bg-surface-container-low p-1.5 rounded hover:bg-surface-container transition-colors cursor-pointer">
+<span class="font-data-mono-sm text-data-mono-sm text-outline">18:41:24</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Object held CAM-04</span>
+</div>
+<div class="flex flex-col bg-amber-50 p-1.5 rounded hover:bg-amber-100 transition-colors cursor-pointer">
+<span class="font-data-mono-sm text-data-mono-sm text-amber-800 font-semibold">18:42:10</span>
+<span class="font-label-sm text-label-sm text-amber-900 truncate">Separation detected</span>
+</div>
+<div class="flex flex-col bg-error-container/60 p-1.5 rounded hover:bg-error-container transition-colors cursor-pointer">
+<span class="font-data-mono-sm text-data-mono-sm text-on-error-container font-bold">18:43:15</span>
+<span class="font-label-sm text-label-sm text-on-error-container font-semibold truncate">INC-0017 Threshold</span>
+</div>
+<div class="flex flex-col bg-primary/10 p-1.5 rounded hover:bg-primary/20 transition-colors cursor-pointer">
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold">18:43:25</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold truncate">AR HUD Broadcast</span>
+</div>
+</div>
+</div>
+<!-- Scrubber Button Dock -->
+<div class="flex flex-wrap items-center justify-between pt-1">
+<div class="flex items-center gap-1.5">
+<button class="w-8 h-8 rounded bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" title="Rewind 10s">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" title="Step Frame Backward">
+<span class="material-symbols-outlined text-[18px]">skip_previous</span>
+</button>
+<button class="w-9 h-9 rounded bg-primary-container text-on-primary flex items-center justify-center shadow-sm hover:bg-primary transition-colors" title="Play/Pause">
+<span class="material-symbols-outlined text-[20px]">pause</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" title="Step Frame Forward">
+<span class="material-symbols-outlined text-[18px]">skip_next</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container-low hover:bg-surface-container text-on-surface flex items-center justify-center transition-colors" title="Fast Forward 10s">
+<span class="material-symbols-outlined text-[18px]">forward_10</span>
+</button>
+<div class="h-5 w-px bg-outline-variant/60 mx-1"></div>
+<div class="flex items-center bg-surface-container-low p-0.5 rounded">
+<button class="px-2 py-0.5 rounded font-data-mono-sm text-data-mono-sm text-on-surface-variant hover:text-on-surface">1x</button>
+<button class="px-2 py-0.5 rounded font-data-mono-sm text-data-mono-sm bg-surface-container-lowest text-primary font-bold shadow-sm">2x</button>
+<button class="px-2 py-0.5 rounded font-data-mono-sm text-data-mono-sm text-on-surface-variant hover:text-on-surface">5x</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+              Reset Timeline
+            </button>
+<button class="px-3 py-1.5 rounded bg-primary text-on-primary font-label-sm text-label-sm font-semibold flex items-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">videocam</span>
+              Sync Live Feed
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Side Panel: Spatial Intelligence & Sensor Correlation (4 Cols) -->
+<div class="col-span-12 xl:col-span-4 flex flex-col gap-space-md">
+<!-- Entity Inspector Module -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">manage_search</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Selected Spatial Entity</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-data-mono-sm text-data-mono-sm font-bold">
+            HIGH PRIORITY
+          </span>
+</div>
+<!-- Entity Core Badges -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-error/10 text-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">luggage</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">OBJ-00017 (Black Duffel)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gate 4 Mezzanine • Grid Ref [X:721, Y:245]</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-data-mono-md text-data-mono-md font-bold text-error">78s</span>
+<span class="block font-label-sm text-label-sm text-outline">STATIONARY</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="font-label-sm text-label-sm text-outline block">CORRELATED OWNER</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-primary">TRACK-0021</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Separation: 38.4 meters</span>
+</div>
+<div class="bg-surface-container-lowest p-2 rounded">
+<span class="font-label-sm text-label-sm text-outline block">TARGET DISPOSITION</span>
+<span class="font-data-mono-sm text-data-mono-sm font-bold text-on-surface">Heading Platform 2</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Velocity: 1.4 m/s (West)</span>
+</div>
+</div>
+</div>
+<!-- Camera FOV Analytics & Sensor Rig Correlation -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Primary Camera Node</span>
+<span class="inline-flex items-center gap-1 font-data-mono-sm text-data-mono-sm text-emerald-800">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+              24 FPS • 82ms Latency
+            </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">CAM-042 (Gate 4 Upper Mount)</span>
+<span class="px-2 py-0.5 rounded bg-tertiary/10 text-tertiary font-data-mono-sm text-data-mono-sm font-bold">Alpha-03 GPU</span>
+</div>
+<div class="grid grid-cols-3 gap-2 text-center pt-1 font-data-mono-sm text-data-mono-sm">
+<div class="bg-surface-container-lowest p-1.5 rounded">
+<span class="text-outline block text-[10px]">ORIENTATION</span>
+<span class="font-bold text-on-surface">135° SE</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded">
+<span class="text-outline block text-[10px]">LENS FOV</span>
+<span class="font-bold text-primary">82° Wide</span>
+</div>
+<div class="bg-surface-container-lowest p-1.5 rounded">
+<span class="text-outline block text-[10px]">RESOLVED RES</span>
+<span class="font-bold text-on-surface">4K UHD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Overlapping Camera Cones & Zero-Blindspot Correlation -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Overlapping Frustums</span>
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold">100% Zero-Blindspot</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">CAM-001 (Main Concourse Center)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">42% Overlap</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary">videocam</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">CAM-004 (Express Baggage Check)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-data-mono-sm text-data-mono-sm text-on-surface-variant">68% Overlap</span>
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+</div>
+</div>
+</div>
+</div>
+<!-- AR Field Mesh & Officer Dispatch Sync -->
+<div class="flex flex-col gap-2 pt-space-xs border-t border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">view_in_ar</span>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">AR Field Glasses Sync</span>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded-full">
+              3 Active HUDs
+            </span>
+</div>
+<div class="space-y-1.5">
+<!-- Officer Davies -->
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Officer Davies</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Platform 2 Intercept • 22m to target</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold">12ms HUD</span>
+</div>
+<!-- Officer Vance -->
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Officer Vance</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Sector 2 Mezzanine • 45m to bag</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold">14ms HUD</span>
+</div>
+<!-- Officer Gomez -->
+<div class="flex items-center justify-between p-2 bg-surface-container-low rounded">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-emerald-500"></div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Officer Gomez</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Gate 1 Perimeter • Standby</span>
+</div>
+</div>
+<span class="font-data-mono-sm text-data-mono-sm text-primary font-bold">11ms HUD</span>
+</div>
+</div>
+</div>
+<!-- Action Commands -->
+<div class="flex flex-col gap-2 pt-space-xs">
+<button class="w-full py-2 px-3 rounded bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+            Launch AR Field Vision HUD
+          </button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility_off</span>
+              Project Blindspot Map
+            </button>
+<button class="py-2 px-2.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">ios_share</span>
+              Export 3D Mesh
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick AI Spatial Advisory Notice -->
+<div class="w-full bg-surface-container-lowest rounded-xl shadow-sm p-space-md flex items-start gap-space-sm border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">psychology</span>
+<div class="flex flex-col gap-1">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Predictive Intercept Recommendation</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Correlated target TRACK-0021 will reach Platform 2 Train Car #4 in approx. <strong>42 seconds</strong>. Officer Davies is positioned for non-confrontational identification at Stairwell B.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline">Transmit Intercept Coordinate</button>
+<span class="text-outline text-xs">•</span>
+<button class="font-label-sm text-label-sm text-outline hover:text-on-surface">Dismiss Advisory</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple Micro-interaction Script for Replay Timeline and Layer Toggling
+  document.addEventListener('DOMContentLoaded', () => {
+    // Add quick interaction feedback to scrubbers and keyframes
+    const keyframes = document.querySelectorAll('.grid-cols-5 > div');
+    keyframes.forEach((kf) => {
+      kf.addEventListener('click', () => {
+        keyframes.forEach(k => k.classList.remove('ring-1', 'ring-primary'));
+        kf.classList.add('ring-1', 'ring-primary');
+      });
+    });
+  });
+</script></main></div></body></html>

@@ -1,0 +1,21 @@
+{
+  "model": "CSRNet (VGG16 frontend, dilated backend)",
+  "dataset": "UCF-QNRF official test split",
+  "density_net": {
+    "mae": 119.07,
+    "rmse": 209.96,
+    "images": 334
+  },
+  "detector_count_baseline": {
+    "mae": 693.62,
+    "rmse": 1021.82,
+    "images": 334
+  },
+  "improvement_mae": 574.55,
+  "epochs": 150,
+  "train_minutes": 45.5,
+  "model_selection": "best val MAE on 10% of the training images",
+  "promoted": true,
+  "density_scale": 100.0,
+  "max_side": 1536
+}

@@ -1,0 +1,14 @@
+........................................s............................... [ 42%]
+........................................................................ [ 84%]
+.........................s                                               [100%]
+============================== warnings summary ===============================
+.venv\lib\site-packages\starlette\testclient.py:40
+  D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\starlette\testclient.py:40: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+    _PortalFactoryType = typing.Callable[[], typing.ContextManager[anyio.abc.BlockingPortal]]
+
+tests/test_agents.py::test_watchlist_body_only_match_is_capped_and_flagged
+  D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+168 passed, 2 skipped, 2 warnings in 159.70s (0:02:39)

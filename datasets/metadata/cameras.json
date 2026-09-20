@@ -1,0 +1,21 @@
+[
+  {
+    "camera_id": "CAM_FA42F8FE097C",
+    "name": "Demo Camera (synthetic)",
+    "location": "Primary Site - Concourse",
+    "site_id": "SITE_44E41F93200F",
+    "zone": "ZONE_004744781EE8",
+    "latitude": null,
+    "longitude": null,
+    "floor": 0,
+    "orientation": 90.0,
+    "field_of_view": 82.0,
+    "range_m": 25.0,
+    "resolution": [
+      960,
+      540
+    ],
+    "fps": 12,
+    "homography": null
+  }
+]

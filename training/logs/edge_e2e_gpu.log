@@ -1,0 +1,18 @@
+starting server (the 'VPS') ...
+  [PASS] edge_node account created - 200
+  [PASS] edge_node role cannot read incidents - 403
+  [PASS] placement=edge refuses to start with no node online - no GPU edge node with spare capacity is online - start tools/gpu_worker.py on a GPU machine
+starting edge node ...
+  [PASS] node registered and online - E2E node / NVIDIA GeForce RTX 5070 Ti
+  [PASS] promoted model synced to node - anomaly_head.pt
+  [PASS] camera start accepted - connecting
+  [PASS] camera placed on the edge node - E2E node
+  [PASS] server sees node-processed frames - frame 38, 4.59 fps, detector fallback-motion
+  [PASS] preview JPEG relayed to server - 37969 bytes
+  [PASS] tracks relayed to server - 10 tracks
+  [PASS] incident raised on node stored on server - 1 incident(s), first: Running detected
+  [PASS] findings republished from the node - 15
+  [PASS] camera stop accepted
+  [PASS] node released the camera
+
+ALL CHECKS PASSED

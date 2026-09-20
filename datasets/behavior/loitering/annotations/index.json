@@ -1,0 +1,578 @@
+[
+  {
+    "scene_id": "LOIT_0000",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 582,
+    "fps": 12,
+    "subjects": [
+      "T_S000",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0000.csv",
+    "subject_id": "T_S000",
+    "dwell_centre": [
+      267.2,
+      309.7
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0001",
+    "category": "loitering",
+    "label": "normal_queue",
+    "positive": false,
+    "frames": 488,
+    "fps": 12,
+    "subjects": [
+      "T_S001",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0001.csv",
+    "subject_id": "T_S001",
+    "dwell_centre": [
+      463.9,
+      261.2
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0002",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 597,
+    "fps": 12,
+    "subjects": [
+      "T_S002",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0002.csv",
+    "subject_id": "T_S002",
+    "dwell_centre": [
+      624.6,
+      360.4
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0003",
+    "category": "loitering",
+    "label": "normal_queue",
+    "positive": false,
+    "frames": 498,
+    "fps": 12,
+    "subjects": [
+      "T_S003",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0003.csv",
+    "subject_id": "T_S003",
+    "dwell_centre": [
+      697.5,
+      363.5
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0004",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 569,
+    "fps": 12,
+    "subjects": [
+      "T_S004",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0004.csv",
+    "subject_id": "T_S004",
+    "dwell_centre": [
+      255.4,
+      352.5
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0005",
+    "category": "loitering",
+    "label": "normal_waiting_then_leaves",
+    "positive": false,
+    "frames": 550,
+    "fps": 12,
+    "subjects": [
+      "T_S005",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0005.csv",
+    "subject_id": "T_S005",
+    "dwell_centre": [
+      677.0,
+      292.0
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0006",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 558,
+    "fps": 12,
+    "subjects": [
+      "T_S006",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0006.csv",
+    "subject_id": "T_S006",
+    "dwell_centre": [
+      455.2,
+      353.2
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0007",
+    "category": "loitering",
+    "label": "normal_browsing",
+    "positive": false,
+    "frames": 589,
+    "fps": 12,
+    "subjects": [
+      "T_S007",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0007.csv",
+    "subject_id": "T_S007",
+    "dwell_centre": [
+      575.6,
+      388.2
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0008",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 535,
+    "fps": 12,
+    "subjects": [
+      "T_S008",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0008.csv",
+    "subject_id": "T_S008",
+    "dwell_centre": [
+      527.2,
+      396.0
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0009",
+    "category": "loitering",
+    "label": "normal_waiting_then_leaves",
+    "positive": false,
+    "frames": 481,
+    "fps": 12,
+    "subjects": [
+      "T_S009",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0009.csv",
+    "subject_id": "T_S009",
+    "dwell_centre": [
+      374.2,
+      296.4
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0010",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 474,
+    "fps": 12,
+    "subjects": [
+      "T_S010",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0010.csv",
+    "subject_id": "T_S010",
+    "dwell_centre": [
+      403.4,
+      317.3
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0011",
+    "category": "loitering",
+    "label": "normal_browsing",
+    "positive": false,
+    "frames": 495,
+    "fps": 12,
+    "subjects": [
+      "T_S011",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0011.csv",
+    "subject_id": "T_S011",
+    "dwell_centre": [
+      408.5,
+      260.3
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0012",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 452,
+    "fps": 12,
+    "subjects": [
+      "T_S012",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0012.csv",
+    "subject_id": "T_S012",
+    "dwell_centre": [
+      246.9,
+      343.1
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0013",
+    "category": "loitering",
+    "label": "normal_browsing",
+    "positive": false,
+    "frames": 439,
+    "fps": 12,
+    "subjects": [
+      "T_S013",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0013.csv",
+    "subject_id": "T_S013",
+    "dwell_centre": [
+      435.4,
+      262.8
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0014",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 542,
+    "fps": 12,
+    "subjects": [
+      "T_S014",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0014.csv",
+    "subject_id": "T_S014",
+    "dwell_centre": [
+      268.1,
+      254.2
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0015",
+    "category": "loitering",
+    "label": "normal_waiting_then_leaves",
+    "positive": false,
+    "frames": 546,
+    "fps": 12,
+    "subjects": [
+      "T_S015",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0015.csv",
+    "subject_id": "T_S015",
+    "dwell_centre": [
+      538.1,
+      313.7
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0016",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 562,
+    "fps": 12,
+    "subjects": [
+      "T_S016",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0016.csv",
+    "subject_id": "T_S016",
+    "dwell_centre": [
+      605.6,
+      383.7
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0017",
+    "category": "loitering",
+    "label": "normal_queue",
+    "positive": false,
+    "frames": 568,
+    "fps": 12,
+    "subjects": [
+      "T_S017",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0017.csv",
+    "subject_id": "T_S017",
+    "dwell_centre": [
+      390.3,
+      323.4
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0018",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 515,
+    "fps": 12,
+    "subjects": [
+      "T_S018",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0018.csv",
+    "subject_id": "T_S018",
+    "dwell_centre": [
+      334.1,
+      374.1
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0019",
+    "category": "loitering",
+    "label": "normal_browsing",
+    "positive": false,
+    "frames": 597,
+    "fps": 12,
+    "subjects": [
+      "T_S019",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0019.csv",
+    "subject_id": "T_S019",
+    "dwell_centre": [
+      569.9,
+      251.4
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0020",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 564,
+    "fps": 12,
+    "subjects": [
+      "T_S020",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0020.csv",
+    "subject_id": "T_S020",
+    "dwell_centre": [
+      650.2,
+      366.7
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0021",
+    "category": "loitering",
+    "label": "normal_waiting_then_leaves",
+    "positive": false,
+    "frames": 594,
+    "fps": 12,
+    "subjects": [
+      "T_S021",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0021.csv",
+    "subject_id": "T_S021",
+    "dwell_centre": [
+      612.0,
+      266.7
+    ],
+    "note": "benign control case"
+  },
+  {
+    "scene_id": "LOIT_0022",
+    "category": "loitering",
+    "label": "loitering",
+    "positive": true,
+    "frames": 522,
+    "fps": 12,
+    "subjects": [
+      "T_S022",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0022.csv",
+    "subject_id": "T_S022",
+    "dwell_centre": [
+      426.8,
+      417.6
+    ],
+    "note": "confined dwell well past the threshold"
+  },
+  {
+    "scene_id": "LOIT_0023",
+    "category": "loitering",
+    "label": "normal_queue",
+    "positive": false,
+    "frames": 455,
+    "fps": 12,
+    "subjects": [
+      "T_S023",
+      "T_BG00",
+      "T_BG01",
+      "T_BG02",
+      "T_BG03"
+    ],
+    "zones": [],
+    "objects": [],
+    "tracking_csv": "behavior/loitering/tracking/LOIT_0023.csv",
+    "subject_id": "T_S023",
+    "dwell_centre": [
+      384.0,
+      373.1
+    ],
+    "note": "benign control case"
+  }
+]

@@ -1,0 +1,364 @@
+{
+  "images": 92,
+  "yolo_weights": "configured",
+  "yolo_conf": 0.35,
+  "locateanything_mode": "slow",
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "latency_ms": {
+    "mean": 3231.4,
+    "p50": 2570.4,
+    "p95": 6523.9
+  },
+  "peak_vram_mb": 8299,
+  "minutes": 5.6,
+  "yolo": {
+    "backpack": {
+      "precision": 0.6,
+      "recall": 0.525,
+      "tp": 42,
+      "fp": 28,
+      "fn": 38
+    },
+    "bicycle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0
+    },
+    "bottle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 5,
+      "fn": 0
+    },
+    "car": {
+      "precision": 0.4167,
+      "recall": 1.0,
+      "tp": 5,
+      "fp": 7,
+      "fn": 0
+    },
+    "handbag": {
+      "precision": 0.45,
+      "recall": 0.45,
+      "tp": 18,
+      "fp": 22,
+      "fn": 22
+    },
+    "laptop": {
+      "precision": 0.6667,
+      "recall": 1.0,
+      "tp": 2,
+      "fp": 1,
+      "fn": 0
+    },
+    "motorcycle": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "person": {
+      "precision": 0.4204,
+      "recall": 0.7518,
+      "tp": 103,
+      "fp": 142,
+      "fn": 34
+    },
+    "suitcase": {
+      "precision": 0.561,
+      "recall": 0.3594,
+      "tp": 23,
+      "fp": 18,
+      "fn": 41
+    },
+    "truck": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 3,
+      "fn": 0
+    },
+    "_bags": {
+      "precision": 0.5497,
+      "recall": 0.4511,
+      "tp": 83,
+      "fp": 68,
+      "fn": 101
+    },
+    "_all": {
+      "precision": 0.4575,
+      "recall": 0.5897,
+      "tp": 194,
+      "fp": 230,
+      "fn": 135
+    }
+  },
+  "locate": {
+    "backpack": {
+      "precision": 0.5319,
+      "recall": 0.625,
+      "tp": 50,
+      "fp": 44,
+      "fn": 30
+    },
+    "bicycle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 5,
+      "fn": 0
+    },
+    "bottle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 22,
+      "fn": 0
+    },
+    "car": {
+      "precision": 0.2273,
+      "recall": 1.0,
+      "tp": 5,
+      "fp": 17,
+      "fn": 0
+    },
+    "handbag": {
+      "precision": 0.4754,
+      "recall": 0.725,
+      "tp": 29,
+      "fp": 32,
+      "fn": 11
+    },
+    "laptop": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "tp": 2,
+      "fp": 4,
+      "fn": 0
+    },
+    "motorcycle": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "person": {
+      "precision": 0.3194,
+      "recall": 0.7226,
+      "tp": 99,
+      "fp": 211,
+      "fn": 38
+    },
+    "suitcase": {
+      "precision": 0.7586,
+      "recall": 0.3438,
+      "tp": 22,
+      "fp": 7,
+      "fn": 42
+    },
+    "truck": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 3,
+      "fn": 0
+    },
+    "_bags": {
+      "precision": 0.5489,
+      "recall": 0.5489,
+      "tp": 101,
+      "fp": 83,
+      "fn": 83
+    },
+    "_all": {
+      "precision": 0.3761,
+      "recall": 0.6322,
+      "tp": 208,
+      "fp": 345,
+      "fn": 121
+    }
+  },
+  "fused_live": {
+    "backpack": {
+      "precision": 0.4808,
+      "recall": 0.625,
+      "tp": 50,
+      "fp": 54,
+      "fn": 30
+    },
+    "bicycle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0
+    },
+    "bottle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 22,
+      "fn": 0
+    },
+    "car": {
+      "precision": 0.4167,
+      "recall": 1.0,
+      "tp": 5,
+      "fp": 7,
+      "fn": 0
+    },
+    "handbag": {
+      "precision": 0.4058,
+      "recall": 0.7,
+      "tp": 28,
+      "fp": 41,
+      "fn": 12
+    },
+    "laptop": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "tp": 2,
+      "fp": 4,
+      "fn": 0
+    },
+    "motorcycle": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "person": {
+      "precision": 0.4204,
+      "recall": 0.7518,
+      "tp": 103,
+      "fp": 142,
+      "fn": 34
+    },
+    "suitcase": {
+      "precision": 0.5532,
+      "recall": 0.4062,
+      "tp": 26,
+      "fp": 21,
+      "fn": 38
+    },
+    "truck": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 3,
+      "fn": 0
+    },
+    "_bags": {
+      "precision": 0.4727,
+      "recall": 0.5652,
+      "tp": 104,
+      "fp": 116,
+      "fn": 80
+    },
+    "_all": {
+      "precision": 0.4191,
+      "recall": 0.6535,
+      "tp": 215,
+      "fp": 298,
+      "fn": 114
+    }
+  },
+  "fused_all": {
+    "backpack": {
+      "precision": 0.4808,
+      "recall": 0.625,
+      "tp": 50,
+      "fp": 54,
+      "fn": 30
+    },
+    "bicycle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 7,
+      "fn": 0
+    },
+    "bottle": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 22,
+      "fn": 0
+    },
+    "car": {
+      "precision": 0.2174,
+      "recall": 1.0,
+      "tp": 5,
+      "fp": 18,
+      "fn": 0
+    },
+    "handbag": {
+      "precision": 0.4058,
+      "recall": 0.7,
+      "tp": 28,
+      "fp": 41,
+      "fn": 12
+    },
+    "laptop": {
+      "precision": 0.3333,
+      "recall": 1.0,
+      "tp": 2,
+      "fp": 4,
+      "fn": 0
+    },
+    "motorcycle": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "person": {
+      "precision": 0.3266,
+      "recall": 0.8321,
+      "tp": 114,
+      "fp": 235,
+      "fn": 23
+    },
+    "suitcase": {
+      "precision": 0.5532,
+      "recall": 0.4062,
+      "tp": 26,
+      "fp": 21,
+      "fn": 38
+    },
+    "truck": {
+      "precision": 0.0,
+      "recall": null,
+      "tp": 0,
+      "fp": 4,
+      "fn": 0
+    },
+    "_bags": {
+      "precision": 0.4727,
+      "recall": 0.5652,
+      "tp": 104,
+      "fp": 116,
+      "fn": 80
+    },
+    "_all": {
+      "precision": 0.3576,
+      "recall": 0.6869,
+      "tp": 226,
+      "fp": 406,
+      "fn": 103
+    }
+  },
+  "decision": {
+    "rule": "enable ensemble if fused_live bag recall +>= 0.05 and bag precision -<= 0.05",
+    "bag_recall_gain": 0.1141,
+    "bag_precision_loss": 0.077,
+    "recommend_ensemble": false
+  }
+}

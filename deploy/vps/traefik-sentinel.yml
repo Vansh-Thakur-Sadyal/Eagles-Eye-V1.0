@@ -1,0 +1,16 @@
+# Goes in /opt/stacks/traefik/dynamic/sentinel.yml  (file provider, hot-reloads).
+# One router for the Sentinel dashboard; never edit another project's file.
+http:
+  routers:
+    sentinel:
+      rule: "Host(`HOSTNAME_PLACEHOLDER`)"
+      entryPoints: [websecure]
+      service: sentinel
+      tls:
+        certResolver: letsencrypt
+  services:
+    sentinel:
+      loadBalancer:
+        servers:
+          - url: "http://127.0.0.1:8090"
+        passHostHeader: true

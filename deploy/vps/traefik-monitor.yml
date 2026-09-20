@@ -1,0 +1,22 @@
+# /opt/stacks/traefik/dynamic/sentinel-monitor.yml
+# The admin/monitoring view on its own hostname, same container.
+http:
+  routers:
+    sentinel-monitor:
+      rule: "Host(`MONITOR_HOST`)"
+      entryPoints: [websecure]
+      service: sentinel
+      middlewares: [sentinel-monitor-root]
+      tls:
+        certResolver: letsencrypt
+  middlewares:
+    sentinel-monitor-root:
+      replacePathRegex:
+        regex: "^/$"
+        replacement: "/portal/monitor.html"
+  services:
+    sentinel:
+      loadBalancer:
+        servers:
+          - url: "http://127.0.0.1:8090"
+        passHostHeader: true

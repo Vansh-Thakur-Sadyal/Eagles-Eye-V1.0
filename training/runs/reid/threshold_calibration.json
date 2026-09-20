@@ -1,0 +1,16 @@
+{
+  "data": "Market-1501 bounding_box_test, 300 identities, one cross-camera pair each; 600 different-identity pairs",
+  "model": "osnet_x1_0_market1501 (promoted)",
+  "same_person_cosine": {"mean": 0.762, "std": 0.081},
+  "different_person_cosine": {"mean": 0.384, "std": 0.072},
+  "operating_points": {
+    "0.50": {"true_match_rate": 0.990, "false_match_rate": 0.0633},
+    "0.55": {"true_match_rate": 0.983, "false_match_rate": 0.0200},
+    "0.60": {"true_match_rate": 0.950, "false_match_rate": 0.0067},
+    "0.62": {"true_match_rate": 0.947, "false_match_rate": 0.0033},
+    "0.65": {"true_match_rate": 0.903, "false_match_rate": 0.0033},
+    "0.70": {"true_match_rate": 0.783, "false_match_rate": 0.0017}
+  },
+  "decision": "keep policy identity.match_threshold 0.62 and watchlist.body_match_threshold 0.60",
+  "imagenet_weights_for_comparison": "same 0.670 vs different 0.619 (gap 0.051) - thresholds were meaningless before training"
+}

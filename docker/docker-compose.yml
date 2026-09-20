@@ -1,0 +1,86 @@
+# Sentinel AI - full stack.
+#
+#   docker compose -f docker/docker-compose.yml up -d --build
+#
+# GPU: uncomment the `deploy` block on the backend and build with the CUDA base
+# image. A container can only use a GPU on the host it runs on - to use a GPU on
+# a different machine, run tools/gpu_worker.py there instead.
+name: sentinel-ai
+
+services:
+  backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.backend
+    restart: unless-stopped
+    environment:
+      SENTINEL_ENV: production
+      SENTINEL_DATABASE_URL: postgresql+psycopg://sentinel:${POSTGRES_PASSWORD:-sentinel}@postgres:5432/sentinel
+      SENTINEL_JWT_SECRET: ${SENTINEL_JWT_SECRET:?set SENTINEL_JWT_SECRET in docker/.env}
+      SENTINEL_CORS_ORIGINS: ${SENTINEL_CORS_ORIGINS:-http://localhost:8080}
+      SENTINEL_DEVICE_MODE: ${SENTINEL_DEVICE_MODE:-auto}
+      SENTINEL_ADMIN_PASSWORD: ${SENTINEL_ADMIN_PASSWORD:-}
+      SENTINEL_N8N_ENABLED: ${SENTINEL_N8N_ENABLED:-false}
+      SENTINEL_N8N_BASE_URL: ${SENTINEL_N8N_BASE_URL:-}
+      SENTINEL_LLM_PROVIDER: ${SENTINEL_LLM_PROVIDER:-none}
+      SENTINEL_LLM_BASE_URL: ${SENTINEL_LLM_BASE_URL:-}
+      SENTINEL_LLM_API_KEY: ${SENTINEL_LLM_API_KEY:-}
+      SENTINEL_LLM_MODEL: ${SENTINEL_LLM_MODEL:-}
+    volumes:
+      - sentinel-data:/data
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  frontend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    depends_on:
+      - backend
+
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sentinel}
+      POSTGRES_DB: sentinel
+    volumes:
+      - sentinel-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional: the automation layer the platform forwards events to.
+  n8n:
+    image: n8nio/n8n:latest
+    restart: unless-stopped
+    profiles: ["automation"]
+    environment:
+      N8N_HOST: ${N8N_HOST:-localhost}
+      N8N_PORT: 5678
+      GENERIC_TIMEZONE: ${TZ:-UTC}
+    ports:
+      - "5678:5678"
+    volumes:
+      - sentinel-n8n:/home/node/.n8n
+
+volumes:
+  sentinel-data:
+  sentinel-postgres:
+  sentinel-n8n:

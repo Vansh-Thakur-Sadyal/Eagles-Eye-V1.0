@@ -1,0 +1,46 @@
+# Sentinel AI backend.
+#
+# Default build is CPU-only so it runs anywhere. For GPU inference build with:
+#   docker build --build-arg BASE=nvidia/cuda:12.8.0-cudnn-runtime-ubuntu22.04 ...
+# and run with `--gpus all`.
+ARG BASE=python:3.11-slim
+FROM ${BASE}
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+# OpenCV needs these even in the headless build.
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libglib2.0-0 libgl1 ffmpeg curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY backend/requirements.txt ./requirements.txt
+RUN python -m pip install --upgrade pip && pip install -r requirements.txt
+
+COPY backend/ ./backend/
+COPY tools/ ./tools/
+COPY training/ ./training/
+
+# Built frontend, when present, is served by the same process.
+COPY frontend/dist/ ./frontend/dist/
+
+WORKDIR /app/backend
+
+ENV SENTINEL_HOST=0.0.0.0 \
+    SENTINEL_PORT=8000 \
+    SENTINEL_STORAGE_DIR=/data/storage \
+    SENTINEL_CONFIG_DIR=/data/config \
+    SENTINEL_DATASET_DIR=/data/datasets \
+    SENTINEL_VECTOR_DIR=/data/vectors \
+    SENTINEL_DATABASE_URL=sqlite:////data/storage/sentinel.db
+
+RUN mkdir -p /data/storage /data/config /data/vectors
+
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/api/system/health || exit 1
+
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

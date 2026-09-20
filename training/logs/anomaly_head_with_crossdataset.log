@@ -1,0 +1,44 @@
+anomaly: train 810 positive / 557 negative, test 140 / 106
+  model selection on 95 / 47 validation bags
+D:\Eagle_Eye_V1.0\training\train_anomaly.py:239: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  history.append({"epoch": epoch, "loss": round(float(loss), 4),
+  epoch   1  loss 0.9354  val AUC 0.8475
+  epoch  10  loss 0.6410  val AUC 0.8670
+  epoch  20  loss 0.4419  val AUC 0.8824
+  epoch  30  loss 0.5504  val AUC 0.8947
+  epoch  40  loss 0.3992  val AUC 0.9010
+  epoch  50  loss 0.3587  val AUC 0.9075
+  epoch  60  loss 0.3708  val AUC 0.9100
+{
+  "task": "anomaly",
+  "backbone": "r2plus1d_18 (Kinetics-400), 32 segments x 16 frames",
+  "evaluation": "video-level AUC on the official UCF-Crime test anomalies + 15% held-out normals (official frame-level annotations not downloaded)",
+  "video_auc": 0.9048,
+  "video_ap": 0.9305,
+  "threshold": 0.558,
+  "operating_point": {
+    "threshold": 0.558,
+    "calibrated_on": "95th percentile of validation-normal video scores",
+    "test_true_positive_rate": 0.5929,
+    "test_false_positive_rate": 0.0566
+  },
+  "train_positive": 715,
+  "train_negative": 510,
+  "test_positive": 140,
+  "test_negative": 106,
+  "epochs": 60,
+  "train_seconds": 101.6,
+  "model_selection": "best epoch on a validation slice of the training data; the test split was evaluated once, after selection",
+  "shanghaitech_cross_dataset": {
+    "frame_auc": 0.5405,
+    "videos": 107,
+    "frames": 40791
+  },
+  "promotion": {
+    "promoted": true,
+    "min_test_auc": 0.7,
+    "max_test_fpr": 0.15
+  }
+}
+PROMOTED to storage/models/anomaly

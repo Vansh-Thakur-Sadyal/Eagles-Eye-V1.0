@@ -1,0 +1,12 @@
+Train: 1201 images
+  200/1201
+  400/1201
+Corrupt JPEG data: 61 extraneous bytes before marker 0xd9
+Corrupt JPEG data: 21 extraneous bytes before marker 0xd9
+  600/1201
+  800/1201
+  1000/1201
+  1200/1201
+Test: 334 images
+  200/334
+prepared

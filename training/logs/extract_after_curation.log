@@ -1,0 +1,24 @@
+21:30:02 === extraction start (to NVMe) ===
+21:30:03 extract ucf_qnrf <- UCF-QNRF_ECCV18.zip
+22:01:16 done ucf_qnrf
+22:01:16 extract shanghaitech (split tar.gz)
+22:21:02 done shanghaitech
+22:21:02 extract mot17 <- MOT17.zip
+22:35:09 extract mot17 <- MOT17Labels.zip
+22:38:10 done mot17
+22:38:10 extract mot20 <- MOT20.zip
+23:04:35 extract mot20 <- MOT20Labels.zip
+23:04:37 done mot20
+23:04:37 extract xd_violence <- 1-1004.zip
+23:16:29 extract xd_violence <- 1005-2004.zip
+/c/sentinel_data/xd_violence/NewAdd.NBA-2017.12.25_CLE@GSW__#01-08-34_01-40-09_label_A.mp4  bad CRC d06afe02  (should be 3662af79)
+/c/sentinel_data/xd_violence/Saving.Private.Ryan.1998__#02-29-31_02-30-55_label_B2-G-0.mp4  bad CRC 0e51c352  (should be 1f80d44c)
+  error:  invalid compressed data to inflate /c/sentinel_data/xd_violence/v=8cTqh9tMz_I__#1_label_A.mp4
+/c/sentinel_data/xd_violence/v=8cTqh9tMz_I__#1_label_A.mp4  bad CRC 375e0d85  (should be 15fef912)
+/c/sentinel_data/xd_violence/v=9eME1y6V-T4__#01-12-00_01-18-00_label_A.mp4  bad CRC 39fc9dc5  (should be a23ecf68)
+23:31:28 WARN unzip failed: /d/Eagle_Eye Dataset/XD-Violence/1005-2004.zip
+23:31:29 extract xd_violence <- 2005-2804.zip
+23:42:10 extract xd_violence <- 2805-3319.zip
+23:49:31 extract xd_violence <- 3320-3954.zip
+23:55:47 INCOMPLETE xd_violence (not marked done)
+23:55:47 === extraction finished ===

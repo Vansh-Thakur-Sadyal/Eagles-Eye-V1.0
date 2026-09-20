@@ -1,0 +1,39 @@
+# Sentinel AI on the shared Hostinger VPS.  Lives at /opt/stacks/sentinel/.
+#
+# The VPS has no GPU: this container serves the dashboard, the API and the edge
+# hub. Detection/tracking/Re-ID run on operators' GPU machines through
+# tools/gpu_worker.py (docs/EDGE_GPU.md), so no torch is installed here.
+#
+#   docker compose up -d --build
+name: sentinel
+
+services:
+  app:
+    build:
+      context: ./src
+      dockerfile: docker/Dockerfile.vps
+    container_name: sentinel-app
+    restart: unless-stopped
+    env_file: ./.env
+    environment:
+      SENTINEL_ENV: production
+      SENTINEL_HOST: 0.0.0.0
+      SENTINEL_PORT: "8000"
+      SENTINEL_DEVICE_MODE: cpu          # no GPU on this box
+      SENTINEL_DETECTOR: motion          # real detection happens on edge nodes
+      SENTINEL_PROCESSING_PLACEMENT: edge
+      SENTINEL_VECTOR_BACKEND: memory
+      SENTINEL_DATABASE_URL: sqlite:////data/storage/sentinel.db
+    volumes:
+      - sentinel-data:/data
+    ports:
+      - "127.0.0.1:8090:8000"            # Traefik reaches it here
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://127.0.0.1:8000/api/system/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 40s
+      retries: 3
+
+volumes:
+  sentinel-data:

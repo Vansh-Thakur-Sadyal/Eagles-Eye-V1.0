@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\Eagle_Eye_V1.0\training\compare_detectors.py", line 137, in <module>
+    sys.exit(main())
+  File "D:\Eagle_Eye_V1.0\training\compare_detectors.py", line 99, in main
+    mot_yaml = build_mot17_person_set()
+  File "D:\Eagle_Eye_V1.0\training\compare_detectors.py", line 58, in build_mot17_person_set
+    shutil.copy2(src, MOT_YOLO / "images" / "val" / f"{name}.jpg")
+  File "C:\Users\thaku\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 434, in copy2
+    copyfile(src, dst, follow_symlinks=follow_symlinks)
+  File "C:\Users\thaku\AppData\Local\Programs\Python\Python310\lib\shutil.py", line 254, in copyfile
+    with open(src, 'rb') as fsrc:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\Eagle_Eye_V1.0\\datasets\\raw\\mot17\\train\\MOT17-02-FRCNN\\img1\\000001.jpg'

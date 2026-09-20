@@ -1,0 +1,554 @@
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+GPU: NVIDIA GeForce RTX 5070 Ti  torch 2.11.0+cu128
+Building train transforms ...
++ resize to 256x128
++ random flip
++ random crop (enlarge to 288x144 and crop 256x128)
++ to torch tensor of range [0, 1]
++ normalization (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
++ random erase
+Building test transforms ...
++ resize to 256x128
++ to torch tensor of range [0, 1]
++ normalization (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])
+=> Loading train (source) dataset
+=> Loaded Market1501
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |   751 |    12936 |         6
+  query    |   750 |     3368 |         6
+  gallery  |   751 |    15913 |         6
+  ----------------------------------------
+=> Loading test (target) dataset
+=> Loaded Market1501
+  ----------------------------------------
+  subset   | # ids | # images | # cameras
+  ----------------------------------------
+  train    |   751 |    12936 |         6
+  query    |   750 |     3368 |         6
+  gallery  |   751 |    15913 |         6
+  ----------------------------------------
+
+
+  **************** Summary ****************
+  source            : ['market1501']
+  # source datasets : 1
+  # source ids      : 751
+  # source images   : 12936
+  # source cameras  : 6
+  target            : ['market1501']
+  *****************************************
+
+
+Successfully loaded imagenet pretrained weights from "C:\Users\thaku/.cache\torch\checkpoints\osnet_x1_0_imagenet.pth"
+** The following layers are discarded due to unmatched keys or layer size: ['classifier.weight', 'classifier.bias']
+measuring ImageNet baseline ...
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0414 sec/batch
+Normalzing features with L2 norm ...
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 4.5%
+CMC curve
+Rank-1  : 14.7%
+Rank-5  : 27.8%
+Rank-10 : 34.0%
+Rank-20 : 41.6%
+baseline rank-1: 0.1470
+=> Start training
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+epoch: [1/80][50/185]	time 0.147 (0.633)	data 0.000 (0.351)	eta 2:35:36	loss_t 1.8066 (3.0168)	loss_x 7.0335 (7.4097)	acc 3.1250 (0.3125)	lr 0.001500
+epoch: [1/80][100/185]	time 0.145 (0.392)	data 0.000 (0.176)	eta 1:35:59	loss_t 0.9676 (2.3083)	loss_x 6.7157 (7.0666)	acc 0.0000 (0.8438)	lr 0.001500
+epoch: [1/80][150/185]	time 0.145 (0.311)	data 0.000 (0.117)	eta 1:15:57	loss_t 0.8201 (1.8333)	loss_x 6.3024 (6.9007)	acc 0.0000 (0.6771)	lr 0.001500
+epoch: [2/80][50/185]	time 0.144 (0.148)	data 0.000 (0.002)	eta 0:35:52	loss_t 0.5829 (0.8199)	loss_x 6.0615 (6.2609)	acc 7.8125 (1.8125)	lr 0.001499
+epoch: [2/80][100/185]	time 0.156 (0.146)	data 0.000 (0.001)	eta 0:35:25	loss_t 0.8486 (0.8199)	loss_x 5.5621 (6.1006)	acc 14.0625 (3.2344)	lr 0.001499
+epoch: [2/80][150/185]	time 0.141 (0.146)	data 0.001 (0.001)	eta 0:35:13	loss_t 2.1273 (0.8692)	loss_x 5.4327 (5.9580)	acc 4.6875 (5.1771)	lr 0.001499
+epoch: [3/80][50/185]	time 0.144 (0.147)	data 0.000 (0.003)	eta 0:35:14	loss_t 0.4792 (0.9616)	loss_x 5.6786 (5.7824)	acc 10.9375 (5.9062)	lr 0.001498
+epoch: [3/80][100/185]	time 0.142 (0.146)	data 0.000 (0.002)	eta 0:34:58	loss_t 1.4709 (0.9616)	loss_x 4.9684 (5.5262)	acc 1.5625 (9.0000)	lr 0.001498
+epoch: [3/80][150/185]	time 0.158 (0.147)	data 0.000 (0.001)	eta 0:34:55	loss_t 1.1703 (1.0048)	loss_x 3.9452 (5.1891)	acc 28.1250 (12.9271)	lr 0.001498
+epoch: [4/80][50/185]	time 0.150 (0.149)	data 0.001 (0.003)	eta 0:35:21	loss_t 0.3268 (1.1338)	loss_x 3.5088 (4.5646)	acc 42.1875 (19.8750)	lr 0.001495
+epoch: [4/80][100/185]	time 0.145 (0.148)	data 0.000 (0.001)	eta 0:34:50	loss_t 1.3715 (1.0148)	loss_x 3.7760 (4.2265)	acc 37.5000 (26.1406)	lr 0.001495
+epoch: [4/80][150/185]	time 0.145 (0.148)	data 0.001 (0.001)	eta 0:34:48	loss_t 0.6634 (0.8994)	loss_x 2.7341 (3.8815)	acc 57.8125 (33.0417)	lr 0.001495
+epoch: [5/80][50/185]	time 0.145 (0.149)	data 0.000 (0.003)	eta 0:34:48	loss_t 0.4545 (0.5876)	loss_x 3.3340 (3.5791)	acc 56.2500 (38.6250)	lr 0.001491
+epoch: [5/80][100/185]	time 0.204 (0.147)	data 0.000 (0.002)	eta 0:34:17	loss_t 0.4317 (0.5960)	loss_x 2.5353 (3.3007)	acc 65.6250 (45.2031)	lr 0.001491
+epoch: [5/80][150/185]	time 0.145 (0.148)	data 0.000 (0.001)	eta 0:34:14	loss_t 0.1027 (0.5517)	loss_x 2.1483 (3.0600)	acc 75.0000 (51.4062)	lr 0.001491
+epoch: [6/80][50/185]	time 0.146 (0.146)	data 0.000 (0.002)	eta 0:33:45	loss_t 0.2271 (0.4499)	loss_x 2.7001 (3.0294)	acc 59.3750 (49.7188)	lr 0.001486
+epoch: [6/80][100/185]	time 0.154 (0.147)	data 0.000 (0.001)	eta 0:33:38	loss_t 0.8204 (0.4655)	loss_x 2.3362 (2.8165)	acc 73.4375 (57.1094)	lr 0.001486
+epoch: [6/80][150/185]	time 0.150 (0.146)	data 0.000 (0.001)	eta 0:33:23	loss_t 0.3180 (0.4326)	loss_x 2.0264 (2.6263)	acc 78.1250 (62.3333)	lr 0.001486
+epoch: [7/80][50/185]	time 0.144 (0.150)	data 0.000 (0.002)	eta 0:34:09	loss_t 0.1639 (0.4039)	loss_x 2.2748 (2.6530)	acc 71.8750 (59.5938)	lr 0.001479
+epoch: [7/80][100/185]	time 0.144 (0.151)	data 0.000 (0.001)	eta 0:34:09	loss_t 0.9215 (0.3549)	loss_x 2.5666 (2.4678)	acc 68.7500 (65.6562)	lr 0.001479
+epoch: [7/80][150/185]	time 0.145 (0.150)	data 0.000 (0.001)	eta 0:33:54	loss_t 0.2688 (0.3340)	loss_x 1.8459 (2.3007)	acc 81.2500 (70.8125)	lr 0.001479
+epoch: [8/80][50/185]	time 0.140 (0.150)	data 0.001 (0.003)	eta 0:33:39	loss_t 0.3822 (0.3415)	loss_x 2.3114 (2.3763)	acc 65.6250 (65.9688)	lr 0.001472
+epoch: [8/80][100/185]	time 0.143 (0.149)	data 0.000 (0.002)	eta 0:33:18	loss_t 0.3566 (0.3076)	loss_x 1.8040 (2.2290)	acc 90.6250 (71.8438)	lr 0.001472
+epoch: [8/80][150/185]	time 0.142 (0.148)	data 0.000 (0.001)	eta 0:33:02	loss_t 0.4168 (0.2979)	loss_x 1.8874 (2.1097)	acc 79.6875 (75.7604)	lr 0.001472
+epoch: [9/80][50/185]	time 0.145 (0.148)	data 0.000 (0.003)	eta 0:32:42	loss_t 0.2482 (0.2725)	loss_x 1.8534 (2.1716)	acc 87.5000 (72.4375)	lr 0.001463
+epoch: [9/80][100/185]	time 0.141 (0.148)	data 0.000 (0.002)	eta 0:32:30	loss_t 0.1574 (0.2504)	loss_x 1.6508 (2.0723)	acc 84.3750 (75.6719)	lr 0.001463
+epoch: [9/80][150/185]	time 0.144 (0.148)	data 0.000 (0.001)	eta 0:32:25	loss_t 0.1777 (0.2353)	loss_x 1.5975 (1.9617)	acc 92.1875 (79.3750)	lr 0.001463
+epoch: [10/80][50/185]	time 0.148 (0.147)	data 0.000 (0.003)	eta 0:31:58	loss_t 0.7719 (0.2552)	loss_x 2.2218 (1.9818)	acc 67.1875 (79.1562)	lr 0.001454
+epoch: [10/80][100/185]	time 0.149 (0.147)	data 0.000 (0.001)	eta 0:31:50	loss_t 0.5137 (0.2164)	loss_x 2.0152 (1.9043)	acc 81.2500 (81.6406)	lr 0.001454
+epoch: [10/80][150/185]	time 0.146 (0.147)	data 0.000 (0.001)	eta 0:31:45	loss_t 0.0110 (0.2000)	loss_x 1.4523 (1.8345)	acc 95.3125 (83.8958)	lr 0.001454
+epoch: [11/80][50/185]	time 0.144 (0.149)	data 0.000 (0.003)	eta 0:32:01	loss_t 0.2322 (0.2178)	loss_x 1.8768 (1.8989)	acc 87.5000 (81.3125)	lr 0.001443
+epoch: [11/80][100/185]	time 0.143 (0.147)	data 0.000 (0.002)	eta 0:31:32	loss_t 0.5959 (0.1998)	loss_x 1.6703 (1.8042)	acc 92.1875 (84.6250)	lr 0.001443
+epoch: [11/80][150/185]	time 0.143 (0.147)	data 0.000 (0.001)	eta 0:31:25	loss_t 0.2804 (0.1889)	loss_x 1.6539 (1.7324)	acc 89.0625 (87.0417)	lr 0.001443
+epoch: [12/80][50/185]	time 0.148 (0.149)	data 0.000 (0.002)	eta 0:31:31	loss_t 0.0518 (0.1519)	loss_x 1.5273 (1.8203)	acc 95.3125 (82.5625)	lr 0.001431
+epoch: [12/80][100/185]	time 0.146 (0.147)	data 0.000 (0.001)	eta 0:30:58	loss_t 0.2996 (0.1592)	loss_x 1.6460 (1.7363)	acc 89.0625 (85.9688)	lr 0.001431
+epoch: [12/80][150/185]	time 0.160 (0.149)	data 0.000 (0.001)	eta 0:31:16	loss_t 0.2371 (0.1595)	loss_x 1.3396 (1.6697)	acc 98.4375 (88.1875)	lr 0.001431
+epoch: [13/80][50/185]	time 0.116 (0.155)	data 0.000 (0.003)	eta 0:32:16	loss_t 0.0167 (0.1518)	loss_x 1.8246 (1.7223)	acc 79.6875 (87.0312)	lr 0.001418
+epoch: [13/80][100/185]	time 0.169 (0.153)	data 0.000 (0.002)	eta 0:31:55	loss_t 0.3195 (0.1438)	loss_x 1.5146 (1.6647)	acc 92.1875 (88.8281)	lr 0.001418
+epoch: [13/80][150/185]	time 0.143 (0.151)	data 0.000 (0.001)	eta 0:31:18	loss_t 0.2913 (0.1382)	loss_x 1.6574 (1.6097)	acc 92.1875 (90.3021)	lr 0.001418
+epoch: [14/80][50/185]	time 0.149 (0.153)	data 0.000 (0.002)	eta 0:31:25	loss_t 0.0645 (0.1174)	loss_x 1.4240 (1.6587)	acc 95.3125 (88.7500)	lr 0.001404
+epoch: [14/80][100/185]	time 0.147 (0.153)	data 0.000 (0.001)	eta 0:31:21	loss_t 0.1364 (0.1189)	loss_x 1.4377 (1.6049)	acc 98.4375 (90.5469)	lr 0.001404
+epoch: [14/80][150/185]	time 0.144 (0.152)	data 0.000 (0.001)	eta 0:31:03	loss_t 0.0010 (0.1143)	loss_x 1.3239 (1.5537)	acc 100.0000 (91.9792)	lr 0.001404
+epoch: [15/80][50/185]	time 0.233 (0.153)	data 0.000 (0.002)	eta 0:31:02	loss_t 0.0149 (0.1242)	loss_x 1.6803 (1.5903)	acc 81.2500 (91.3438)	lr 0.001389
+epoch: [15/80][100/185]	time 0.152 (0.154)	data 0.000 (0.001)	eta 0:31:03	loss_t 0.0739 (0.1299)	loss_x 1.3254 (1.5458)	acc 98.4375 (92.5156)	lr 0.001389
+epoch: [15/80][150/185]	time 0.141 (0.153)	data 0.000 (0.001)	eta 0:30:39	loss_t 0.1098 (0.1244)	loss_x 1.3727 (1.5127)	acc 96.8750 (93.4583)	lr 0.001389
+epoch: [16/80][50/185]	time 0.148 (0.151)	data 0.000 (0.003)	eta 0:30:05	loss_t 0.1757 (0.1448)	loss_x 1.5982 (1.5869)	acc 89.0625 (90.4688)	lr 0.001374
+epoch: [16/80][100/185]	time 0.143 (0.150)	data 0.000 (0.002)	eta 0:29:48	loss_t 0.0174 (0.1315)	loss_x 1.4246 (1.5365)	acc 93.7500 (92.4219)	lr 0.001374
+epoch: [16/80][150/185]	time 0.148 (0.151)	data 0.000 (0.001)	eta 0:29:54	loss_t 0.0025 (0.1260)	loss_x 1.2949 (1.5000)	acc 98.4375 (93.2396)	lr 0.001374
+epoch: [17/80][50/185]	time 0.146 (0.152)	data 0.000 (0.002)	eta 0:29:50	loss_t 0.0860 (0.0978)	loss_x 1.5779 (1.5483)	acc 87.5000 (92.1562)	lr 0.001357
+epoch: [17/80][100/185]	time 0.145 (0.151)	data 0.000 (0.001)	eta 0:29:33	loss_t 0.1526 (0.0977)	loss_x 1.4010 (1.5026)	acc 98.4375 (93.4219)	lr 0.001357
+epoch: [17/80][150/185]	time 0.155 (0.150)	data 0.000 (0.001)	eta 0:29:13	loss_t 0.0311 (0.0927)	loss_x 1.3028 (1.4653)	acc 98.4375 (94.3333)	lr 0.001357
+epoch: [18/80][50/185]	time 0.157 (0.154)	data 0.000 (0.003)	eta 0:29:47	loss_t 0.1560 (0.0839)	loss_x 1.6001 (1.4852)	acc 90.6250 (94.5000)	lr 0.001339
+epoch: [18/80][100/185]	time 0.165 (0.152)	data 0.000 (0.002)	eta 0:29:13	loss_t 0.0684 (0.0911)	loss_x 1.3579 (1.4646)	acc 98.4375 (94.6094)	lr 0.001339
+epoch: [18/80][150/185]	time 0.144 (0.152)	data 0.000 (0.001)	eta 0:29:07	loss_t 0.0459 (0.0898)	loss_x 1.3676 (1.4395)	acc 95.3125 (94.9792)	lr 0.001339
+epoch: [19/80][50/185]	time 0.150 (0.158)	data 0.000 (0.003)	eta 0:30:03	loss_t 0.0024 (0.1240)	loss_x 1.5000 (1.5118)	acc 96.8750 (92.6562)	lr 0.001320
+epoch: [19/80][100/185]	time 0.180 (0.157)	data 0.000 (0.002)	eta 0:29:42	loss_t 0.0940 (0.1057)	loss_x 1.3698 (1.4603)	acc 92.1875 (94.1719)	lr 0.001320
+epoch: [19/80][150/185]	time 0.181 (0.157)	data 0.000 (0.001)	eta 0:29:32	loss_t 0.0050 (0.0969)	loss_x 1.3586 (1.4335)	acc 93.7500 (94.7188)	lr 0.001320
+epoch: [20/80][50/185]	time 0.145 (0.152)	data 0.001 (0.002)	eta 0:28:24	loss_t 0.0000 (0.1117)	loss_x 1.3057 (1.4568)	acc 98.4375 (94.3125)	lr 0.001301
+epoch: [20/80][100/185]	time 0.168 (0.155)	data 0.000 (0.001)	eta 0:28:52	loss_t 0.4262 (0.1080)	loss_x 1.3063 (1.4341)	acc 100.0000 (95.0625)	lr 0.001301
+epoch: [20/80][150/185]	time 0.147 (0.153)	data 0.001 (0.001)	eta 0:28:22	loss_t 0.0074 (0.0966)	loss_x 1.2669 (1.4129)	acc 98.4375 (95.3854)	lr 0.001301
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0134 sec/batch
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 73.7%
+CMC curve
+Rank-1  : 88.5%
+Rank-5  : 95.8%
+Rank-10 : 97.5%
+Rank-20 : 98.5%
+Checkpoint saved to "D:\Eagle_Eye_V1.0\training\runs\reid\model\model.pth.tar-20"
+epoch: [21/80][50/185]	time 0.142 (0.160)	data 0.000 (0.002)	eta 0:29:27	loss_t 0.2168 (0.0872)	loss_x 1.3021 (1.4162)	acc 96.8750 (94.9375)	lr 0.001280
+epoch: [21/80][100/185]	time 0.150 (0.156)	data 0.000 (0.001)	eta 0:28:34	loss_t 0.0000 (0.0795)	loss_x 1.3270 (1.4014)	acc 98.4375 (95.6094)	lr 0.001280
+epoch: [21/80][150/185]	time 0.144 (0.154)	data 0.000 (0.001)	eta 0:28:09	loss_t 0.1048 (0.0818)	loss_x 1.4219 (1.3840)	acc 92.1875 (95.8542)	lr 0.001280
+epoch: [22/80][50/185]	time 0.146 (0.153)	data 0.000 (0.003)	eta 0:27:38	loss_t 0.0653 (0.0707)	loss_x 1.3196 (1.4135)	acc 93.7500 (95.4375)	lr 0.001259
+epoch: [22/80][100/185]	time 0.149 (0.152)	data 0.001 (0.002)	eta 0:27:28	loss_t 0.0096 (0.0636)	loss_x 1.3180 (1.3782)	acc 96.8750 (96.2656)	lr 0.001259
+epoch: [22/80][150/185]	time 0.146 (0.150)	data 0.000 (0.001)	eta 0:26:58	loss_t 0.0098 (0.0681)	loss_x 1.2866 (1.3620)	acc 96.8750 (96.4375)	lr 0.001259
+epoch: [23/80][50/185]	time 0.149 (0.152)	data 0.000 (0.003)	eta 0:27:07	loss_t 0.0153 (0.0808)	loss_x 1.3532 (1.3806)	acc 100.0000 (95.5938)	lr 0.001237
+epoch: [23/80][100/185]	time 0.153 (0.151)	data 0.000 (0.002)	eta 0:26:49	loss_t 0.0404 (0.0764)	loss_x 1.3205 (1.3763)	acc 98.4375 (95.9062)	lr 0.001237
+epoch: [23/80][150/185]	time 0.143 (0.152)	data 0.000 (0.001)	eta 0:26:48	loss_t 0.2291 (0.0724)	loss_x 1.3268 (1.3557)	acc 95.3125 (96.3542)	lr 0.001237
+epoch: [24/80][50/185]	time 0.148 (0.149)	data 0.000 (0.002)	eta 0:26:08	loss_t 0.1429 (0.0754)	loss_x 1.3493 (1.3809)	acc 96.8750 (96.4062)	lr 0.001214
+epoch: [24/80][100/185]	time 0.144 (0.154)	data 0.001 (0.001)	eta 0:26:53	loss_t 0.1039 (0.0679)	loss_x 1.4185 (1.3606)	acc 96.8750 (96.7812)	lr 0.001214
+epoch: [24/80][150/185]	time 0.144 (0.154)	data 0.001 (0.001)	eta 0:26:39	loss_t 0.0063 (0.0612)	loss_x 1.2984 (1.3393)	acc 98.4375 (97.1667)	lr 0.001214
+epoch: [25/80][50/185]	time 0.146 (0.156)	data 0.000 (0.003)	eta 0:26:51	loss_t 0.0771 (0.0804)	loss_x 1.3704 (1.3731)	acc 98.4375 (96.6562)	lr 0.001191
+epoch: [25/80][100/185]	time 0.141 (0.154)	data 0.000 (0.001)	eta 0:26:22	loss_t 0.0034 (0.0677)	loss_x 1.2842 (1.3474)	acc 96.8750 (97.0469)	lr 0.001191
+epoch: [25/80][150/185]	time 0.149 (0.152)	data 0.000 (0.001)	eta 0:25:53	loss_t 0.0261 (0.0638)	loss_x 1.2597 (1.3288)	acc 96.8750 (97.1979)	lr 0.001191
+epoch: [26/80][50/185]	time 0.147 (0.156)	data 0.000 (0.002)	eta 0:26:18	loss_t 0.2570 (0.0717)	loss_x 1.3227 (1.3643)	acc 98.4375 (96.2812)	lr 0.001167
+epoch: [26/80][100/185]	time 0.149 (0.154)	data 0.000 (0.001)	eta 0:25:49	loss_t 0.0020 (0.0676)	loss_x 1.2410 (1.3414)	acc 100.0000 (96.9688)	lr 0.001167
+epoch: [26/80][150/185]	time 0.151 (0.152)	data 0.000 (0.001)	eta 0:25:28	loss_t 0.0302 (0.0570)	loss_x 1.3089 (1.3207)	acc 98.4375 (97.4583)	lr 0.001167
+epoch: [27/80][50/185]	time 0.144 (0.155)	data 0.001 (0.003)	eta 0:25:41	loss_t 0.0069 (0.0824)	loss_x 1.3644 (1.3367)	acc 98.4375 (97.1562)	lr 0.001142
+epoch: [27/80][100/185]	time 0.147 (0.152)	data 0.000 (0.001)	eta 0:25:03	loss_t 0.0171 (0.0599)	loss_x 1.2344 (1.3225)	acc 100.0000 (97.3438)	lr 0.001142
+epoch: [27/80][150/185]	time 0.149 (0.152)	data 0.000 (0.001)	eta 0:24:52	loss_t 0.0693 (0.0518)	loss_x 1.2649 (1.3055)	acc 98.4375 (97.5938)	lr 0.001142
+epoch: [28/80][50/185]	time 0.188 (0.161)	data 0.000 (0.002)	eta 0:26:11	loss_t 0.0280 (0.0386)	loss_x 1.2704 (1.3118)	acc 95.3125 (97.5312)	lr 0.001116
+epoch: [28/80][100/185]	time 0.151 (0.157)	data 0.001 (0.001)	eta 0:25:23	loss_t 0.0150 (0.0473)	loss_x 1.3120 (1.3091)	acc 93.7500 (97.3438)	lr 0.001116
+epoch: [28/80][150/185]	time 0.149 (0.162)	data 0.001 (0.001)	eta 0:26:01	loss_t 0.0682 (0.0494)	loss_x 1.3134 (1.2950)	acc 98.4375 (97.6458)	lr 0.001116
+epoch: [29/80][50/185]	time 0.184 (0.153)	data 0.000 (0.003)	eta 0:24:24	loss_t 0.1078 (0.0462)	loss_x 1.2998 (1.3232)	acc 95.3125 (97.6250)	lr 0.001090
+epoch: [29/80][100/185]	time 0.158 (0.150)	data 0.001 (0.002)	eta 0:23:50	loss_t 0.0000 (0.0404)	loss_x 1.2183 (1.3056)	acc 100.0000 (97.6094)	lr 0.001090
+epoch: [29/80][150/185]	time 0.146 (0.150)	data 0.000 (0.001)	eta 0:23:43	loss_t 0.0904 (0.0418)	loss_x 1.2459 (1.2917)	acc 100.0000 (97.7188)	lr 0.001090
+epoch: [30/80][50/185]	time 0.152 (0.153)	data 0.000 (0.003)	eta 0:23:54	loss_t 0.0065 (0.0326)	loss_x 1.2481 (1.3131)	acc 100.0000 (97.6250)	lr 0.001064
+epoch: [30/80][100/185]	time 0.147 (0.152)	data 0.000 (0.002)	eta 0:23:38	loss_t 0.0045 (0.0309)	loss_x 1.1930 (1.2895)	acc 100.0000 (97.9062)	lr 0.001064
+epoch: [30/80][150/185]	time 0.151 (0.151)	data 0.001 (0.001)	eta 0:23:25	loss_t 0.0171 (0.0324)	loss_x 1.2446 (1.2732)	acc 96.8750 (98.1354)	lr 0.001064
+epoch: [31/80][50/185]	time 0.183 (0.154)	data 0.000 (0.003)	eta 0:23:32	loss_t 0.0541 (0.0404)	loss_x 1.2802 (1.2834)	acc 98.4375 (98.1250)	lr 0.001037
+epoch: [31/80][100/185]	time 0.152 (0.152)	data 0.000 (0.002)	eta 0:23:10	loss_t 0.0424 (0.0449)	loss_x 1.2434 (1.2815)	acc 100.0000 (98.0625)	lr 0.001037
+epoch: [31/80][150/185]	time 0.145 (0.152)	data 0.000 (0.001)	eta 0:22:59	loss_t 0.0000 (0.0442)	loss_x 1.1928 (1.2703)	acc 100.0000 (98.2604)	lr 0.001037
+epoch: [32/80][50/185]	time 0.145 (0.158)	data 0.000 (0.002)	eta 0:23:40	loss_t 0.0000 (0.0348)	loss_x 1.2752 (1.2881)	acc 98.4375 (97.6562)	lr 0.001010
+epoch: [32/80][100/185]	time 0.152 (0.155)	data 0.000 (0.001)	eta 0:23:07	loss_t 0.0109 (0.0413)	loss_x 1.2563 (1.2699)	acc 98.4375 (98.1250)	lr 0.001010
+epoch: [32/80][150/185]	time 0.150 (0.153)	data 0.000 (0.001)	eta 0:22:41	loss_t 0.0445 (0.0391)	loss_x 1.2503 (1.2566)	acc 98.4375 (98.3438)	lr 0.001010
+epoch: [33/80][50/185]	time 0.215 (0.156)	data 0.000 (0.003)	eta 0:23:01	loss_t 0.0770 (0.0445)	loss_x 1.2302 (1.2782)	acc 100.0000 (98.4375)	lr 0.000982
+epoch: [33/80][100/185]	time 0.227 (0.154)	data 0.000 (0.001)	eta 0:22:31	loss_t 0.0294 (0.0480)	loss_x 1.2122 (1.2740)	acc 98.4375 (98.1875)	lr 0.000982
+epoch: [33/80][150/185]	time 0.148 (0.154)	data 0.000 (0.001)	eta 0:22:21	loss_t 0.0203 (0.0416)	loss_x 1.2008 (1.2571)	acc 98.4375 (98.4167)	lr 0.000982
+epoch: [34/80][50/185]	time 0.147 (0.153)	data 0.000 (0.003)	eta 0:22:05	loss_t 0.0164 (0.0343)	loss_x 1.2814 (1.2611)	acc 95.3125 (98.3125)	lr 0.000954
+epoch: [34/80][100/185]	time 0.149 (0.154)	data 0.000 (0.002)	eta 0:22:03	loss_t 0.0680 (0.0355)	loss_x 1.1781 (1.2515)	acc 100.0000 (98.4219)	lr 0.000954
+epoch: [34/80][150/185]	time 0.151 (0.153)	data 0.000 (0.001)	eta 0:21:45	loss_t 0.0000 (0.0340)	loss_x 1.1704 (1.2418)	acc 100.0000 (98.6250)	lr 0.000954
+epoch: [35/80][50/185]	time 0.148 (0.156)	data 0.000 (0.003)	eta 0:21:58	loss_t 0.0000 (0.0312)	loss_x 1.2470 (1.2676)	acc 98.4375 (97.9375)	lr 0.000925
+epoch: [35/80][100/185]	time 0.145 (0.154)	data 0.000 (0.002)	eta 0:21:36	loss_t 0.0202 (0.0288)	loss_x 1.2036 (1.2496)	acc 100.0000 (98.4375)	lr 0.000925
+epoch: [35/80][150/185]	time 0.154 (0.153)	data 0.000 (0.001)	eta 0:21:20	loss_t 0.0000 (0.0264)	loss_x 1.1826 (1.2362)	acc 100.0000 (98.6146)	lr 0.000925
+epoch: [36/80][50/185]	time 0.146 (0.157)	data 0.001 (0.003)	eta 0:21:42	loss_t 0.0300 (0.0264)	loss_x 1.2500 (1.2485)	acc 98.4375 (98.8750)	lr 0.000896
+epoch: [36/80][100/185]	time 0.133 (0.153)	data 0.000 (0.002)	eta 0:21:01	loss_t 0.0094 (0.0297)	loss_x 1.2671 (1.2454)	acc 95.3125 (98.8125)	lr 0.000896
+epoch: [36/80][150/185]	time 0.153 (0.154)	data 0.001 (0.001)	eta 0:21:01	loss_t 0.0026 (0.0287)	loss_x 1.1749 (1.2349)	acc 98.4375 (98.9271)	lr 0.000896
+epoch: [37/80][50/185]	time 0.149 (0.152)	data 0.000 (0.003)	eta 0:20:29	loss_t 0.0493 (0.0476)	loss_x 1.2244 (1.2571)	acc 96.8750 (98.2812)	lr 0.000867
+epoch: [37/80][100/185]	time 0.150 (0.155)	data 0.000 (0.002)	eta 0:20:43	loss_t 0.0000 (0.0392)	loss_x 1.2195 (1.2444)	acc 98.4375 (98.4844)	lr 0.000867
+epoch: [37/80][150/185]	time 0.151 (0.154)	data 0.000 (0.001)	eta 0:20:32	loss_t 0.0189 (0.0350)	loss_x 1.1754 (1.2352)	acc 100.0000 (98.4896)	lr 0.000867
+epoch: [38/80][50/185]	time 0.152 (0.158)	data 0.000 (0.002)	eta 0:20:50	loss_t 0.0557 (0.0287)	loss_x 1.2456 (1.2539)	acc 100.0000 (98.2188)	lr 0.000838
+epoch: [38/80][100/185]	time 0.164 (0.153)	data 0.000 (0.001)	eta 0:20:03	loss_t 0.0163 (0.0308)	loss_x 1.2312 (1.2398)	acc 100.0000 (98.4062)	lr 0.000838
+epoch: [38/80][150/185]	time 0.148 (0.152)	data 0.000 (0.001)	eta 0:19:45	loss_t 0.0000 (0.0286)	loss_x 1.2225 (1.2286)	acc 98.4375 (98.6979)	lr 0.000838
+epoch: [39/80][50/185]	time 0.138 (0.152)	data 0.001 (0.002)	eta 0:19:35	loss_t 0.0000 (0.0272)	loss_x 1.2213 (1.2445)	acc 98.4375 (98.4688)	lr 0.000809
+epoch: [39/80][100/185]	time 0.145 (0.153)	data 0.000 (0.001)	eta 0:19:32	loss_t 0.0275 (0.0229)	loss_x 1.2386 (1.2267)	acc 98.4375 (98.7500)	lr 0.000809
+epoch: [39/80][150/185]	time 0.154 (0.152)	data 0.000 (0.001)	eta 0:19:18	loss_t 0.0000 (0.0219)	loss_x 1.1595 (1.2178)	acc 100.0000 (98.8333)	lr 0.000809
+epoch: [40/80][50/185]	time 0.152 (0.155)	data 0.000 (0.003)	eta 0:19:27	loss_t 0.0204 (0.0257)	loss_x 1.2303 (1.2385)	acc 98.4375 (98.6250)	lr 0.000779
+epoch: [40/80][100/185]	time 0.154 (0.151)	data 0.000 (0.002)	eta 0:18:53	loss_t 0.0340 (0.0271)	loss_x 1.2162 (1.2250)	acc 96.8750 (98.8906)	lr 0.000779
+epoch: [40/80][150/185]	time 0.154 (0.151)	data 0.001 (0.001)	eta 0:18:42	loss_t 0.0613 (0.0251)	loss_x 1.1976 (1.2142)	acc 100.0000 (98.9792)	lr 0.000779
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0115 sec/batch
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 78.1%
+CMC curve
+Rank-1  : 91.0%
+Rank-5  : 97.2%
+Rank-10 : 98.2%
+Rank-20 : 98.8%
+Checkpoint saved to "D:\Eagle_Eye_V1.0\training\runs\reid\model\model.pth.tar-40"
+epoch: [41/80][50/185]	time 0.144 (0.148)	data 0.000 (0.002)	eta 0:18:10	loss_t 0.0000 (0.0222)	loss_x 1.2259 (1.2344)	acc 95.3125 (98.7812)	lr 0.000750
+epoch: [41/80][100/185]	time 0.148 (0.149)	data 0.000 (0.001)	eta 0:18:04	loss_t 0.0835 (0.0247)	loss_x 1.2354 (1.2198)	acc 98.4375 (98.9531)	lr 0.000750
+epoch: [41/80][150/185]	time 0.144 (0.149)	data 0.000 (0.001)	eta 0:17:59	loss_t 0.0000 (0.0270)	loss_x 1.2072 (1.2089)	acc 100.0000 (99.0417)	lr 0.000750
+epoch: [42/80][50/185]	time 0.141 (0.148)	data 0.000 (0.002)	eta 0:17:38	loss_t 0.0393 (0.0254)	loss_x 1.1473 (1.2083)	acc 100.0000 (99.3125)	lr 0.000721
+epoch: [42/80][100/185]	time 0.142 (0.147)	data 0.000 (0.001)	eta 0:17:25	loss_t 0.0230 (0.0232)	loss_x 1.1633 (1.2120)	acc 98.4375 (99.0156)	lr 0.000721
+epoch: [42/80][150/185]	time 0.151 (0.147)	data 0.000 (0.001)	eta 0:17:20	loss_t 0.0000 (0.0239)	loss_x 1.1304 (1.2059)	acc 100.0000 (99.0521)	lr 0.000721
+epoch: [43/80][50/185]	time 0.154 (0.150)	data 0.000 (0.002)	eta 0:17:27	loss_t 0.0000 (0.0260)	loss_x 1.2130 (1.2134)	acc 100.0000 (99.1875)	lr 0.000691
+epoch: [43/80][100/185]	time 0.148 (0.148)	data 0.001 (0.001)	eta 0:17:08	loss_t 0.0004 (0.0232)	loss_x 1.2209 (1.2057)	acc 100.0000 (99.2344)	lr 0.000691
+epoch: [43/80][150/185]	time 0.149 (0.148)	data 0.001 (0.001)	eta 0:16:59	loss_t 0.0000 (0.0225)	loss_x 1.1280 (1.1966)	acc 100.0000 (99.2604)	lr 0.000691
+epoch: [44/80][50/185]	time 0.145 (0.151)	data 0.000 (0.005)	eta 0:17:09	loss_t 0.0000 (0.0258)	loss_x 1.1773 (1.2070)	acc 100.0000 (99.0625)	lr 0.000662
+epoch: [44/80][100/185]	time 0.145 (0.151)	data 0.001 (0.002)	eta 0:16:58	loss_t 0.0344 (0.0268)	loss_x 1.1977 (1.2061)	acc 98.4375 (99.2656)	lr 0.000662
+epoch: [44/80][150/185]	time 0.145 (0.150)	data 0.000 (0.002)	eta 0:16:41	loss_t 0.0342 (0.0241)	loss_x 1.1895 (1.1962)	acc 100.0000 (99.3125)	lr 0.000662
+epoch: [45/80][50/185]	time 0.150 (0.152)	data 0.000 (0.003)	eta 0:16:43	loss_t 0.0241 (0.0288)	loss_x 1.3052 (1.2209)	acc 96.8750 (98.8750)	lr 0.000633
+epoch: [45/80][100/185]	time 0.156 (0.151)	data 0.000 (0.001)	eta 0:16:32	loss_t 0.0201 (0.0277)	loss_x 1.1915 (1.2070)	acc 100.0000 (99.1406)	lr 0.000633
+epoch: [45/80][150/185]	time 0.150 (0.151)	data 0.000 (0.001)	eta 0:16:23	loss_t 0.0618 (0.0246)	loss_x 1.1713 (1.1983)	acc 98.4375 (99.1875)	lr 0.000633
+epoch: [46/80][50/185]	time 0.147 (0.146)	data 0.000 (0.003)	eta 0:15:35	loss_t 0.0056 (0.0188)	loss_x 1.3476 (1.2042)	acc 95.3125 (99.2812)	lr 0.000604
+epoch: [46/80][100/185]	time 0.148 (0.146)	data 0.000 (0.001)	eta 0:15:31	loss_t 0.0000 (0.0238)	loss_x 1.1632 (1.1992)	acc 100.0000 (99.2812)	lr 0.000604
+epoch: [46/80][150/185]	time 0.147 (0.146)	data 0.000 (0.001)	eta 0:15:23	loss_t 0.0515 (0.0218)	loss_x 1.1179 (1.1921)	acc 100.0000 (99.3438)	lr 0.000604
+epoch: [47/80][50/185]	time 0.153 (0.152)	data 0.000 (0.003)	eta 0:15:49	loss_t 0.0066 (0.0203)	loss_x 1.1613 (1.2029)	acc 100.0000 (99.3125)	lr 0.000575
+epoch: [47/80][100/185]	time 0.148 (0.151)	data 0.000 (0.001)	eta 0:15:33	loss_t 0.0541 (0.0197)	loss_x 1.1411 (1.1966)	acc 100.0000 (99.2812)	lr 0.000575
+epoch: [47/80][150/185]	time 0.148 (0.149)	data 0.000 (0.001)	eta 0:15:17	loss_t 0.0000 (0.0193)	loss_x 1.1396 (1.1881)	acc 100.0000 (99.3229)	lr 0.000575
+epoch: [48/80][50/185]	time 0.145 (0.153)	data 0.001 (0.003)	eta 0:15:24	loss_t 0.0000 (0.0294)	loss_x 1.2056 (1.2082)	acc 96.8750 (98.9688)	lr 0.000546
+epoch: [48/80][100/185]	time 0.151 (0.153)	data 0.001 (0.002)	eta 0:15:15	loss_t 0.0427 (0.0232)	loss_x 1.1747 (1.1966)	acc 100.0000 (99.2031)	lr 0.000546
+epoch: [48/80][150/185]	time 0.146 (0.152)	data 0.000 (0.001)	eta 0:15:06	loss_t 0.2495 (0.0217)	loss_x 1.1333 (1.1879)	acc 100.0000 (99.2708)	lr 0.000546
+epoch: [49/80][50/185]	time 0.145 (0.149)	data 0.000 (0.003)	eta 0:14:33	loss_t 0.0173 (0.0277)	loss_x 1.1321 (1.1905)	acc 100.0000 (99.3438)	lr 0.000518
+epoch: [49/80][100/185]	time 0.112 (0.148)	data 0.001 (0.002)	eta 0:14:23	loss_t 0.0976 (0.0235)	loss_x 1.2468 (1.1849)	acc 100.0000 (99.3125)	lr 0.000518
+epoch: [49/80][150/185]	time 0.144 (0.149)	data 0.000 (0.001)	eta 0:14:20	loss_t 0.0079 (0.0209)	loss_x 1.1391 (1.1791)	acc 100.0000 (99.3021)	lr 0.000518
+epoch: [50/80][50/185]	time 0.151 (0.151)	data 0.000 (0.003)	eta 0:14:16	loss_t 0.0000 (0.0194)	loss_x 1.1524 (1.1953)	acc 100.0000 (99.3750)	lr 0.000490
+epoch: [50/80][100/185]	time 0.119 (0.151)	data 0.000 (0.002)	eta 0:14:11	loss_t 0.0000 (0.0167)	loss_x 1.1221 (1.1808)	acc 100.0000 (99.4531)	lr 0.000490
+epoch: [50/80][150/185]	time 0.147 (0.151)	data 0.000 (0.001)	eta 0:14:04	loss_t 0.0000 (0.0155)	loss_x 1.1496 (1.1722)	acc 100.0000 (99.4896)	lr 0.000490
+epoch: [51/80][50/185]	time 0.149 (0.150)	data 0.000 (0.003)	eta 0:13:46	loss_t 0.0050 (0.0186)	loss_x 1.1870 (1.1784)	acc 98.4375 (99.4688)	lr 0.000463
+epoch: [51/80][100/185]	time 0.223 (0.149)	data 0.001 (0.002)	eta 0:13:34	loss_t 0.0000 (0.0218)	loss_x 1.1457 (1.1800)	acc 100.0000 (99.3125)	lr 0.000463
+epoch: [51/80][150/185]	time 0.148 (0.150)	data 0.000 (0.001)	eta 0:13:29	loss_t 0.0041 (0.0193)	loss_x 1.1404 (1.1744)	acc 100.0000 (99.3333)	lr 0.000463
+epoch: [52/80][50/185]	time 0.151 (0.151)	data 0.000 (0.003)	eta 0:13:22	loss_t 0.0000 (0.0176)	loss_x 1.1536 (1.1886)	acc 100.0000 (99.5000)	lr 0.000436
+epoch: [52/80][100/185]	time 0.227 (0.152)	data 0.000 (0.002)	eta 0:13:20	loss_t 0.0220 (0.0186)	loss_x 1.1941 (1.1776)	acc 96.8750 (99.4844)	lr 0.000436
+epoch: [52/80][150/185]	time 0.144 (0.150)	data 0.000 (0.001)	eta 0:13:03	loss_t 0.0000 (0.0173)	loss_x 1.1016 (1.1727)	acc 100.0000 (99.4375)	lr 0.000436
+epoch: [53/80][50/185]	time 0.144 (0.150)	data 0.000 (0.003)	eta 0:12:49	loss_t 0.0000 (0.0155)	loss_x 1.1663 (1.1830)	acc 100.0000 (99.3438)	lr 0.000410
+epoch: [53/80][100/185]	time 0.146 (0.151)	data 0.001 (0.002)	eta 0:12:46	loss_t 0.0290 (0.0173)	loss_x 1.1595 (1.1761)	acc 100.0000 (99.4375)	lr 0.000410
+epoch: [53/80][150/185]	time 0.146 (0.149)	data 0.001 (0.001)	eta 0:12:31	loss_t 0.0000 (0.0168)	loss_x 1.1569 (1.1671)	acc 100.0000 (99.5000)	lr 0.000410
+epoch: [54/80][50/185]	time 0.139 (0.151)	data 0.000 (0.003)	eta 0:12:26	loss_t 0.0000 (0.0126)	loss_x 1.1951 (1.1795)	acc 100.0000 (99.5312)	lr 0.000384
+epoch: [54/80][100/185]	time 0.145 (0.150)	data 0.001 (0.002)	eta 0:12:13	loss_t 0.0000 (0.0150)	loss_x 1.1295 (1.1702)	acc 98.4375 (99.5000)	lr 0.000384
+epoch: [54/80][150/185]	time 0.148 (0.149)	data 0.000 (0.001)	eta 0:12:01	loss_t 0.0110 (0.0130)	loss_x 1.1483 (1.1613)	acc 100.0000 (99.5625)	lr 0.000384
+epoch: [55/80][50/185]	time 0.143 (0.153)	data 0.001 (0.002)	eta 0:12:05	loss_t 0.0000 (0.0183)	loss_x 1.1109 (1.1825)	acc 100.0000 (99.4375)	lr 0.000358
+epoch: [55/80][100/185]	time 0.148 (0.150)	data 0.000 (0.001)	eta 0:11:46	loss_t 0.1541 (0.0151)	loss_x 1.2014 (1.1713)	acc 98.4375 (99.4844)	lr 0.000358
+epoch: [55/80][150/185]	time 0.144 (0.150)	data 0.000 (0.001)	eta 0:11:40	loss_t 0.0037 (0.0174)	loss_x 1.1155 (1.1649)	acc 100.0000 (99.5312)	lr 0.000358
+epoch: [56/80][50/185]	time 0.141 (0.148)	data 0.000 (0.003)	eta 0:11:17	loss_t 0.0000 (0.0116)	loss_x 1.1499 (1.1640)	acc 100.0000 (99.4688)	lr 0.000333
+epoch: [56/80][100/185]	time 0.148 (0.147)	data 0.000 (0.002)	eta 0:11:06	loss_t 0.0000 (0.0144)	loss_x 1.1234 (1.1587)	acc 100.0000 (99.5781)	lr 0.000333
+epoch: [56/80][150/185]	time 0.144 (0.148)	data 0.000 (0.001)	eta 0:11:00	loss_t 0.0449 (0.0167)	loss_x 1.2103 (1.1547)	acc 98.4375 (99.5729)	lr 0.000333
+epoch: [57/80][50/185]	time 0.144 (0.149)	data 0.000 (0.003)	eta 0:10:54	loss_t 0.0000 (0.0153)	loss_x 1.1769 (1.1725)	acc 98.4375 (99.5312)	lr 0.000309
+epoch: [57/80][100/185]	time 0.149 (0.149)	data 0.001 (0.002)	eta 0:10:45	loss_t 0.0790 (0.0153)	loss_x 1.1939 (1.1707)	acc 98.4375 (99.4531)	lr 0.000309
+epoch: [57/80][150/185]	time 0.150 (0.148)	data 0.000 (0.001)	eta 0:10:33	loss_t 0.0059 (0.0142)	loss_x 1.1436 (1.1620)	acc 100.0000 (99.5000)	lr 0.000309
+epoch: [58/80][50/185]	time 0.142 (0.146)	data 0.000 (0.002)	eta 0:10:15	loss_t 0.0000 (0.0095)	loss_x 1.1655 (1.1683)	acc 100.0000 (99.3438)	lr 0.000286
+epoch: [58/80][100/185]	time 0.144 (0.147)	data 0.000 (0.001)	eta 0:10:10	loss_t 0.0214 (0.0168)	loss_x 1.1459 (1.1610)	acc 100.0000 (99.4531)	lr 0.000286
+epoch: [58/80][150/185]	time 0.148 (0.148)	data 0.000 (0.001)	eta 0:10:05	loss_t 0.0039 (0.0138)	loss_x 1.1094 (1.1532)	acc 100.0000 (99.5312)	lr 0.000286
+epoch: [59/80][50/185]	time 0.150 (0.150)	data 0.000 (0.004)	eta 0:10:01	loss_t 0.0000 (0.0175)	loss_x 1.1306 (1.1690)	acc 100.0000 (99.4688)	lr 0.000263
+epoch: [59/80][100/185]	time 0.144 (0.148)	data 0.000 (0.002)	eta 0:09:48	loss_t 0.0000 (0.0137)	loss_x 1.1190 (1.1618)	acc 100.0000 (99.5156)	lr 0.000263
+epoch: [59/80][150/185]	time 0.147 (0.149)	data 0.000 (0.001)	eta 0:09:44	loss_t 0.0124 (0.0115)	loss_x 1.1656 (1.1561)	acc 98.4375 (99.5521)	lr 0.000263
+epoch: [60/80][50/185]	time 0.148 (0.148)	data 0.000 (0.003)	eta 0:09:28	loss_t 0.0000 (0.0099)	loss_x 1.1512 (1.1633)	acc 98.4375 (99.5938)	lr 0.000241
+epoch: [60/80][100/185]	time 0.149 (0.148)	data 0.000 (0.002)	eta 0:09:20	loss_t 0.0000 (0.0116)	loss_x 1.1203 (1.1564)	acc 100.0000 (99.6250)	lr 0.000241
+epoch: [60/80][150/185]	time 0.169 (0.148)	data 0.001 (0.001)	eta 0:09:13	loss_t 0.0082 (0.0116)	loss_x 1.1367 (1.1519)	acc 100.0000 (99.6250)	lr 0.000241
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0120 sec/batch
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 80.5%
+CMC curve
+Rank-1  : 92.5%
+Rank-5  : 97.4%
+Rank-10 : 98.2%
+Rank-20 : 98.9%
+Checkpoint saved to "D:\Eagle_Eye_V1.0\training\runs\reid\model\model.pth.tar-60"
+epoch: [61/80][50/185]	time 0.167 (0.157)	data 0.000 (0.003)	eta 0:09:31	loss_t 0.0000 (0.0113)	loss_x 1.1287 (1.1605)	acc 100.0000 (99.5000)	lr 0.000220
+epoch: [61/80][100/185]	time 0.119 (0.155)	data 0.001 (0.002)	eta 0:09:19	loss_t 0.0000 (0.0116)	loss_x 1.1394 (1.1571)	acc 100.0000 (99.5469)	lr 0.000220
+epoch: [61/80][150/185]	time 0.147 (0.154)	data 0.000 (0.001)	eta 0:09:07	loss_t 0.0602 (0.0124)	loss_x 1.1193 (1.1489)	acc 100.0000 (99.6250)	lr 0.000220
+epoch: [62/80][50/185]	time 0.228 (0.156)	data 0.000 (0.002)	eta 0:09:00	loss_t 0.0110 (0.0138)	loss_x 1.1278 (1.1674)	acc 100.0000 (99.3750)	lr 0.000199
+epoch: [62/80][100/185]	time 0.147 (0.152)	data 0.001 (0.001)	eta 0:08:39	loss_t 0.0306 (0.0115)	loss_x 1.1710 (1.1588)	acc 100.0000 (99.5156)	lr 0.000199
+epoch: [62/80][150/185]	time 0.124 (0.152)	data 0.000 (0.001)	eta 0:08:31	loss_t 0.0337 (0.0134)	loss_x 1.1107 (1.1534)	acc 100.0000 (99.5208)	lr 0.000199
+epoch: [63/80][50/185]	time 0.148 (0.156)	data 0.000 (0.003)	eta 0:08:31	loss_t 0.0081 (0.0098)	loss_x 1.1398 (1.1645)	acc 100.0000 (99.6875)	lr 0.000180
+epoch: [63/80][100/185]	time 0.150 (0.158)	data 0.000 (0.002)	eta 0:08:29	loss_t 0.0238 (0.0104)	loss_x 1.1898 (1.1563)	acc 98.4375 (99.6406)	lr 0.000180
+epoch: [63/80][150/185]	time 0.149 (0.155)	data 0.001 (0.001)	eta 0:08:13	loss_t 0.0161 (0.0083)	loss_x 1.1426 (1.1485)	acc 98.4375 (99.6667)	lr 0.000180
+epoch: [64/80][50/185]	time 0.151 (0.151)	data 0.001 (0.003)	eta 0:07:47	loss_t 0.0000 (0.0123)	loss_x 1.1713 (1.1617)	acc 96.8750 (99.5625)	lr 0.000161
+epoch: [64/80][100/185]	time 0.148 (0.151)	data 0.000 (0.002)	eta 0:07:40	loss_t 0.0000 (0.0123)	loss_x 1.1183 (1.1527)	acc 100.0000 (99.6250)	lr 0.000161
+epoch: [64/80][150/185]	time 0.146 (0.151)	data 0.001 (0.001)	eta 0:07:33	loss_t 0.0108 (0.0162)	loss_x 1.1494 (1.1487)	acc 100.0000 (99.6042)	lr 0.000161
+epoch: [65/80][50/185]	time 0.150 (0.154)	data 0.001 (0.002)	eta 0:07:27	loss_t 0.0000 (0.0109)	loss_x 1.1722 (1.1555)	acc 100.0000 (99.6875)	lr 0.000143
+epoch: [65/80][100/185]	time 0.150 (0.154)	data 0.000 (0.001)	eta 0:07:20	loss_t 0.0070 (0.0114)	loss_x 1.1434 (1.1487)	acc 100.0000 (99.6719)	lr 0.000143
+epoch: [65/80][150/185]	time 0.151 (0.154)	data 0.000 (0.001)	eta 0:07:14	loss_t 0.0000 (0.0143)	loss_x 1.0938 (1.1437)	acc 100.0000 (99.6250)	lr 0.000143
+epoch: [66/80][50/185]	time 0.147 (0.154)	data 0.001 (0.003)	eta 0:06:58	loss_t 0.0146 (0.0112)	loss_x 1.1690 (1.1656)	acc 98.4375 (99.4062)	lr 0.000126
+epoch: [66/80][100/185]	time 0.153 (0.152)	data 0.000 (0.002)	eta 0:06:47	loss_t 0.0920 (0.0096)	loss_x 1.2110 (1.1509)	acc 98.4375 (99.5312)	lr 0.000126
+epoch: [66/80][150/185]	time 0.155 (0.153)	data 0.000 (0.001)	eta 0:06:41	loss_t 0.0000 (0.0089)	loss_x 1.1207 (1.1429)	acc 100.0000 (99.6042)	lr 0.000126
+epoch: [67/80][50/185]	time 0.163 (0.154)	data 0.000 (0.003)	eta 0:06:30	loss_t 0.0000 (0.0157)	loss_x 1.1592 (1.1600)	acc 100.0000 (99.4062)	lr 0.000111
+epoch: [67/80][100/185]	time 0.151 (0.154)	data 0.000 (0.002)	eta 0:06:24	loss_t 0.0000 (0.0150)	loss_x 1.1350 (1.1530)	acc 100.0000 (99.4844)	lr 0.000111
+epoch: [67/80][150/185]	time 0.153 (0.154)	data 0.000 (0.001)	eta 0:06:16	loss_t 0.0000 (0.0138)	loss_x 1.1321 (1.1456)	acc 100.0000 (99.5104)	lr 0.000111
+epoch: [68/80][50/185]	time 0.145 (0.155)	data 0.000 (0.003)	eta 0:06:05	loss_t 0.0218 (0.0101)	loss_x 1.1486 (1.1539)	acc 100.0000 (99.7188)	lr 0.000096
+epoch: [68/80][100/185]	time 0.149 (0.153)	data 0.001 (0.002)	eta 0:05:52	loss_t 0.0000 (0.0109)	loss_x 1.1138 (1.1482)	acc 100.0000 (99.7188)	lr 0.000096
+epoch: [68/80][150/185]	time 0.199 (0.154)	data 0.001 (0.001)	eta 0:05:47	loss_t 0.0029 (0.0100)	loss_x 1.1126 (1.1405)	acc 100.0000 (99.7292)	lr 0.000096
+epoch: [69/80][50/185]	time 0.149 (0.156)	data 0.000 (0.003)	eta 0:05:38	loss_t 0.0058 (0.0082)	loss_x 1.1869 (1.1505)	acc 98.4375 (99.7188)	lr 0.000082
+epoch: [69/80][100/185]	time 0.146 (0.155)	data 0.000 (0.002)	eta 0:05:27	loss_t 0.0266 (0.0157)	loss_x 1.1217 (1.1494)	acc 100.0000 (99.6094)	lr 0.000082
+epoch: [69/80][150/185]	time 0.151 (0.154)	data 0.000 (0.001)	eta 0:05:17	loss_t 0.0000 (0.0158)	loss_x 1.1133 (1.1434)	acc 100.0000 (99.6146)	lr 0.000082
+epoch: [70/80][50/185]	time 0.146 (0.158)	data 0.000 (0.003)	eta 0:05:14	loss_t 0.0000 (0.0098)	loss_x 1.1597 (1.1592)	acc 100.0000 (99.6250)	lr 0.000069
+epoch: [70/80][100/185]	time 0.160 (0.157)	data 0.001 (0.002)	eta 0:05:03	loss_t 0.0000 (0.0121)	loss_x 1.1302 (1.1498)	acc 98.4375 (99.6406)	lr 0.000069
+epoch: [70/80][150/185]	time 0.148 (0.155)	data 0.001 (0.001)	eta 0:04:52	loss_t 0.0067 (0.0092)	loss_x 1.1057 (1.1398)	acc 100.0000 (99.7292)	lr 0.000069
+epoch: [71/80][50/185]	time 0.152 (0.160)	data 0.000 (0.004)	eta 0:04:47	loss_t 0.0000 (0.0109)	loss_x 1.1769 (1.1521)	acc 100.0000 (99.6875)	lr 0.000057
+epoch: [71/80][100/185]	time 0.147 (0.157)	data 0.001 (0.002)	eta 0:04:35	loss_t 0.0000 (0.0159)	loss_x 1.1381 (1.1482)	acc 100.0000 (99.6250)	lr 0.000057
+epoch: [71/80][150/185]	time 0.146 (0.155)	data 0.000 (0.001)	eta 0:04:23	loss_t 0.0000 (0.0159)	loss_x 1.1460 (1.1405)	acc 100.0000 (99.6562)	lr 0.000057
+epoch: [72/80][50/185]	time 0.165 (0.153)	data 0.000 (0.002)	eta 0:04:06	loss_t 0.0171 (0.0102)	loss_x 1.1350 (1.1530)	acc 100.0000 (99.6250)	lr 0.000046
+epoch: [72/80][100/185]	time 0.151 (0.154)	data 0.000 (0.001)	eta 0:04:01	loss_t 0.0000 (0.0134)	loss_x 1.1161 (1.1461)	acc 100.0000 (99.6875)	lr 0.000046
+epoch: [72/80][150/185]	time 0.152 (0.154)	data 0.001 (0.001)	eta 0:03:53	loss_t 0.0822 (0.0110)	loss_x 1.1156 (1.1399)	acc 100.0000 (99.7188)	lr 0.000046
+epoch: [73/80][50/185]	time 0.149 (0.158)	data 0.000 (0.003)	eta 0:03:45	loss_t 0.0000 (0.0123)	loss_x 1.1409 (1.1497)	acc 100.0000 (99.5938)	lr 0.000037
+epoch: [73/80][100/185]	time 0.149 (0.158)	data 0.000 (0.002)	eta 0:03:37	loss_t 0.0000 (0.0097)	loss_x 1.1917 (1.1469)	acc 100.0000 (99.6406)	lr 0.000037
+epoch: [73/80][150/185]	time 0.227 (0.157)	data 0.000 (0.001)	eta 0:03:28	loss_t 0.0931 (0.0097)	loss_x 1.1428 (1.1402)	acc 98.4375 (99.6354)	lr 0.000037
+epoch: [74/80][50/185]	time 0.165 (0.159)	data 0.001 (0.003)	eta 0:03:18	loss_t 0.0179 (0.0102)	loss_x 1.1440 (1.1543)	acc 100.0000 (99.6875)	lr 0.000028
+epoch: [74/80][100/185]	time 0.145 (0.157)	data 0.000 (0.002)	eta 0:03:07	loss_t 0.0947 (0.0145)	loss_x 1.1279 (1.1447)	acc 100.0000 (99.7031)	lr 0.000028
+epoch: [74/80][150/185]	time 0.147 (0.156)	data 0.001 (0.001)	eta 0:02:59	loss_t 0.0000 (0.0135)	loss_x 1.1051 (1.1388)	acc 100.0000 (99.6667)	lr 0.000028
+epoch: [75/80][50/185]	time 0.145 (0.154)	data 0.000 (0.003)	eta 0:02:42	loss_t 0.0250 (0.0166)	loss_x 1.1719 (1.1560)	acc 100.0000 (99.5312)	lr 0.000021
+epoch: [75/80][100/185]	time 0.146 (0.153)	data 0.000 (0.001)	eta 0:02:34	loss_t 0.0157 (0.0143)	loss_x 1.1283 (1.1508)	acc 100.0000 (99.5781)	lr 0.000021
+epoch: [75/80][150/185]	time 0.149 (0.153)	data 0.000 (0.001)	eta 0:02:27	loss_t 0.0000 (0.0118)	loss_x 1.1442 (1.1405)	acc 100.0000 (99.6458)	lr 0.000021
+epoch: [76/80][50/185]	time 0.159 (0.152)	data 0.000 (0.003)	eta 0:02:13	loss_t 0.0000 (0.0093)	loss_x 1.1432 (1.1435)	acc 98.4375 (99.7188)	lr 0.000014
+epoch: [76/80][100/185]	time 0.168 (0.153)	data 0.001 (0.001)	eta 0:02:06	loss_t 0.0000 (0.0078)	loss_x 1.1632 (1.1411)	acc 98.4375 (99.6406)	lr 0.000014
+epoch: [76/80][150/185]	time 0.154 (0.153)	data 0.000 (0.001)	eta 0:01:58	loss_t 0.0000 (0.0078)	loss_x 1.1018 (1.1355)	acc 100.0000 (99.6771)	lr 0.000014
+epoch: [77/80][50/185]	time 0.146 (0.156)	data 0.000 (0.003)	eta 0:01:47	loss_t 0.0000 (0.0058)	loss_x 1.2091 (1.1512)	acc 98.4375 (99.7500)	lr 0.000009
+epoch: [77/80][100/185]	time 0.148 (0.154)	data 0.000 (0.002)	eta 0:01:38	loss_t 0.0000 (0.0080)	loss_x 1.1162 (1.1420)	acc 100.0000 (99.7812)	lr 0.000009
+epoch: [77/80][150/185]	time 0.149 (0.154)	data 0.000 (0.001)	eta 0:01:30	loss_t 0.0000 (0.0095)	loss_x 1.1022 (1.1358)	acc 100.0000 (99.7812)	lr 0.000009
+epoch: [78/80][50/185]	time 0.148 (0.155)	data 0.001 (0.002)	eta 0:01:18	loss_t 0.0094 (0.0084)	loss_x 1.1239 (1.1537)	acc 100.0000 (99.6562)	lr 0.000005
+epoch: [78/80][100/185]	time 0.152 (0.154)	data 0.000 (0.001)	eta 0:01:09	loss_t 0.0000 (0.0097)	loss_x 1.1024 (1.1501)	acc 100.0000 (99.6406)	lr 0.000005
+epoch: [78/80][150/185]	time 0.147 (0.153)	data 0.000 (0.001)	eta 0:01:01	loss_t 0.0000 (0.0085)	loss_x 1.0957 (1.1425)	acc 100.0000 (99.6354)	lr 0.000005
+epoch: [79/80][50/185]	time 0.146 (0.156)	data 0.000 (0.003)	eta 0:00:49	loss_t 0.0090 (0.0109)	loss_x 1.1696 (1.1490)	acc 100.0000 (99.5938)	lr 0.000002
+epoch: [79/80][100/185]	time 0.149 (0.153)	data 0.000 (0.001)	eta 0:00:41	loss_t 0.0000 (0.0083)	loss_x 1.1178 (1.1443)	acc 100.0000 (99.6250)	lr 0.000002
+epoch: [79/80][150/185]	time 0.146 (0.153)	data 0.000 (0.001)	eta 0:00:33	loss_t 0.0000 (0.0103)	loss_x 1.1402 (1.1391)	acc 100.0000 (99.6354)	lr 0.000002
+epoch: [80/80][50/185]	time 0.148 (0.155)	data 0.000 (0.003)	eta 0:00:20	loss_t 0.0000 (0.0055)	loss_x 1.1405 (1.1475)	acc 100.0000 (99.6875)	lr 0.000001
+epoch: [80/80][100/185]	time 0.147 (0.154)	data 0.000 (0.002)	eta 0:00:13	loss_t 0.0000 (0.0064)	loss_x 1.1165 (1.1399)	acc 100.0000 (99.7344)	lr 0.000001
+epoch: [80/80][150/185]	time 0.145 (0.154)	data 0.000 (0.001)	eta 0:00:05	loss_t 0.0000 (0.0064)	loss_x 1.0930 (1.1344)	acc 100.0000 (99.7292)	lr 0.000001
+=> Final test
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0119 sec/batch
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 80.7%
+CMC curve
+Rank-1  : 92.7%
+Rank-5  : 97.6%
+Rank-10 : 98.4%
+Rank-20 : 98.9%
+Checkpoint saved to "D:\Eagle_Eye_V1.0\training\runs\reid\model\model.pth.tar-80"
+Elapsed 0:50:04
+##### Evaluating market1501 (source) #####
+Extracting features from query set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 3368-by-512 matrix
+Extracting features from gallery set ...
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+D:\Eagle_Eye_V1.0\backend\.venv\lib\site-packages\torchreid\reid\metrics\rank.py:11: UserWarning: Cython evaluation (very fast so highly recommended) is unavailable, now use python evaluation.
+  warnings.warn(
+Done, obtained 15913-by-512 matrix
+Speed: 0.0127 sec/batch
+Normalzing features with L2 norm ...
+Computing distance matrix with metric=euclidean ...
+Computing CMC and mAP ...
+** Results **
+mAP: 81.2%
+CMC curve
+Rank-1  : 92.8%
+Rank-5  : 97.4%
+Rank-10 : 98.4%
+Rank-20 : 99.0%
+{
+  "model": "osnet_x1_0",
+  "dataset": "market1501",
+  "epochs": 80,
+  "rank1": 0.9284,
+  "baseline_rank1_imagenet": 0.147,
+  "train_minutes": 50.1,
+  "gpu": "NVIDIA GeForce RTX 5070 Ti",
+  "promoted": true,
+  "checkpoint": "D:\\Eagle_Eye_V1.0\\storage\\models\\reid\\osnet_x1_0_market1501.pth.tar"
+}

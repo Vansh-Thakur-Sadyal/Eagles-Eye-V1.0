@@ -1,0 +1,63 @@
+{
+  "checks": {
+    "edge_node account created": {
+      "ok": true,
+      "detail": 200
+    },
+    "edge_node role cannot read incidents": {
+      "ok": true,
+      "detail": 403
+    },
+    "placement=edge refuses to start with no node online": {
+      "ok": true,
+      "detail": "no GPU edge node with spare capacity is online - start tools/gpu_worker.py on a GPU machine"
+    },
+    "node registered and online": {
+      "ok": true,
+      "detail": "E2E node / NVIDIA GeForce RTX 5070 Ti"
+    },
+    "promoted model synced to node": {
+      "ok": true,
+      "detail": "anomaly_head.pt"
+    },
+    "camera start accepted": {
+      "ok": true,
+      "detail": "connecting"
+    },
+    "camera placed on the edge node": {
+      "ok": true,
+      "detail": "E2E node"
+    },
+    "server sees node-processed frames": {
+      "ok": true,
+      "detail": "frame 38, 4.59 fps, detector fallback-motion"
+    },
+    "preview JPEG relayed to server": {
+      "ok": true,
+      "detail": "37969 bytes"
+    },
+    "tracks relayed to server": {
+      "ok": true,
+      "detail": "10 tracks"
+    },
+    "incident raised on node stored on server": {
+      "ok": true,
+      "detail": "1 incident(s), first: Running detected"
+    },
+    "findings republished from the node": {
+      "ok": true,
+      "detail": "15"
+    },
+    "camera stop accepted": {
+      "ok": true,
+      "detail": null
+    },
+    "node released the camera": {
+      "ok": true,
+      "detail": null
+    }
+  },
+  "started": "2026-09-20 05:10:17",
+  "result": "pass",
+  "scratch_dir": null
+}

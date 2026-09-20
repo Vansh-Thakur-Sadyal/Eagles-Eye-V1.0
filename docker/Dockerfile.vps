@@ -1,0 +1,48 @@
+# Sentinel AI for a CPU-only VPS (the dashboard + API + edge hub).
+#
+# Deliberately WITHOUT torch/ultralytics/insightface: this box has no GPU, and
+# detection, tracking, Re-ID and the video models run on operators' own GPU
+# machines via tools/gpu_worker.py (docs/EDGE_GPU.md). That keeps the image
+# ~400 MB instead of ~6 GB, and the VPS only aggregates what nodes report.
+#
+# Everything degrades honestly: with no torch the detector reports itself as
+# the motion fallback, and cameras are placed on edge nodes
+# (SENTINEL_PROCESSING_PLACEMENT=edge).
+FROM python:3.11-slim
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libglib2.0-0 libgl1 curl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY backend/requirements-vps.txt ./requirements.txt
+RUN python -m pip install --upgrade pip && pip install -r requirements.txt
+
+COPY backend/ ./backend/
+COPY frontend/dist/ ./frontend/dist/
+COPY portal/ ./portal/
+
+WORKDIR /app/backend
+
+ENV SENTINEL_HOST=0.0.0.0 \
+    SENTINEL_PORT=8000 \
+    SENTINEL_STORAGE_DIR=/data/storage \
+    SENTINEL_CONFIG_DIR=/data/config \
+    SENTINEL_DATASET_DIR=/data/datasets \
+    SENTINEL_VECTOR_DIR=/data/vectors \
+    SENTINEL_VECTOR_BACKEND=memory \
+    SENTINEL_DEVICE_MODE=cpu \
+    SENTINEL_DATABASE_URL=sqlite:////data/storage/sentinel.db
+
+RUN mkdir -p /data/storage /data/config /data/vectors
+
+EXPOSE 8000
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/api/system/health || exit 1
+
+CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]

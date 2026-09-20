@@ -1,0 +1,18 @@
+# Sentinel detection dataset
+path: D:/Eagle_Eye_V1.0/datasets/detection
+train: images/train
+val: images/val
+test: images/test
+nc: 11
+names:
+  0: person
+  1: backpack
+  2: handbag
+  3: suitcase
+  4: bicycle
+  5: motorcycle
+  6: car
+  7: bus
+  8: truck
+  9: bottle
+  10: laptop

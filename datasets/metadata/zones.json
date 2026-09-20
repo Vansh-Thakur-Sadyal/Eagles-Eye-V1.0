@@ -1,0 +1,59 @@
+[
+  {
+    "zone_id": "ZONE_004744781EE8",
+    "name": "Public Concourse",
+    "zone_type": "public",
+    "site_id": "SITE_44E41F93200F",
+    "floor": 0,
+    "polygon": [
+      [
+        0.02,
+        0.3
+      ],
+      [
+        0.68,
+        0.3
+      ],
+      [
+        0.68,
+        0.98
+      ],
+      [
+        0.02,
+        0.98
+      ]
+    ],
+    "authorized_roles": [],
+    "risk_weight": 1.0
+  },
+  {
+    "zone_id": "ZONE_C7F3CD5467AC",
+    "name": "Restricted Area",
+    "zone_type": "restricted",
+    "site_id": "SITE_44E41F93200F",
+    "floor": 0,
+    "polygon": [
+      [
+        0.72,
+        0.55
+      ],
+      [
+        0.97,
+        0.55
+      ],
+      [
+        0.97,
+        0.92
+      ],
+      [
+        0.72,
+        0.92
+      ]
+    ],
+    "authorized_roles": [
+      "staff",
+      "security"
+    ],
+    "risk_weight": 1.4
+  }
+]

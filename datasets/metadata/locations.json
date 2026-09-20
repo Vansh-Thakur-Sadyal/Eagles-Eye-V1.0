@@ -1,0 +1,16 @@
+[
+  {
+    "site_id": "SITE_44E41F93200F",
+    "name": "Primary Site",
+    "site_type": "generic",
+    "latitude": null,
+    "longitude": null,
+    "timezone": "UTC",
+    "floors": [
+      {
+        "level": 0,
+        "name": "Ground"
+      }
+    ]
+  }
+]

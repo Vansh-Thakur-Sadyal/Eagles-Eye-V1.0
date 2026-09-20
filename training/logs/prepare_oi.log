@@ -1,0 +1,25 @@
+mapped 16 Open Images labels -> 11 Sentinel classes
+images on disk: 483,309
+reading train-bbox.csv (14.6M rows) ...
+clean boxes: 723,796 in 185,115 images (dropped 41,968 images with group/depiction boxes)
+selection: {
+  "backpack": 322,
+  "suitcase": 429,
+  "handbag": 598,
+  "laptop": 1532,
+  "motorcycle": 1778,
+  "bus": 1843,
+  "truck": 1997,
+  "bottle": 2858,
+  "bicycle": 3654,
+  "car": 6000,
+  "person-only images": 18000
+}
+  5,000/39,011  {'train': 4602, 'val': 398, 'error': 0}
+  10,000/39,011  {'train': 9184, 'val': 816, 'error': 0}
+  15,000/39,011  {'train': 13799, 'val': 1201, 'error': 0}
+  20,000/39,011  {'train': 18382, 'val': 1618, 'error': 0}
+  25,000/39,011  {'train': 22989, 'val': 2011, 'error': 0}
+  30,000/39,011  {'train': 27615, 'val': 2385, 'error': 0}
+  35,000/39,011  {'train': 32230, 'val': 2770, 'error': 0}
+finished: {'train': 35925, 'val': 3086, 'error': 0}
