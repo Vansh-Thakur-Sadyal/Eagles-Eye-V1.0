@@ -156,3 +156,4 @@ This release uses a weight-management policy like:
 This repository is intended for public technical release with a clean Git history and safe defaults. It is not a data bundle. It is a working application scaffold, backend, frontend, documents, and operator tooling designed to run locally once the user installs the required dependencies, models, and datasets.
 
 The project remains open to extension, fine-tuning, and deployment but does not redistribute third-party surveillance datasets or proprietary pre-trained model artifacts without explicit rights.
+>>>>>>> origin/main
